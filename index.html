@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Neira Ibrahimovic is a Technical Product Manager building thoughtful products across software, data, AI and life sciences.">
+  <title>Neira Ibrahimovic | Technical Product Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="nav">
+    <a class="brand" href="#top">NI<span>.</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#story">My story</a>
+      <a href="#code">Code</a>
+      <a href="#contact">Say hi</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Technical Product Manager · San Diego</p>
+        <h1>Hi, I’m Neira.<br>I like the <em>messy</em> problems.</h1>
+        <p class="lede">The ones where the user problem is real, the technology is complicated and there are twelve teams in the room with twelve different opinions.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">See what I’ve built</a>
+          <a class="button text-link" href="#story">How I got here ↓</a>
+        </div>
+      </div>
+      <div class="portrait-card reveal">
+        <img src="https://avatars.githubusercontent.com/u/119445388?v=4" alt="Neira Ibrahimovic">
+        <div class="portrait-note">product person<br>science nerd<br>CS student ✦</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Areas I work in">
+      <div>0→1 products <span>✦</span> platform <span>✦</span> APIs <span>✦</span> cloud <span>✦</span> AI <span>✦</span> life sciences <span>✦</span> figuring out what the heck the user actually needs <span>✦</span></div>
+    </section>
+
+    <section class="intro section">
+      <p class="kicker">A little about how I work</p>
+      <h2>I’m happiest somewhere between a whiteboard and a very complicated system diagram.</h2>
+      <p>I started as a scientist. Now I build software products and spend a surprising amount of time asking engineers questions until I understand what is happening one layer deeper. I care about the technical details because they change the product decisions.</p>
+      <div class="principles">
+        <button class="principle active" data-copy="The workflow usually tells you more than the feature request.">Start with the workflow</button>
+        <button class="principle" data-copy="I do not need to be the engineer. I do need to understand enough to make a good call.">Go one layer deeper</button>
+        <button class="principle" data-copy="If I can make the idea tangible before we build it, I probably will.">Prototype early</button>
+        <button class="principle" data-copy="A launch is only useful if somebody can actually use what you shipped.">Finish the last mile</button>
+      </div>
+      <p class="principle-copy" id="principle-copy">The workflow usually tells you more than the feature request.</p>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Selected work</p>
+          <h2>A few problems I’ve spent a lot of time thinking about.</h2>
+        </div>
+        <p class="side-note">Not the résumé version.<br>The interesting version.</p>
+      </div>
+
+      <article class="case flagship reveal">
+        <div class="case-number">01</div>
+        <div class="case-copy">
+          <p class="tag">0→1 enterprise data platform</p>
+          <h3>So... what exactly <em>is</em> a sample?</h3>
+          <p>This turned out to be a surprisingly difficult question. Different products had different answers. The same biological sample could become disconnected as it moved through a workflow. Customers learned to stitch the story back together themselves.</p>
+          <p>Usually with spreadsheets. Lots of spreadsheets.</p>
+          <button class="story-toggle" aria-expanded="false">Open the story <span>↗</span></button>
+          <div class="story-panel">
+            <p>I owned SIMS from an early concept into a real product. That meant figuring out what the product should be, shaping the data model, working through API behavior, testing ideas with customers and coordinating integrations across more than a dozen teams.</p>
+            <div class="mini-diagram">
+              <span>Run planning</span><i>→</i><span>Sample</span><i>→</i><span>Analysis</span><i>→</i><span>Interpretation</span>
+            </div>
+            <h4>The part that looked simple but wasn’t</h4>
+            <p>We wanted one sample identity that could move across the workflow without breaking the systems customers already depended on. That meant the ideal model had to meet years of legacy behavior somewhere in the middle.</p>
+            <blockquote>Someone from another team once told me I was working on one of the hardest and longest standing problems at Illumina. I still think about that.</blockquote>
+          </div>
+        </div>
+        <div class="case-art sample-art" aria-hidden="true">
+          <div class="orbit o1">run</div><div class="orbit o2">QC</div><div class="orbit o3">analysis</div>
+          <div class="sample-core">one<br>sample</div>
+        </div>
+      </article>
+
+      <div class="case-grid">
+        <article class="case small reveal">
+          <p class="case-number">02</p>
+          <p class="tag">Multiomics</p>
+          <h3>Making two products feel like one.</h3>
+          <p>I joined Connected Multiomics before its first Early Access release, shortly after an acquisition. My job quickly became much bigger than integrating requirements.</p>
+          <button class="story-toggle" aria-expanded="false">What I worked on <span>+</span></button>
+          <div class="story-panel">
+            <p>I wrote product requirements and user needs, worked closely with test engineering on traceability, contributed to UX and UAT and helped bring different scientific workflows into one cohesive experience.</p>
+            <p>I also noticed we did not have the customer documentation we needed for launch. There was no clear owner, so I built it.</p>
+          </div>
+        </article>
+
+        <article class="case small dark reveal">
+          <p class="case-number">03</p>
+          <p class="tag">Cloud platform</p>
+          <h3>Deleting a file sounds easy.</h3>
+          <p class="big-aside">It was not.</p>
+          <p>I worked across the infrastructure behind an AWS based data platform. The problems ranged from secure customer storage access to data movement costs and recoverable deletion.</p>
+          <button class="story-toggle light" aria-expanded="false">Go under the hood <span>+</span></button>
+          <div class="story-panel">
+            <p>I helped shape requirements for moving customer owned storage toward IAM role based access. I also worked through egress metering and pricing, data lifecycle behavior and file integrity.</p>
+            <p>Some of this work continued after I moved to SIMS, so I am careful about the distinction between what I helped define and what I personally delivered.</p>
+            <div class="flow"><span>request</span><b>→</b><span>authorize</span><b>→</b><span>object storage</span><b>→</b><span>usage event</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-band section reveal">
+      <div class="spark">✦</div>
+      <div>
+        <p class="kicker">AI in practice</p>
+        <h2>I went to an AI workshop. Then I built something.</h2>
+        <p>I like AI most when it solves a boring problem nobody wants to keep doing manually. I took what I learned and prototyped an AI release management workflow that turned product inputs into useful release artifacts and cut hours of repetitive work each week.</p>
+      </div>
+      <div class="ai-steps">
+        <span>learn</span><i>→</i><span>notice</span><i>→</i><span>prototype</span><i>→</i><span>use it</span>
+      </div>
+    </section>
+
+    <section class="docs section reveal">
+      <div class="browser">
+        <div class="browser-bar"><i></i><i></i><i></i><span>help.connected.illumina.com</span></div>
+        <div class="browser-body">
+          <span class="fake-logo">CONNECTED SOFTWARE</span>
+          <h3>Documentation should feel connected too.</h3>
+          <div class="fake-cards"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="docs-copy">
+        <p class="kicker">27+ teams</p>
+        <h2>One place to find the docs.</h2>
+        <p>While working on ICA, I noticed our software documentation was spread across different places and every product had its own way of doing things. I wanted it to feel like one connected experience.</p>
+        <p>I created a shared home for the documentation, helped define the process teams would follow and designed the visual headers in Canva so the sites actually looked like they belonged together.</p>
+        <a class="button primary" href="https://help.connected.illumina.com/" target="_blank" rel="noreferrer">See the real thing ↗</a>
+      </div>
+    </section>
+
+    <section class="journey section" id="story">
+      <p class="kicker">How I got here</p>
+      <h2>The career plan was not exactly linear.</h2>
+      <div class="timeline">
+        <article class="moment reveal">
+          <div class="photo-placeholder ucla"><span>UCLA photo goes here</span></div>
+          <div><small>UCLA</small><h3>Scientist first.</h3><p>I studied molecular biology and mathematical biology. I spent time in the wet lab and learned what it feels like to be the person actually using scientific tools and working with the data they create.</p></div>
+        </article>
+        <article class="moment reverse reveal">
+          <div class="photo-placeholder lab"><span>Illumina lab photo goes here</span></div>
+          <div><small>Illumina internship</small><h3>Then I got curious about the tools.</h3><p>I worked on sequencing instrument validation and verification. Eventually I realized I was just as interested in building the products around the science as I was in the science itself.</p></div>
+        </article>
+        <article class="moment reveal">
+          <div class="photo-placeholder speech"><span>3,000+ person speech photo goes here</span></div>
+          <div><small>Somewhere along the way</small><h3>I ended up speaking to 3,000+ people.</h3><p>This story deserves its own spot here. The photo is ready. I am saving the exact story until I can tell it properly.</p></div>
+        </article>
+        <article class="moment reverse reveal">
+          <div class="photo-placeholder penn"><span>Penn family photo goes here</span></div>
+          <div><small>University of Pennsylvania</small><h3>I decided product management wasn’t enough homework.</h3><p>I kept wanting to understand the systems I was helping build one layer deeper. So I went back to school for computer science at Penn. Naturally, I made my family come see the campus too.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="code section" id="code">
+      <div class="section-head">
+        <div><p class="kicker">Technical projects</p><h2>Yes, I write code too.</h2></div>
+        <p class="side-note">Mostly because I keep<br>wanting to know how things work.</p>
+      </div>
+      <div class="project-stack">
+        <a class="project" href="https://github.com/NeiraIbrahimovic" target="_blank" rel="noreferrer"><span>01</span><div><h3>Unix shell in C</h3><p>Processes · pipes · I/O redirection · signals</p></div><b>↗</b></a>
+        <a class="project" href="https://github.com/NeiraIbrahimovic" target="_blank" rel="noreferrer"><span>02</span><div><h3>TCP client and server</h3><p>Sockets · networking · handshake protocols</p></div><b>↗</b></a>
+        <a class="project" href="https://github.com/NeiraIbrahimovic" target="_blank" rel="noreferrer"><span>03</span><div><h3>Data and machine learning</h3><p>Python · modeling · asking too many questions of a dataset</p></div><b>↗</b></a>
+      </div>
+    </section>
+
+    <section class="ask section reveal">
+      <div>
+        <span class="beta">coming next</span>
+        <h2>Ask Neira AI ✦</h2>
+        <p>Soon you will be able to ask this portfolio questions instead of hunting through it. It will answer from my real experience and point you to the story behind the answer.</p>
+      </div>
+      <div class="prompt-cloud">
+        <button>How technical is Neira?</button>
+        <button>Tell me about something that went wrong.</button>
+        <button>What has she actually built?</button>
+        <button>Why biology and computer science?</button>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <p class="kicker">Still here?</p>
+      <h2>We should probably talk.</h2>
+      <p>I’m always happy to meet people building thoughtful products and solving hard problems.</p>
+      <div class="contact-links">
+        <a href="mailto:neiraibrahimovic01@gmail.com">Email me ↗</a>
+        <a href="https://github.com/NeiraIbrahimovic" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Built with curiosity and an unreasonable number of browser tabs.</span><span>© <span id="year"></span> Neira Ibrahimovic</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
