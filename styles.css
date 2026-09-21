@@ -898,3 +898,11 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 @media(max-width:800px){
  .ai-band{padding-top:30px!important;padding-bottom:30px!important;gap:26px!important}
 }
+
+/* Match footer link text exactly to footer name/copyright color */
+footer.simple-footer .footer-links,
+footer.simple-footer .footer-links a{
+  color:#17201d!important;
+  opacity:1!important;
+  font-weight:400!important;
+}
