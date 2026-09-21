@@ -344,3 +344,11 @@
   letter-spacing:.12em!important;
   white-space:nowrap!important;
 }
+
+/* Keep SIMS skills section headline on one line on desktop */
+@media(min-width:801px){
+  .visual-takeaways h2{
+    white-space:nowrap!important;
+    font-size:clamp(27px,2.7vw,38px)!important;
+  }
+}
