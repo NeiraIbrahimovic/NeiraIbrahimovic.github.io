@@ -928,3 +928,11 @@ footer.simple-footer .footer-links{
     max-width:none!important;
   }
 }
+
+/* Land Ask NeirAI nav at the top edge of its dark section */
+#ask{
+  scroll-margin-top:74px!important;
+}
+@media(max-width:800px){
+  #ask{scroll-margin-top:56px!important}
+}
