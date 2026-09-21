@@ -64,7 +64,7 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 
 /* Stronger section transitions */
 .intro{max-width:none;background:#dfe7da;padding-left:max(28px,calc((100vw - 894px)/2));padding-right:max(28px,calc((100vw - 894px)/2))}
-.skills-ticker .ticker-track{animation-duration:78s}
+.skills-ticker .ticker-track{animation-duration:120s}
 
 /* Case study hierarchy */
 .case-link{display:inline-block;margin-top:18px;color:inherit;font-weight:700;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:5px}
