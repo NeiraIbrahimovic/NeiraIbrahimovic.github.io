@@ -295,3 +295,6 @@
 
 /* Supplied DRAGEN logo */
 .exact-node .dragen-logo{width:31px!important;height:27px!important;object-fit:contain!important;margin-bottom:2px!important;mix-blend-mode:multiply}
+
+/* Supplied integration-map icons */
+.exact-node .product-svg-icon{width:29px!important;height:29px!important;object-fit:contain!important;margin-bottom:1px!important;display:block}
