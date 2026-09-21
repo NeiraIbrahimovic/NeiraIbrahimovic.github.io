@@ -733,3 +733,20 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .sample-map .sample-core{width:128px!important;height:128px!important}
  .sample-map .map-node{font-size:9px!important;padding:7px 10px!important}
 }
+
+/* Crisp black line icons, smaller card subtitles, single-line closing statement */
+.strength-icon svg{width:31px;height:31px;display:block;fill:none;stroke:#17201d;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.strength-icon.icon-search,.strength-icon.icon-people,.strength-icon.icon-gear,.strength-icon.icon-bulb{transform:none!important}
+@media(min-width:801px){
+ .strengths-four .strength-teaser{font-size:.68rem!important;line-height:1.35!important;max-width:175px!important}
+ .contact-manifesto{
+   font-size:clamp(34px,4.15vw,62px)!important;
+   white-space:nowrap!important;
+   max-width:none!important;
+   width:100%!important;
+ }
+}
+@media(max-width:800px){
+ .strength-icon svg{width:26px;height:26px}
+ .contact-manifesto{white-space:normal!important}
+}
