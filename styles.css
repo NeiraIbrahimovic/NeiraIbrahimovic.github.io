@@ -609,3 +609,19 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
   .strengths-four .strength-title{font-size:16px!important}
   .strengths-four .strength-teaser{font-size:.66rem!important;white-space:normal!important}
 }
+
+/* SIMS ecosystem diagram: six connected workflow spokes */
+.sample-map .map-node{padding:8px 13px!important;text-align:center;white-space:nowrap}
+.sample-map .n1{left:8%!important;top:12%!important}
+.sample-map .n2{right:8%!important;top:12%!important}
+.sample-map .n3{left:2%!important;top:46%!important}
+.sample-map .n4{right:2%!important;top:46%!important}
+.sample-map .n5{left:7%!important;bottom:12%!important}
+.sample-map .n6{right:8%!important;bottom:12%!important}
+.sample-map .map-line{width:43%!important}
+.sample-map .l1{transform:rotate(-145deg)!important}
+.sample-map .l2{transform:rotate(-35deg)!important}
+.sample-map .l3{transform:rotate(180deg)!important}
+.sample-map .l4{transform:rotate(0deg)!important}
+.sample-map .l5{transform:rotate(145deg)!important}
+.sample-map .l6{transform:rotate(35deg)!important}
