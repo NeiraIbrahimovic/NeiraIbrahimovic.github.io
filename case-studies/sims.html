@@ -63,7 +63,14 @@
     </div>
     <div class="workbench-detail" id="workDetail"><button class="workbench-close" type="button" aria-label="Close">×</button><small>MY ROLE</small><h3>Click a card to explore my ownership.</h3><p>I worked across the product lifecycle, from understanding the problem through bringing the solution to customers.</p></div>
   </div>
-  </section>
+  <div class="customer-voices">
+  <button class="voices-toggle" type="button" aria-expanded="false">What customers are saying <span>＋</span></button>
+  <div class="voices-panel">
+    <figure><blockquote>“The data model fits very nicely to standard sequencing workflows. It's well thought out.”</blockquote><figcaption>Penn Medicine</figcaption></figure>
+    <figure><blockquote>“I really like. I like the levels of sample/specimen/run sample definition.”</blockquote><figcaption>Rede D'Or</figcaption></figure>
+    <figure><blockquote>“We're very excited about SIMS because it gives a really interesting end-to-end view of sample.”</blockquote><figcaption>Illumina Lab Services</figcaption></figure>
+  </div>
+</div></section>
 
 <section class="study-section solution-journey">
   <div class="section-intro"><p class="kicker">03 · From problem → solution</p><h2>The solution emerged one product decision at a time.</h2><p>We used an <strong>API-first approach</strong>. Getting the backend model and contracts right was foundational because those APIs would power the frontend experience and every product integration around it.</p></div>
@@ -121,5 +128,13 @@ document.querySelectorAll(".workbench-card").forEach((card)=>{
 document.querySelector(".workbench-close")?.addEventListener("click",()=>detail.classList.remove("open"));
 document.querySelectorAll(".decision-accordion details").forEach((item)=>{
  item.addEventListener("toggle",()=>{if(item.open) document.querySelectorAll(".decision-accordion details").forEach(x=>{if(x!==item)x.open=false})});
+});
+
+const voicesToggle=document.querySelector(".voices-toggle");
+voicesToggle?.addEventListener("click",()=>{
+ const wrap=voicesToggle.closest(".customer-voices");
+ const open=wrap.classList.toggle("open");
+ voicesToggle.setAttribute("aria-expanded",open);
+ voicesToggle.querySelector("span").textContent=open?"−":"＋";
 });
 </script></main></body></html>
