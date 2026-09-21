@@ -261,3 +261,42 @@ img,svg{max-width:100%}
   .code-github{margin:4px 18px 22px}
   .contact{padding-top:28px!important;padding-bottom:40px!important}
 }
+
+/* Compact programming panel + closing section spacing */
+.code-band{
+  padding-top:26px!important;
+  padding-bottom:26px!important;
+  margin-top:32px!important;
+  margin-bottom:42px!important;
+}
+.code-band:before{
+  inset:10px max(42px,calc((100vw - 1580px)/2))!important;
+  background:#c8d7d0!important;
+  border-radius:22px!important;
+}
+.code-band .section-head{padding:18px 28px 8px!important;margin-bottom:4px!important}
+.code-band .project-stack{padding:0 28px!important}
+.code-band .project{padding-top:18px!important;padding-bottom:18px!important}
+.code-github{
+  margin:12px 28px 20px!important;
+  background:var(--blue)!important;
+  color:#fff8ee!important;
+  border:0!important;
+  border-radius:999px!important;
+  padding:11px 17px!important;
+  text-decoration:none!important;
+  font-size:12px!important;
+  box-shadow:0 3px 0 rgba(23,32,29,.14);
+}
+.code-github:hover{transform:translateY(-1px);box-shadow:0 5px 0 rgba(23,32,29,.14)}
+.ask{margin-top:0!important;margin-bottom:18px!important}
+.contact{margin-top:0!important;padding-top:20px!important;padding-bottom:38px!important}
+@media(max-width:800px){
+  .code-band{padding:20px 10px!important;margin-bottom:30px!important}
+  .code-band:before{inset:6px 10px!important;border-radius:18px!important}
+  .code-band .section-head{padding:16px 16px 6px!important}
+  .code-band .project-stack{padding:0 16px!important}
+  .code-github{margin:10px 16px 16px!important}
+  .ask{margin-bottom:10px!important}
+  .contact{padding-top:16px!important;padding-bottom:34px!important}
+}
