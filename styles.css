@@ -871,3 +871,9 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 /* Tighten spacing between “turn” and the italic “what if?” */
 .hero h1 em{margin-left:-0.10em!important}
 @media(max-width:800px){.hero h1 em{margin-left:-0.07em!important}}
+
+/* Center teal SIMS nodes directly over spoke/ring intersections */
+.d1{left:34.65%!important;top:21.9%!important}
+.d2{left:65.35%!important;top:21.9%!important}
+.d5{left:34.65%!important;top:78.1%!important}
+.d6{left:65.35%!important;top:78.1%!important}
