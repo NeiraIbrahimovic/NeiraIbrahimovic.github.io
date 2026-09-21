@@ -811,3 +811,38 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .strengths-four .strength-body p{font-size:.76rem!important;line-height:1.42!important}
  .strengths-four .scribble{font-size:.8rem!important;margin-top:8px!important}
 }
+
+/* Restore compact Selected Work sizing */
+.flagship{min-height:460px!important;padding:34px!important}
+.flagship .case-art{min-height:360px!important;margin-top:0!important}
+.sample-art{min-height:360px!important}
+.sample-map .sample-core{width:150px!important;height:150px!important}
+.sample-map:before{inset:18%!important}.sample-map:after{inset:34%!important}
+.sample-map .map-line{width:32%!important}
+.map-dot{z-index:6!important}
+.sample-map .map-line{z-index:2!important}
+.sample-map .map-node{z-index:7!important}
+/* spokes terminate at the six teal outer-ring nodes */
+.sample-map .l1{transform:rotate(-120deg)!important}.sample-map .l2{transform:rotate(-60deg)!important}
+.sample-map .l3{transform:rotate(180deg)!important}.sample-map .l4{transform:rotate(0deg)!important}
+.sample-map .l5{transform:rotate(120deg)!important}.sample-map .l6{transform:rotate(60deg)!important}
+
+.compact-featured{gap:20px!important}
+.compact-featured .case{padding:28px!important;min-height:0!important}
+.compact-featured .case h3{font-size:clamp(28px,2.25vw,38px)!important;line-height:1.04!important;margin-bottom:16px!important}
+.compact-featured .case>p:not(.case-number):not(.tag){font-size:.9rem!important;line-height:1.55!important}
+.compact-featured .compact-meta{margin-top:18px!important}
+.compact-featured .case-link{margin-top:18px!important}
+
+.compact-three{gap:18px!important}
+.compact-three .case{padding:24px!important;min-height:0!important}
+.compact-three .case h3{font-size:clamp(23px,1.8vw,30px)!important;line-height:1.06!important;margin-bottom:14px!important}
+.compact-three .case>p:not(.case-number):not(.tag){font-size:.82rem!important;line-height:1.5!important}
+.compact-three .compact-meta{margin-top:15px!important}
+.compact-three .case-link{margin-top:16px!important}
+
+@media(max-width:800px){
+ .flagship{padding:24px!important;min-height:0!important}
+ .flagship .case-art,.sample-art{min-height:330px!important}
+ .compact-featured .case,.compact-three .case{padding:24px!important}
+}
