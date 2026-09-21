@@ -1129,3 +1129,29 @@ footer.simple-footer .footer-links{
     font-size:clamp(44px,12vw,72px)!important;
   }
 }
+
+
+/* Restore original hero layout while keeping the new tagline accents */
+.hero h1{
+  white-space:normal!important;
+  max-width:900px!important;
+  width:auto!important;
+  font-size:clamp(56px,7vw,112px)!important;
+}
+.hero h1 em{
+  color:#c9694b!important;
+  font-style:italic!important;
+  font-weight:400!important;
+}
+.hero h1 strong{
+  color:#6f958a!important;
+  font-family:"DM Serif Display",serif!important;
+  font-style:italic!important;
+  font-weight:400!important;
+}
+@media(max-width:800px){
+  .hero h1{
+    width:auto!important;
+    font-size:clamp(44px,12vw,72px)!important;
+  }
+}
