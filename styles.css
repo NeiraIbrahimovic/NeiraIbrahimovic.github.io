@@ -692,3 +692,44 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .strengths-four .strength-title,.strengths-four .strength-teaser{white-space:normal!important}
  .strengths-four .strength-icon{color:#17201d!important;filter:none!important}
 }
+
+/* Selected Work header alignment */
+.work>.section-head{align-items:center!important}
+.work>.section-head .side-note{margin-top:34px!important;align-self:center!important}
+
+/* SIMS ecosystem diagram: reference-matched geometry */
+.sample-art{padding:0!important}
+.sample-map{position:absolute!important;inset:0!important}
+.sample-map .sample-core{width:150px!important;height:150px!important;z-index:4!important}
+.sample-map .map-line{
+  left:50%!important;top:50%!important;width:38%!important;
+  border-top:1px dashed rgba(74,105,96,.62)!important;
+  transform-origin:0 50%!important;z-index:1!important
+}
+.sample-map .l1{transform:rotate(-150deg)!important}
+.sample-map .l2{transform:rotate(-30deg)!important}
+.sample-map .l3{transform:rotate(180deg)!important}
+.sample-map .l4{transform:rotate(0deg)!important}
+.sample-map .l5{transform:rotate(150deg)!important}
+.sample-map .l6{transform:rotate(30deg)!important}
+.sample-map .map-node{
+  z-index:5!important;background:#fff8ee!important;
+  border:1px solid rgba(23,32,29,.16)!important;
+  border-radius:999px!important;padding:8px 13px!important;
+  font-size:10px!important;font-weight:700!important;white-space:nowrap!important
+}
+.sample-map .n1{left:8%!important;top:12%!important}
+.sample-map .n2{right:8%!important;top:12%!important}
+.sample-map .n3{left:2%!important;top:46%!important}
+.sample-map .n4{right:2%!important;top:46%!important}
+.sample-map .n5{left:7%!important;bottom:12%!important}
+.sample-map .n6{right:8%!important;bottom:12%!important}
+.map-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:#6f958a;z-index:4;transform:translate(-50%,-50%)}
+.d1{left:17.1%;top:30.5%}.d2{left:82.9%;top:30.5%}
+.d3{left:12%;top:50%}.d4{left:88%;top:50%}
+.d5{left:17.1%;top:69.5%}.d6{left:82.9%;top:69.5%}
+@media(max-width:800px){
+ .work>.section-head .side-note{margin-top:12px!important}
+ .sample-map .sample-core{width:128px!important;height:128px!important}
+ .sample-map .map-node{font-size:9px!important;padding:7px 10px!important}
+}
