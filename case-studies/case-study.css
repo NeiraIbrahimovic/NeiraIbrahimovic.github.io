@@ -208,3 +208,14 @@
 .solution-copy{padding:12px 0}.solution-copy .kicker{margin-bottom:14px}.solution-copy h2{font-size:clamp(36px,4vw,54px)!important;line-height:.98!important;margin:0 0 24px!important}.solution-copy h2 em{color:var(--terracotta);font-style:italic}.solution-copy>p:last-child{font-size:14px!important;line-height:1.65!important;max-width:440px}
 @media(max-width:800px){.solution-split{grid-template-columns:1fr;gap:26px}.integration-map{height:480px}.solution-copy{order:-1}.solution-copy h2 br{display:none}}
 @media(max-width:520px){.integration-map{height:540px}.integration-node{width:102px;font-size:7px}.in10{left:27%}.in11{left:73%}}
+
+/* Full-width compact takeaways */
+.visual-study .visual-takeaways{margin:0!important;max-width:none!important;width:100%!important;border-radius:0!important;padding-top:34px!important;padding-bottom:34px!important}
+.visual-study .visual-takeaways .takeaway-grid{margin-top:18px!important;gap:10px!important}
+.visual-study .visual-takeaways .takeaway-grid div{padding:14px 16px!important;border-width:2px!important;border-radius:14px!important}
+.visual-study .visual-takeaways .takeaway-grid p{margin-top:5px!important;margin-bottom:0!important;line-height:1.4!important}
+
+/* Challenge quote banner */
+.challenge-banner{width:100%;background:#17201d;color:#fff8ee;text-align:center;padding:24px max(24px,calc((100vw - 1080px)/2));box-sizing:border-box}
+.challenge-banner blockquote{font:clamp(23px,2.7vw,34px)/1.15 var(--serif);margin:0 auto 7px;max-width:900px}
+.challenge-banner p{font-size:10px;line-height:1.45;opacity:.68;margin:0 auto;max-width:720px;font-style:italic}
