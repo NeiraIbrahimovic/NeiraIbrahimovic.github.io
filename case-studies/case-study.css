@@ -169,3 +169,7 @@
  .product-workbench{grid-template-columns:1fr 1fr}.workbench-phase{min-height:0}.workbench-detail{grid-column:1/3}.lifecycle-line{grid-template-columns:1fr;gap:5px}.lifecycle-line i{transform:rotate(90deg)}
 }
 @media(max-width:480px){.product-workbench{grid-template-columns:1fr}.workbench-detail{grid-column:1}.phase-head b{font-size:18px}}
+
+/* Match workbench detail panel to phase-number terracotta */
+.product-workbench .workbench-detail{background:var(--terracotta)!important;color:#fff8ee!important}
+.product-workbench .workbench-detail>small{color:#fff8ee!important;opacity:.72}
