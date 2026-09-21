@@ -321,3 +321,10 @@ img,svg{max-width:100%}
   .code-band .project-list{padding-left:28px!important;padding-right:18px!important}
   .code-github{margin-top:24px!important;margin-left:28px!important}
 }
+
+/* Keep the four platform deep-dives aligned on desktop */
+@media(min-width:1100px){
+  .platform-stories{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:18px!important}
+  .platform-stories .case{min-width:0!important}
+  .platform-stories .case h3{font-size:clamp(24px,1.8vw,32px)!important}
+}
