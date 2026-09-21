@@ -1043,3 +1043,38 @@ footer.simple-footer .footer-links{
     line-height:inherit!important;
   }
 }
+
+
+/* Penn journey: show more of both original photos */
+@media(min-width:801px){
+  .penn-collage.penn-two{
+    min-height:500px!important;
+    overflow:visible!important;
+  }
+  .penn-collage.penn-two .photo-main{
+    width:78%!important;
+    height:88%!important;
+    object-fit:cover!important;
+    object-position:center 62%!important;
+    transform:none!important;
+  }
+  .penn-collage.penn-two .photo-accent{
+    width:48%!important;
+    height:58%!important;
+    right:-1%!important;
+    bottom:-2%!important;
+    object-fit:cover!important;
+    object-position:center 72%!important;
+  }
+}
+@media(max-width:800px){
+  .penn-collage.penn-two .photo-main{
+    object-position:center 62%!important;
+    transform:none!important;
+  }
+  .penn-collage.penn-two .photo-accent{
+    aspect-ratio:4/5!important;
+    object-fit:cover!important;
+    object-position:center 72%!important;
+  }
+}
