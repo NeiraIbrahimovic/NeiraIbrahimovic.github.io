@@ -298,3 +298,7 @@
 
 /* Supplied integration-map icons */
 .exact-node .product-svg-icon{width:29px!important;height:29px!important;object-fit:contain!important;margin-bottom:1px!important;display:block}
+
+/* Explicit bidirectional spoke arrows: polygons avoid SVG marker rendering inconsistencies */
+.exact-lines .bidir-spokes line{stroke:var(--terracotta)!important;stroke-width:1.7;stroke-dasharray:7 6;marker-start:none!important;marker-end:none!important}
+.exact-lines .bidir-spokes polygon{fill:var(--terracotta)!important;stroke:none!important}
