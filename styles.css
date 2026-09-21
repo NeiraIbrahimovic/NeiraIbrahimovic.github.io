@@ -224,3 +224,40 @@ img,svg{max-width:100%}
   .ask{margin-top:24px!important}
   .contact{padding-top:42px!important;padding-bottom:48px!important}
 }
+
+/* Final section rhythm and AI/code color refinement */
+.ai-band{
+  background:transparent!important;
+  color:var(--ink)!important;
+  padding-top:44px!important;
+  padding-bottom:44px!important;
+  position:relative;
+}
+.ai-band:before{
+  content:"";
+  position:absolute;
+  inset:22px max(28px,calc((100vw - 1500px)/2));
+  background:#c9d7e2;
+  border-radius:28px;
+  z-index:0;
+}
+.ai-band>*{position:relative;z-index:1}
+.ai-band .kicker,.ai-band h2,.ai-band p,.ai-band figcaption{color:var(--ink)!important}
+.ai-band .ai-copy{padding:24px 34px}
+.ai-band .ai-photo{margin-right:34px}
+.ai-steps span{border-color:rgba(23,32,29,.35)!important;color:var(--ink)!important}
+.code-band{margin-top:34px!important;margin-bottom:34px!important}
+.code-band:before{background:#ead7cf!important}
+.code-github{display:inline-block;position:relative;z-index:2;margin:4px 34px 28px;color:var(--terracotta);font-weight:700;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+.ask{margin-top:0!important;margin-bottom:0!important}
+.contact{padding-top:34px!important;padding-bottom:46px!important}
+.contact-links{margin-top:24px!important}
+@media(max-width:800px){
+  .ai-band{padding:28px 12px!important}
+  .ai-band:before{inset:12px;border-radius:20px}
+  .ai-band .ai-copy{padding:20px 18px}
+  .ai-band .ai-photo{margin:0 18px 18px;width:auto}
+  .code-band{margin-top:24px!important;margin-bottom:24px!important}
+  .code-github{margin:4px 18px 22px}
+  .contact{padding-top:28px!important;padding-bottom:40px!important}
+}
