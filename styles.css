@@ -946,3 +946,65 @@ footer.simple-footer .footer-links{
   left:auto!important;
   bottom:-5%!important;
 }
+
+
+/* Documentation: wider browser-like screenshot proportions */
+@media(min-width:801px){
+  .docs{
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)!important;
+    gap:48px!important;
+  }
+  .docs .browser{
+    width:100%!important;
+    aspect-ratio:16/10!important;
+  }
+  .docs .browser-body{
+    height:calc(100% - 54px)!important;
+    overflow:hidden!important;
+  }
+  .docs .docs-screenshot{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:top left!important;
+  }
+  .docs-copy h2{
+    font-size:clamp(42px,3.55vw,66px)!important;
+    line-height:.98!important;
+  }
+  .docs-copy p{
+    font-size:clamp(16px,1.25vw,19px)!important;
+    line-height:1.58!important;
+  }
+}
+
+/* AI workshop photo */
+.ai-photo .ai-workshop-image{
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:4/3!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:24px!important;
+}
+
+/* Journey photo framing */
+.photo-collage.single .photo-main{
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+
+/* Show more of the Illumina sign photo, including raised hand */
+.journey-row:nth-of-type(2) .photo-main{
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#f4efe5!important;
+}
+
+/* Show more of the Penn sweatshirt and logo */
+.penn-collage.penn-two .photo-main{
+  object-fit:cover!important;
+  object-position:center 42%!important;
+  transform:scale(.94)!important;
+  transform-origin:center!important;
+}
