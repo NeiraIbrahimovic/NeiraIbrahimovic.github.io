@@ -884,3 +884,17 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
   color:inherit!important;
   opacity:1!important;
 }
+
+/* Vertically compress AI in practice section */
+.ai-band{
+  padding-top:38px!important;
+  padding-bottom:38px!important;
+  gap:38px!important;
+}
+.ai-band .ai-copy h2{margin-bottom:16px!important}
+.ai-band .ai-copy>p:not(.kicker){margin-top:0!important;margin-bottom:14px!important}
+.ai-band .ai-photo{margin-top:0!important;margin-bottom:0!important}
+.ai-band .ai-photo figcaption{margin-top:10px!important}
+@media(max-width:800px){
+ .ai-band{padding-top:30px!important;padding-bottom:30px!important;gap:26px!important}
+}
