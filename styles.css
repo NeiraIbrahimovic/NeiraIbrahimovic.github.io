@@ -1008,3 +1008,38 @@ footer.simple-footer .footer-links{
   transform:scale(.94)!important;
   transform-origin:center!important;
 }
+
+
+/* Restore documentation section to its previous dimensions */
+@media(min-width:801px){
+  .docs{
+    grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important;
+    gap:42px!important;
+    align-items:center!important;
+  }
+  .docs .browser{
+    width:92%!important;
+    aspect-ratio:auto!important;
+  }
+  .docs .browser-body{
+    height:auto!important;
+    overflow:hidden!important;
+  }
+  .docs .docs-screenshot{
+    width:100%!important;
+    height:auto!important;
+    object-fit:initial!important;
+    object-position:initial!important;
+  }
+  .docs-copy{
+    max-width:none!important;
+  }
+  .docs-copy h2{
+    font-size:clamp(44px,4vw,72px)!important;
+    line-height:.98!important;
+  }
+  .docs-copy p{
+    font-size:inherit!important;
+    line-height:inherit!important;
+  }
+}
