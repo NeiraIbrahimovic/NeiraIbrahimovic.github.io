@@ -12,12 +12,12 @@
 <main class="study visual-study">
 
 <section class="study-hero visual-hero">
-  <p class="kicker">01 · SIMS · 0→1 enterprise data platform</p>
+  <p class="kicker">01 · SIMS (Sample Information Management System) · 0→1 enterprise data platform</p>
   <h1>One sample.<br><em>One identity.</em><br>Across an ecosystem.</h1>
   <p class="study-deck">How I turned a fragmented sample experience into a shared product model designed to preserve identity and traceability across Illumina software.</p>
   <div class="study-facts">
     <div><b>My role</b><span>Technical Product Manager / Product Lead</span></div>
-    <div><b>Journey</b><span>Problem definition → Alpha → Beta → Full customer launch</span></div>
+    <div><b>Journey</b><span>Problem definition → Alpha → Beta →<br>Full customer launch</span></div>
     <div><b>Scale</b><span>12+ product integrations</span></div>
     <div><b>Focus</b><span>Data model · APIs · UX · adoption</span></div>
   </div>
@@ -25,23 +25,33 @@
 
 <section class="study-section problem-visual">
   <div class="section-intro"><p class="kicker">01 · The problem</p><h2>The same biological sample wasn’t preserved across applications in an end-to-end workflow.</h2></div>
-  <div class="fragment-map" aria-label="Fragmented sample identities across software">
-    <div class="frag-card"><small>RUN PLANNING</small><b>Sample A</b><span>planning identity</span></div>
+  <div class="fragment-map" aria-label="Sample identity changing across an end-to-end workflow">
+    <div class="frag-card"><small>CLARITY LIMS</small><b>Library Prep</b><span>Specimen_A</span></div>
     <div class="broken-link">···</div>
-    <div class="frag-card"><small>SEQUENCING</small><b>Sample A_01</b><span>run identity</span></div>
+    <div class="frag-card"><small>BASESPACE SEQUENCE HUB</small><b>Run Planning</b><span>Sample A_DNA</span></div>
     <div class="broken-link">···</div>
-    <div class="frag-card"><small>ANALYSIS</small><b>SMP-4832</b><span>analysis identity</span></div>
+    <div class="frag-card"><small>ILLUMINA CONNECTED ANALYTICS</small><b>Analysis</b><span>analysis identity</span></div>
     <div class="broken-link">···</div>
-    <div class="frag-card"><small>INTERPRETATION</small><b>Subject 24</b><span>downstream identity</span></div>
+    <div class="frag-card"><small>ILLUMINA CONNECTED INSIGHTS</small><b>Interpretation</b><span>interpretation context</span></div>
   </div>
   <div class="problem-callout"><span>THE PRODUCT QUESTION</span><strong>How might we preserve sample identity and lineage as data moves through independently evolved products?</strong></div>
 </section>
 
 <section class="study-section role-impact">
   <div class="section-intro"><p class="kicker">02 · My role & impact</p><h2>I led the product from an ambiguous problem to a launch-ready platform.</h2></div>
-  <div class="role-work-map">
+  <div class="work-orbit" id="workOrbit">
+    <div class="work-orbit-ring"></div>
     <div class="work-center">ME<small>Product Lead</small></div>
-    <div class="work-card w1">Requirements</div><div class="work-card w2">Go-to-market plan</div><div class="work-card w3">Marketing collateral</div><div class="work-card w4">Customer demos</div><div class="work-card w5">Customer discovery</div><div class="work-card w6">UX prototypes</div><div class="work-card w7">API design</div><div class="work-card w8">Data migration plan</div><div class="work-card w9">12+ product integrations</div>
+    <button class="work-node wn1" data-detail="Translated customer, workflow and platform needs into detailed product requirements and acceptance criteria.">Requirements</button>
+    <button class="work-node wn2" data-detail="Defined the launch path, target audiences, rollout approach and readiness needed to bring SIMS to customers.">Go-to-market plan</button>
+    <button class="work-node wn3" data-detail="Created product messaging and supporting materials to explain the problem, solution and value clearly.">Marketing collateral</button>
+    <button class="work-node wn4" data-detail="Led demos that made the end-to-end workflow tangible for customers, partners and internal stakeholders.">Customer demos</button>
+    <button class="work-node wn5" data-detail="Interviewed customers to understand sample-management pain points and validate workflows, concepts and priorities.">Customer discovery</button>
+    <button class="work-node wn6" data-detail="Built and iterated UX prototypes to test workflows before committing engineering effort.">UX prototypes</button>
+    <button class="work-node wn7" data-detail="Defined API behavior and integration requirements so SIMS could serve both frontend experiences and downstream products.">API design</button>
+    <button class="work-node wn8" data-detail="Developed the product approach for moving existing sample data into the new shared model across systems.">Data migration plan</button>
+    <button class="work-node wn9" data-detail="Coordinated integration strategy and dependencies across more than 12 products and teams.">12+ product integrations</button>
+    <div class="work-detail" id="workDetail"><b>Click a piece of the product</b><span>Explore what I owned and delivered.</span></div>
   </div>
   <div class="impact-strip"><div><strong>0→1</strong><span>concept to launch</span></div><div><strong>12+</strong><span>product integrations</span></div><div><strong>End-to-end</strong><span>product + technical ownership</span></div></div>
 </section>
@@ -61,35 +71,16 @@
 
 <section class="study-section model-section">
   <div class="section-intro"><p class="kicker">The solution</p><h2>A persistent identity at the center.</h2></div>
-  <div class="identity-diagram">
-    <div class="id-ring ring-outer"></div><div class="id-ring ring-inner"></div>
-    <div class="id-core">SIMS<small>sample identity<br>+ metadata</small></div>
-    <div class="id-node n1">Run Planning</div><div class="id-node n2">LIMS</div><div class="id-node n3">Secondary Analysis</div><div class="id-node n4">Cohort Analysis</div><div class="id-node n5">Interpretation</div><div class="id-node n6">QC</div>
-  </div>
+  <div class="app-orbit"><div class="app-ring ring-a"></div><div class="app-ring ring-b"></div><div class="app-core">SIMS<small>persistent sample identity</small></div><span class="app-node app1">BioInsight Platform Core</span><span class="app-node app2">Emedgene</span><span class="app-node app3">Connected Insights</span><span class="app-node app4">Connected Multiomics</span><span class="app-node app5">Data Lake</span><span class="app-node app6">Orchestration Software</span><span class="app-node app7">Fleet Manager</span><span class="app-node app8">Clarity LIMS</span><span class="app-node app9">BaseSpace Sequence Hub</span><span class="app-node app10">Genomic Sequencing Service</span><span class="app-node app11">Genomic Microarray Service</span></div>
   <div class="solution-note"><strong>One shared data model. Event-driven synchronization.</strong><span>Products publish and receive events as sample data changes, keeping connected objects in sync so one sample can carry its data, analyses and history across the workflow.</span></div><p class="caption centered">Conceptual, public-safe view of the product architecture.</p>
 </section>
 
 <section class="study-section decisions-section">
   <div class="section-intro"><p class="kicker">04 · Key product decisions</p><h2>The tradeoffs that shaped the product.</h2></div>
-  <div class="decision-visual-grid">
-    <article>
-      <span>DECISION 01</span><h3>Model for the future without breaking the past.</h3>
-      <div class="before-after"><div><small>RUN SAMPLE</small><b>Run-specific instance</b></div><i>+</i><div><small>SAMPLE</small><b>Persistent identity</b></div></div>
-      <p>Existing products already had established sample concepts. I helped define a compatibility model that supported the target architecture without requiring an ecosystem-wide rewrite.</p>
-      <footer>Principle: design the architecture and adoption path together.</footer>
-    </article>
-    <article>
-      <span>DECISION 02</span><h3>Treat dependencies as product work.</h3>
-      <div class="dependency-line"><b>SIMS</b><i>→</i><b>Security</b><i>→</i><b>Integrations</b><i>→</i><b>Release</b></div>
-      <p>Code freezes, security readiness and downstream release mechanics could move the milestone. I made those dependencies explicit in the roadmap and prioritized internal beta before external exposure.</p>
-      <footer>Principle: a platform ships on everybody else's calendar.</footer>
-    </article>
-    <article>
-      <span>DECISION 03</span><h3>Make distributed ownership tangible.</h3>
-      <div class="workshop-flow"><b>Proposed path</b><i>→</i><b>Challenge</b><i>→</i><b>Refine</b><i>→</i><b>Align</b></div>
-      <p>Migration crossed systems without one natural owner. I brought a concrete proposal and working agenda to the teams so engineers could challenge it and converge on a path together.</p>
-      <footer>Principle: don't wait for perfect ownership to create momentum.</footer>
-    </article>
+  <div class="decision-accordion">
+    <details><summary><span>DECISION 01</span><strong>Model for the future without breaking the past.</strong><i>+</i></summary><div class="decision-body"><div class="before-after"><div><small>RUN SAMPLE</small><b>Run-specific instance</b></div><i>+</i><div><small>SAMPLE</small><b>Persistent identity</b></div></div><p>Existing products already had established sample concepts. I helped define a compatibility model that supported the target architecture without requiring an ecosystem-wide rewrite.</p><footer>Principle: design the architecture and adoption path together.</footer></div></details>
+    <details><summary><span>DECISION 02</span><strong>Treat dependencies as product work.</strong><i>+</i></summary><div class="decision-body"><div class="dependency-line"><b>SIMS</b><i>→</i><b>Security</b><i>→</i><b>Integrations</b><i>→</i><b>Release</b></div><p>Code freezes, security readiness and downstream release mechanics could move the milestone. I made those dependencies explicit in the roadmap and prioritized internal beta before external exposure.</p><footer>Principle: a platform ships on everybody else's calendar.</footer></div></details>
+    <details><summary><span>DECISION 03</span><strong>Make distributed ownership tangible.</strong><i>+</i></summary><div class="decision-body"><div class="workshop-flow"><b>Proposed path</b><i>→</i><b>Challenge</b><i>→</i><b>Refine</b><i>→</i><b>Align</b></div><p>Migration crossed systems without one natural owner. I brought a concrete proposal and working agenda to the teams so engineers could challenge it and converge on a path together.</p><footer>Principle: don't wait for perfect ownership to create momentum.</footer></div></details>
   </div>
 </section>
 
@@ -105,4 +96,17 @@
 
 <section class="study-quote"><blockquote>“One of the hardest and longest-standing problems at Illumina.”</blockquote><p class="quote-caption">A colleague said this to me at a conference while we were discussing the sample-management problem.</p><p>The challenge was never one feature. It was creating shared behavior across an ecosystem that had evolved independently for years.</p></section>
 <section class="study-next"><a href="../index.html#work">← Back to selected work</a><a href="multiomics.html">Next case study →</a></section>
-</main></body></html>
+<script>
+document.querySelectorAll(".work-node").forEach((node)=>{
+ node.addEventListener("click",()=>{
+   document.querySelectorAll(".work-node").forEach(n=>n.classList.remove("active"));
+   node.classList.add("active");
+   const d=document.getElementById("workDetail");
+   d.innerHTML="<b>"+node.textContent+"</b><span>"+node.dataset.detail+"</span>";
+   d.classList.add("show");
+ });
+});
+document.querySelectorAll(".decision-accordion details").forEach((item)=>{
+ item.addEventListener("toggle",()=>{if(item.open) document.querySelectorAll(".decision-accordion details").forEach(x=>{if(x!==item)x.open=false})});
+});
+</script></main></body></html>
