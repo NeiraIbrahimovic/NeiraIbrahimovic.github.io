@@ -288,3 +288,7 @@
 .challenge-quote-wrap{margin-top:22px!important;margin-bottom:22px!important}
 .challenge-chat{background:rgba(201,105,75,.09)!important;border-color:rgba(201,105,75,.28)!important}
 .challenge-chat:before{background:#f0e1d5!important;border-left-color:rgba(201,105,75,.28)!important;border-bottom-color:rgba(201,105,75,.28)!important}
+
+/* Match quote spacing above and below */
+.visual-study .study-hero{padding-bottom:22px!important}
+.challenge-quote-wrap{margin-top:0!important;margin-bottom:22px!important}
