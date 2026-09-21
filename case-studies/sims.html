@@ -1,9 +1,114 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIMS Case Study | Neira Ibrahimovic</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="case-study.css"></head><body><header class="nav"><a class="brand" href="../index.html">NI<span>.</span></a><nav><a href="../index.html#work">← All work</a><a href="../index.html#story">My story</a><a href="../index.html#contact">Say hi</a></nav></header><main class="study"><section class="study-hero"><p class="kicker">01 · SIMS · 0→1 enterprise data platform</p><h1>Building a global identity layer for samples.</h1><p class="study-deck">A technical product case study in enterprise data modeling, APIs, legacy-system compatibility and cross-functional execution across a genomics software ecosystem.</p><div class="study-facts"><div><b>Role</b><span>Technical Product Manager / Product Lead</span></div><div><b>Ownership</b><span>0→1, concept through internal beta</span></div><div><b>Scale</b><span>12+ integrating product teams</span></div><div><b>Users</b><span>Lab scientists, bioinformaticians and downstream applications</span></div></div></section>
-<section class="study-section"><p class="kicker">Problem statement</p><h2>One biological sample could become multiple software identities.</h2><p>Illumina products had evolved different ways to create and represent samples. A sample planned for sequencing could become disconnected from the files, analyses and downstream interpretation associated with it. Teams and customers could end up reconciling information manually because there was no shared sample identity across the workflow.</p><p>The problem was therefore not simply to build a new sample-management UI. It was to create an enterprise layer that could preserve identity, lineage and relationships as data moved across products.</p></section>
-<section class="study-section"><p class="kicker">The product direction</p><h2>A shared sample model with a persistent identity.</h2><p>I helped define SIMS as the system that could provide a consistent sample identity and metadata model across the ecosystem. The product needed to support run-specific sample instances, aggregation across sequencing runs, links to files and analyses, and integrations that could serve both human workflows and downstream applications.</p><div class="architecture"><div class="arch-node">Run planning</div><div class="arch-node">BaseSpace</div><div class="arch-node">Clarity</div><div class="arch-core">SIMS<small>identity + metadata</small></div><div class="arch-node">ICA</div><div class="arch-node">Analysis</div><div class="arch-node">Interpretation</div></div><p class="caption">Public-safe conceptual view of the integration surface.</p></section>
-<section class="study-section role-block"><p class="kicker">My role & impact</p><h2>Product ownership from ambiguity to an executable platform strategy.</h2><p>My scope included product vision and roadmap, enterprise data-model decisions, API and integration requirements, UX and prototypes, customer discovery, alpha and beta readiness, launch planning and coordination across more than a dozen integrating teams.</p><p>I moved between senior-leadership alignment and detailed technical work with engineering and architecture. A large part of the role was translating the same problem at different levels: strategic value for leadership, contracts and behavior for integrating teams, and an understandable workflow for users.</p><div class="skill-chips"><span>0→1 product strategy</span><span>Enterprise data modeling</span><span>REST APIs</span><span>Event-driven integrations</span><span>Customer discovery</span><span>UAT</span><span>Cross-functional execution</span><span>GTM</span></div> </section>
-<section class="study-section"><p class="kicker">Key product decision 01 · Identity model</p><h2>The cleanest new model would have broken the old world.</h2><p>BaseSpace already distinguished run-level Samples from Biosamples that could aggregate across runs. Rather than require an ecosystem-wide rewrite, we established a compatibility model in which a SIMS <strong>Run Sample</strong> represented the run-specific instance and a SIMS <strong>Sample</strong> represented the persistent identity that could span runs.</p><div class="decision"><b>Decision principle</b><span>Design the target architecture and the adoption path together. A platform is not successful if its model is elegant but existing products cannot realistically migrate to it.</span></div></section>
-<section class="study-section"><p class="kicker">Key product decision 02 · Release strategy</p><h2>A platform ships on everybody else's calendar.</h2><p>SIMS depended on products with different release cadences, security requirements and integration mechanics. During an early release cycle, a downstream code freeze, web-component versioning and security-readiness work created risk close to the planned external milestone.</p><p>I prioritized an internal beta before external exposure. The experience changed how I planned platform work: code freezes, security scans, version dependencies and downstream release mechanics became explicit roadmap dependencies rather than implementation details discovered near launch.</p></section>
-<section class="study-section"><p class="kicker">Key product decision 03 · Adoption & migration</p><h2>The hardest work lived between team boundaries.</h2><p>The new model also required a strategy for existing sample data and API behavior, but the migration crossed several systems and did not have one natural owner. When international teams met in San Diego, I created the working agenda and brought a proposed migration approach into the room. Engineers challenged and refined it until the group had a concrete direction.</p><p>That became an important operating pattern for me: when ownership is distributed, make the problem and proposed path tangible enough that the right people can make decisions together.</p></section>
-<section class="study-section lessons"><p class="kicker">Skills & takeaways</p><h2>What SIMS taught me about technical platform product management.</h2><div class="lesson-grid"><div><b>Senior leadership communication</b><p>Frame architectural work around customer impact, strategic value, risk and the decision needed without stripping away the technical substance.</p></div><div><b>Cross-functional execution</b><p>A platform roadmap has to model other teams' release mechanics, security work and migration dependencies, not just the owning team's backlog.</p></div><div><b>Technical product judgment</b><p>Data models and API semantics are product decisions when they determine what users and downstream systems can do.</p></div><div><b>Influence without authority</b><p>Integration teams had their own roadmaps. Adoption depended on a clear contract, credible migration path and repeated alignment.</p></div></div></section>
-<section class="study-quote"><blockquote>“One of the hardest and longest-standing problems at Illumina.”</blockquote><p>A colleague's description of the sample problem. The difficulty was not one feature. It was establishing shared behavior across an ecosystem that had evolved independently for years.</p></section><section class="study-next"><a href="../index.html#work">← Back to selected work</a><a href="multiomics.html">Next case study →</a></section></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SIMS Case Study | Neira Ibrahimovic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+<header class="nav"><a class="brand" href="../index.html">NI<span>.</span></a><nav><a href="../index.html#work">← All work</a><a href="../index.html#story">My story</a><a href="../index.html#contact">Say hi</a></nav></header>
+<main class="study visual-study">
+
+<section class="study-hero visual-hero">
+  <p class="kicker">01 · SIMS · 0→1 enterprise data platform</p>
+  <h1>One sample.<br><em>One identity.</em><br>Across an ecosystem.</h1>
+  <p class="study-deck">How I turned a fragmented sample experience into a shared product model designed to preserve identity and traceability across Illumina software.</p>
+  <div class="study-facts">
+    <div><b>My role</b><span>Technical Product Manager / Product Lead</span></div>
+    <div><b>Journey</b><span>Problem definition → internal beta</span></div>
+    <div><b>Scale</b><span>12+ product integrations</span></div>
+    <div><b>Focus</b><span>Data model · APIs · UX · adoption</span></div>
+  </div>
+</section>
+
+<section class="study-section problem-visual">
+  <div class="section-intro"><p class="kicker">01 · The problem</p><h2>The same biological sample could become different things in different products.</h2></div>
+  <div class="fragment-map" aria-label="Fragmented sample identities across software">
+    <div class="frag-card"><small>RUN PLANNING</small><b>Sample A</b><span>planning identity</span></div>
+    <div class="broken-link">···</div>
+    <div class="frag-card"><small>SEQUENCING</small><b>Sample A_01</b><span>run identity</span></div>
+    <div class="broken-link">···</div>
+    <div class="frag-card"><small>ANALYSIS</small><b>SMP-4832</b><span>analysis identity</span></div>
+    <div class="broken-link">···</div>
+    <div class="frag-card"><small>INTERPRETATION</small><b>Subject 24</b><span>downstream identity</span></div>
+  </div>
+  <div class="problem-callout"><span>THE PRODUCT QUESTION</span><strong>How might we preserve sample identity and lineage as data moves through independently evolved products?</strong></div>
+</section>
+
+<section class="study-section role-impact">
+  <div class="section-intro"><p class="kicker">02 · My role & impact</p><h2>I owned the product problem from ambiguity to an executable platform strategy.</h2></div>
+  <div class="role-impact-grid">
+    <div class="role-orbit">
+      <div class="orbit-center">ME<small>Product Lead</small></div>
+      <span class="orbit-item o1">Vision + roadmap</span><span class="orbit-item o2">Data model</span><span class="orbit-item o3">API requirements</span><span class="orbit-item o4">UX + prototypes</span><span class="orbit-item o5">Customer discovery</span><span class="orbit-item o6">Beta + GTM</span>
+    </div>
+    <div class="impact-stack">
+      <div><strong>12+</strong><span>product integrations aligned around a shared model</span></div>
+      <div><strong>0→1</strong><span>from problem statement through internal beta</span></div>
+      <div><strong>1</strong><span>shared identity layer connecting previously fragmented workflows</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="study-section solution-journey">
+  <div class="section-intro"><p class="kicker">03 · From problem → solution</p><h2>The solution emerged one product decision at a time.</h2><p>Instead of starting with a UI, I worked backward from the identity problem.</p></div>
+  <div class="journey-track">
+    <article><span class="step-no">01</span><div class="step-icon">?</div><h3>Map the fragmentation</h3><p>Understand how products created, named and related samples today.</p><b>OUTPUT</b><em>Shared problem definition</em></article>
+    <i>→</i>
+    <article><span class="step-no">02</span><div class="step-icon">◇</div><h3>Define the model</h3><p>Separate persistent sample identity from run-specific instances.</p><b>OUTPUT</b><em>Sample + Run Sample</em></article>
+    <i>→</i>
+    <article><span class="step-no">03</span><div class="step-icon">↔</div><h3>Design the contract</h3><p>Translate the model into API behavior and integration requirements.</p><b>OUTPUT</b><em>Integration strategy</em></article>
+    <i>→</i>
+    <article><span class="step-no">04</span><div class="step-icon">✓</div><h3>Prove the path</h3><p>Validate workflows, coordinate dependencies and prepare for beta.</p><b>OUTPUT</b><em>Executable rollout</em></article>
+  </div>
+</section>
+
+<section class="study-section model-section">
+  <div class="section-intro"><p class="kicker">The solution</p><h2>A persistent identity at the center.</h2></div>
+  <div class="identity-diagram">
+    <div class="id-ring ring-outer"></div><div class="id-ring ring-inner"></div>
+    <div class="id-core">SIMS<small>sample identity<br>+ metadata</small></div>
+    <div class="id-node n1">Run Planning</div><div class="id-node n2">LIMS</div><div class="id-node n3">Secondary Analysis</div><div class="id-node n4">Cohort Analysis</div><div class="id-node n5">Interpretation</div><div class="id-node n6">QC</div>
+  </div>
+  <p class="caption centered">Conceptual, public-safe view of the product architecture.</p>
+</section>
+
+<section class="study-section decisions-section">
+  <div class="section-intro"><p class="kicker">04 · Key product decisions</p><h2>The tradeoffs that shaped the product.</h2></div>
+  <div class="decision-visual-grid">
+    <article>
+      <span>DECISION 01</span><h3>Model for the future without breaking the past.</h3>
+      <div class="before-after"><div><small>RUN SAMPLE</small><b>Run-specific instance</b></div><i>+</i><div><small>SAMPLE</small><b>Persistent identity</b></div></div>
+      <p>Existing products already had established sample concepts. I helped define a compatibility model that supported the target architecture without requiring an ecosystem-wide rewrite.</p>
+      <footer>Principle: design the architecture and adoption path together.</footer>
+    </article>
+    <article>
+      <span>DECISION 02</span><h3>Treat dependencies as product work.</h3>
+      <div class="dependency-line"><b>SIMS</b><i>→</i><b>Security</b><i>→</i><b>Integrations</b><i>→</i><b>Release</b></div>
+      <p>Code freezes, security readiness and downstream release mechanics could move the milestone. I made those dependencies explicit in the roadmap and prioritized internal beta before external exposure.</p>
+      <footer>Principle: a platform ships on everybody else's calendar.</footer>
+    </article>
+    <article>
+      <span>DECISION 03</span><h3>Make distributed ownership tangible.</h3>
+      <div class="workshop-flow"><b>Proposed path</b><i>→</i><b>Challenge</b><i>→</i><b>Refine</b><i>→</i><b>Align</b></div>
+      <p>Migration crossed systems without one natural owner. I brought a concrete proposal and working agenda to the teams so engineers could challenge it and converge on a path together.</p>
+      <footer>Principle: don't wait for perfect ownership to create momentum.</footer>
+    </article>
+  </div>
+</section>
+
+<section class="study-section takeaway-block visual-takeaways">
+  <p class="kicker">05 · Skills & takeaways</p><h2>What SIMS taught me about platform product management.</h2>
+  <div class="takeaway-grid">
+    <div><span>01</span><b>Technical product judgment</b><p>Data models and API semantics are product decisions when they shape what users and systems can do.</p></div>
+    <div><span>02</span><b>Influence without authority</b><p>Adoption depends on clear contracts, credible migration paths and repeated alignment.</p></div>
+    <div><span>03</span><b>Cross-functional execution</b><p>The real roadmap includes other teams' releases, security work and dependencies.</p></div>
+    <div><span>04</span><b>Executive communication</b><p>Translate architecture into customer impact, strategic value, risk and the decision needed.</p></div>
+  </div>
+</section>
+
+<section class="study-quote"><blockquote>“One of the hardest and longest-standing problems at Illumina.”</blockquote><p>The challenge was never one feature. It was creating shared behavior across an ecosystem that had evolved independently for years.</p></section>
+<section class="study-next"><a href="../index.html#work">← Back to selected work</a><a href="multiomics.html">Next case study →</a></section>
+</main></body></html>
