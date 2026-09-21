@@ -23,3 +23,30 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 .skills-ticker:hover .ticker-track{animation-play-state:paused}
 @keyframes skills-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.skills-ticker .ticker-track{animation:none;white-space:normal;flex-wrap:wrap}.skills-ticker .ticker-track span[aria-hidden="true"]{display:none}}
+
+/* Denser transition into selected work */
+.intro{padding-bottom:34px}
+.intro .principle-copy{min-height:0;margin-bottom:0}
+.work{padding-top:46px}
+.work .section-head{margin-bottom:34px}
+.work:before{content:"";position:absolute;left:0;right:0;z-index:-1}
+.work{position:relative}
+
+/* More visual rhythm across case studies */
+.case-sage{background:#dfe7da}
+.case-terracotta{background:#a9513e;color:#fff8ee}
+.case-terracotta .tag,.case-terracotta .case-number{color:#ffd69a}
+.case-terracotta .story-toggle{color:#fff8ee}
+.case-gold{background:#e8c978}
+.case-gold .tag,.case-gold .case-number{color:#6d3f25}
+.case-blue{background:#35506d;color:#fff8ee}
+.case-blue .tag,.case-blue .case-number{color:#f0bd66}
+.case-blue .story-toggle{color:#fff8ee}
+.platform-stories .case:nth-child(3){grid-column:1}
+.platform-stories .case:nth-child(4){grid-column:2}
+.story-panel.open{padding-top:2px}
+.story-panel.open h4{margin-top:24px;margin-bottom:6px}
+.story-panel.open p{margin-top:7px}
+.flagship .story-panel.open{max-width:720px}
+.flagship{background:#fbf3e6}
+@media(max-width:800px){.platform-stories .case:nth-child(3),.platform-stories .case:nth-child(4){grid-column:auto}.intro{padding-bottom:28px}.work{padding-top:34px}}
