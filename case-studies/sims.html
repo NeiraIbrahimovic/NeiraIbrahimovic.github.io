@@ -39,24 +39,31 @@
 
 <section class="study-section role-impact">
   <div class="section-intro"><p class="kicker">02 · My role & impact</p><h2>I led the product from an ambiguous problem to a launch-ready platform.</h2></div>
-  <div class="work-orbit orbital-ui" id="workOrbit">
-    <div class="orbital-ring"></div>
-    <div class="orbital-center"><span>ME</span><small>PRODUCT LEAD</small></div>
-    <button class="orbital-node on1" data-detail="Translated customer, workflow and platform needs into detailed product requirements and acceptance criteria."><span>01</span><b>Requirements</b></button>
-    <button class="orbital-node on2" data-detail="Defined the launch path, target audiences, rollout approach and readiness needed to bring SIMS to customers."><span>02</span><b>Go-to-market</b></button>
-    <button class="orbital-node on3" data-detail="Created product messaging and supporting materials to explain the problem, solution and value clearly."><span>03</span><b>Marketing</b></button>
-    <button class="orbital-node on4" data-detail="Led demos that made the end-to-end workflow tangible for customers, partners and internal stakeholders."><span>04</span><b>Customer demos</b></button>
-    <button class="orbital-node on5" data-detail="Interviewed customers to understand sample-management pain points and validate workflows, concepts and priorities."><span>05</span><b>Discovery</b></button>
-    <button class="orbital-node on6" data-detail="Built and iterated UX prototypes to test workflows before committing engineering effort."><span>06</span><b>UX prototypes</b></button>
-    <button class="orbital-node on7" data-detail="Defined API behavior and integration requirements so SIMS could serve both frontend experiences and downstream products."><span>07</span><b>API design</b></button>
-    <button class="orbital-node on8" data-detail="Developed the product approach for moving existing sample data into the new shared model across systems."><span>08</span><b>Migration</b></button>
-    <button class="orbital-node on9" data-detail="Coordinated integration strategy and dependencies across more than 12 products and teams."><span>09</span><b>12+ integrations</b></button>
-    <div class="orbital-popover" id="workDetail" aria-live="polite">
-      <button class="popover-close" type="button" aria-label="Close">×</button>
-      <small>MY ROLE</small><h3>Explore my product ownership</h3>
-      <p>Click any node around the orbit to see what I owned and delivered.</p>
+  <div class="product-workbench">
+    <div class="workbench-phase">
+      <div class="phase-head"><span>01</span><b>Discover</b></div>
+      <button class="workbench-card" data-detail="Interviewed customers to understand sample-management pain points and validate workflows, concepts and priorities."><b>Customer discovery</b><small>Interviews + validation</small></button>
+      <button class="workbench-card" data-detail="Led demos that made the end-to-end workflow tangible and gave customers something concrete to react to."><b>Customer demos</b><small>Workflow feedback</small></button>
     </div>
+    <div class="workbench-phase">
+      <div class="phase-head"><span>02</span><b>Define</b></div>
+      <button class="workbench-card" data-detail="Translated customer, workflow and platform needs into detailed product requirements and acceptance criteria."><b>Requirements</b><small>Behavior + edge cases</small></button>
+      <button class="workbench-card" data-detail="Defined API behavior and integration requirements so SIMS could power both frontend experiences and downstream products."><b>API design</b><small>Contracts + behavior</small></button>
+      <button class="workbench-card" data-detail="Developed the product approach for moving existing sample data into the new shared model across systems."><b>Data migration plan</b><small>Legacy → shared model</small></button>
+    </div>
+    <div class="workbench-phase">
+      <div class="phase-head"><span>03</span><b>Build</b></div>
+      <button class="workbench-card" data-detail="Built and iterated UX prototypes to test workflows before committing engineering effort."><b>UX prototypes</b><small>Test before build</small></button>
+      <button class="workbench-card" data-detail="Coordinated integration strategy, requirements and dependencies across more than 12 products and teams."><b>12+ integrations</b><small>Cross-product execution</small></button>
+    </div>
+    <div class="workbench-phase">
+      <div class="phase-head"><span>04</span><b>Launch</b></div>
+      <button class="workbench-card" data-detail="Defined the launch path, target audiences, rollout approach and readiness needed to bring SIMS to customers."><b>Go-to-market plan</b><small>Rollout + readiness</small></button>
+      <button class="workbench-card" data-detail="Created product messaging and supporting materials to explain the problem, solution and value clearly."><b>Marketing collateral</b><small>Positioning + messaging</small></button>
+    </div>
+    <div class="workbench-detail" id="workDetail"><button class="workbench-close" type="button" aria-label="Close">×</button><small>MY ROLE</small><h3>Click a card to explore my ownership.</h3><p>I worked across the product lifecycle, from understanding the problem through bringing the solution to customers.</p></div>
   </div>
+  <div class="lifecycle-line"><span>Problem definition</span><i>→</i><span>Alpha</span><i>→</i><span>Beta</span><i>→</i><span>Full customer launch</span></div>
   <div class="impact-strip"><div><strong>0→1</strong><span>concept to launch</span></div><div><strong>12+</strong><span>product integrations</span></div><div><strong>End-to-end</strong><span>product + technical ownership</span></div></div>
 </section>
 
@@ -102,17 +109,18 @@
 <section class="study-next"><a href="../index.html#work">← Back to selected work</a><a href="multiomics.html">Next case study →</a></section>
 <script>
 const detail=document.getElementById("workDetail");
-document.querySelectorAll(".orbital-node").forEach((node)=>{
- node.addEventListener("click",(e)=>{
-   e.stopPropagation();
-   document.querySelectorAll(".orbital-node").forEach(n=>n.classList.remove("active"));
-   node.classList.add("active");
-   detail.innerHTML='<button class="popover-close" type="button" aria-label="Close">×</button><small>MY ROLE</small><h3>'+node.querySelector("b").textContent+'</h3><p>'+node.dataset.detail+'</p>';
+document.querySelectorAll(".workbench-card").forEach((card)=>{
+ card.addEventListener("click",()=>{
+   const wasActive=card.classList.contains("active");
+   document.querySelectorAll(".workbench-card").forEach(c=>c.classList.remove("active"));
+   if(wasActive){detail.classList.remove("open");return;}
+   card.classList.add("active");
+   detail.innerHTML='<button class="workbench-close" type="button" aria-label="Close">×</button><small>MY ROLE</small><h3>'+card.querySelector("b").textContent+'</h3><p>'+card.dataset.detail+'</p>';
    detail.classList.add("open");
-   detail.querySelector(".popover-close").addEventListener("click",(ev)=>{ev.stopPropagation();detail.classList.remove("open");node.classList.remove("active")});
+   detail.querySelector(".workbench-close").addEventListener("click",()=>{detail.classList.remove("open");card.classList.remove("active")});
  });
 });
-document.querySelector(".popover-close")?.addEventListener("click",()=>detail.classList.remove("open"));
+document.querySelector(".workbench-close")?.addEventListener("click",()=>detail.classList.remove("open"));
 document.querySelectorAll(".decision-accordion details").forEach((item)=>{
  item.addEventListener("toggle",()=>{if(item.open) document.querySelectorAll(".decision-accordion details").forEach(x=>{if(x!==item)x.open=false})});
 });
