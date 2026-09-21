@@ -1234,3 +1234,15 @@ footer.simple-footer .footer-links{
 @media(max-width:800px){
  .sample-art-v2 .overview-sims-map{width:90%!important;height:90%!important;top:0!important}
 }
+
+/* Radially balance the SIMS overview nodes */
+.sample-art-v2 .overview-sims-map{width:90%!important;height:90%!important;top:0!important;margin:auto!important}
+.sample-art-v2 .overview-node{width:26%!important;min-height:70px!important}
+.sample-art-v2 .overview-node.ov1{left:37%!important;top:2%!important}
+.sample-art-v2 .overview-node.ov2{left:2%!important;top:18%!important}
+.sample-art-v2 .overview-node.ov3{right:2%!important;top:18%!important}
+.sample-art-v2 .overview-node.ov4{left:-3%!important;top:43%!important}
+.sample-art-v2 .overview-node.ov5{right:-3%!important;top:43%!important}
+.sample-art-v2 .overview-node.ov6{left:2%!important;bottom:4%!important}
+.sample-art-v2 .overview-node.ov7{left:37%!important;bottom:0!important}
+.sample-art-v2 .overview-node.ov8{right:2%!important;bottom:4%!important}
