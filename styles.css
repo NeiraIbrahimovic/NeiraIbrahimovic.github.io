@@ -90,3 +90,15 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 .s6{bottom:9%;right:5%}.s6:after{right:100%;transform:rotate(28deg);transform-origin:right}
 @media(max-width:1000px){.platform-stories{grid-template-columns:1fr 1fr}.case-meta{grid-template-columns:1fr}}
 @media(max-width:800px){.platform-stories{grid-template-columns:1fr}.intro{padding-left:20px;padding-right:20px}}
+
+/* Code section contrast */
+.code-band{max-width:none;background:#e8c978;padding-left:max(28px,calc((100vw - 1650px)/2));padding-right:max(28px,calc((100vw - 1650px)/2));border-top:1px solid rgba(23,32,29,.16);border-bottom:1px solid rgba(23,32,29,.16)}
+.code-band .project{transition:background .2s ease,padding .2s ease}
+.code-band .project:hover{background:rgba(255,248,238,.28);padding-left:14px;padding-right:14px}
+
+/* Recruiter CTA: remove the oversized dead space */
+.contact{padding-top:72px!important;padding-bottom:72px!important;min-height:0!important}
+.ask+.contact{margin-top:0}
+.contact h2{margin-top:10px;margin-bottom:18px}
+.contact>p:not(.kicker){max-width:760px;margin-left:auto;margin-right:auto}
+@media(max-width:800px){.code-band{padding-left:20px;padding-right:20px}.contact{padding-top:54px!important;padding-bottom:54px!important}}
