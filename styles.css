@@ -528,3 +528,54 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 @media(max-width:600px){
   footer.simple-footer{align-items:flex-start!important;flex-direction:column!important;padding:20px!important}
 }
+
+/* Reference-matched How I Work cards */
+@media(min-width:801px){
+  .strengths-four{gap:18px!important}
+  .strengths-four .strength{border-radius:20px!important;box-shadow:none!important}
+  .strengths-four .strength summary{
+    position:relative;
+    min-height:164px!important;
+    padding:22px 24px!important;
+    grid-template-columns:1fr 34px!important;
+    grid-template-rows:auto 1fr auto!important;
+  }
+  .strengths-four .strength-title{font-size:clamp(20px,1.55vw,25px)!important;padding-right:26px}
+  .strengths-four .strength-teaser{font-size:.8rem!important}
+  .strength-icon{
+    position:absolute;
+    top:20px;
+    right:22px;
+    font-family:"DM Sans",sans-serif;
+    font-size:31px;
+    line-height:1;
+    font-weight:400;
+    color:#17201d;
+  }
+  .icon-pencil{font-size:34px;transform:rotate(-8deg)}
+  .icon-team{font-size:30px;transform:rotate(45deg)}
+  .icon-arrow{font-size:36px;font-weight:300}
+  .strengths-four .strength-body{
+    padding:17px 24px 22px!important;
+    border-top:1px solid rgba(23,32,29,.10);
+  }
+  .strengths-four .strength-body p{font-size:.84rem!important;line-height:1.52!important}
+}
+.strength-curiosity{background:#c9d7e2!important;border-color:#aebfce!important}
+.strength-detail{background:#ead5cc!important;border-color:#d8bbb0!important}
+.strength-execution{background:#d9a58f!important;border-color:#c58c74!important}
+.strength-proactive{background:#e8c979!important;border-color:#d4ad4e!important}
+.strength[open].strength-curiosity .strength-body{background:#e7eef3!important}
+.strength[open].strength-detail .strength-body{background:#f4e8e3!important}
+.strength[open].strength-execution .strength-body{background:#f0ddd5!important}
+.strength[open].strength-proactive .strength-body{background:#f4e8bd!important}
+.strength[open] .strength-body{border-radius:0 0 19px 19px}
+.strength[open]{overflow:hidden}
+@media(max-width:800px){
+ .strength-icon{position:absolute;top:18px;right:58px;font-size:26px}
+ .strength summary{position:relative}
+ .strength[open].strength-curiosity .strength-body{background:#e7eef3!important}
+ .strength[open].strength-detail .strength-body{background:#f4e8e3!important}
+ .strength[open].strength-execution .strength-body{background:#f0ddd5!important}
+ .strength[open].strength-proactive .strength-body{background:#f4e8bd!important}
+}
