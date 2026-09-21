@@ -292,3 +292,6 @@
 /* Match quote spacing above and below */
 .visual-study .study-hero{padding-bottom:22px!important}
 .challenge-quote-wrap{margin-top:0!important;margin-bottom:22px!important}
+
+/* Supplied DRAGEN logo */
+.exact-node .dragen-logo{width:31px!important;height:27px!important;object-fit:contain!important;margin-bottom:2px!important;mix-blend-mode:multiply}
