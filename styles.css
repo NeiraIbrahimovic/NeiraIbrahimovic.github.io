@@ -913,3 +913,18 @@ footer.simple-footer .footer-links{
   align-items:center!important;
   gap:22px!important;
 }
+
+/* Give documentation copy more horizontal room */
+@media(min-width:801px){
+  .docs{
+    grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important;
+    gap:42px!important;
+    align-items:center!important;
+  }
+  .docs .browser{
+    width:92%!important;
+  }
+  .docs-copy{
+    max-width:none!important;
+  }
+}
