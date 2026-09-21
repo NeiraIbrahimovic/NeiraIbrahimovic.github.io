@@ -846,3 +846,6 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .flagship .case-art,.sample-art{min-height:330px!important}
  .compact-featured .case,.compact-three .case{padding:24px!important}
 }
+
+/* Close tiny spoke-to-node gaps in SIMS diagram */
+.sample-map .map-line{width:33.2%!important}
