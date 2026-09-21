@@ -1203,3 +1203,18 @@ footer.simple-footer .footer-links{
 .overview-node small{font-size:9px;line-height:1.2;color:#7a756d;margin-top:4px}
 .overview-node.ov1{left:35.5%;top:1%}.overview-node.ov2{left:2%;top:15%}.overview-node.ov3{right:2%;top:15%}.overview-node.ov4{left:0;top:42%}.overview-node.ov5{right:0;top:42%}.overview-node.ov6{left:2%;bottom:3%}.overview-node.ov7{left:35.5%;bottom:-1%}.overview-node.ov8{right:2%;bottom:3%}
 @media(max-width:800px){.overview-sims-map{min-height:390px}.overview-node{width:30%;min-height:72px}.overview-core{width:27%}}
+
+/* Fit the SIMS integration map comfortably inside the homepage art tile */
+.sample-art-v2{padding:22px!important}
+.sample-art-v2 .overview-sims-map{width:88%!important;height:88%!important;min-height:0!important;margin:auto;top:6%}
+.sample-art-v2 .overview-core{width:25%!important;border-radius:18px!important}
+.sample-art-v2 .overview-core b{font-size:22px!important}
+.sample-art-v2 .overview-node{width:27%!important;min-height:70px!important;padding:7px 6px!important;border-radius:15px!important}
+.sample-art-v2 .overview-node img{width:24px!important;height:24px!important}
+.sample-art-v2 .overview-node b{font-size:11px!important}
+.sample-art-v2 .overview-node small{font-size:8px!important;margin-top:3px!important}
+.sample-art-v2 .overview-core-icon{display:none!important}
+@media(max-width:800px){
+  .sample-art-v2{padding:16px!important}
+  .sample-art-v2 .overview-sims-map{width:92%!important;height:92%!important;top:4%}
+}
