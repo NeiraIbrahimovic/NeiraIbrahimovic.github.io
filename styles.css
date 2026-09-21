@@ -857,3 +857,13 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 
 /* Stop SIMS spokes exactly at teal nodes */
 .sample-map .map-line{width:32%!important}
+
+/* Balance optical spacing around the italic hero phrase */
+.hero h1 em{
+  display:inline-block;
+  margin-left:-0.04em;
+  margin-right:.10em;
+}
+@media(max-width:800px){
+  .hero h1 em{margin-left:-0.02em;margin-right:.08em}
+}
