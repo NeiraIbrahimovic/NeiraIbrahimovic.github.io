@@ -1181,3 +1181,9 @@ footer.simple-footer .footer-links{
     transform:translateX(-34px)!important;
   }
 }
+
+
+/* Keep clear breathing room around ticker separators */
+.skills-ticker .ticker-track span{
+  word-spacing:.08em;
+}
