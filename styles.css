@@ -433,3 +433,26 @@ footer>span:last-child a{text-decoration:none;border-bottom:1px solid rgba(216,2
  .strength-body{grid-template-columns:1fr;padding:0 18px 20px 62px;gap:16px}
  .scribble{white-space:normal}
 }
+
+/* Four-across strength cards */
+@media(min-width:801px){
+  .strengths-four{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px!important;align-items:start}
+  .strengths-four .strength{min-width:0;border-radius:22px}
+  .strengths-four .strength:hover{transform:translateY(-4px)}
+  .strengths-four .strength summary{
+    min-height:190px;
+    display:grid!important;
+    grid-template-columns:1fr 34px!important;
+    grid-template-rows:auto 1fr auto!important;
+    align-items:start!important;
+    gap:10px 12px!important;
+    padding:22px!important;
+  }
+  .strengths-four .strength-index{grid-column:1;grid-row:1}
+  .strengths-four .strength-title{grid-column:1/-1;grid-row:2;font-size:clamp(23px,1.9vw,29px)!important;align-self:center}
+  .strengths-four .strength-teaser{grid-column:1;grid-row:3;font-size:.86rem!important;align-self:end}
+  .strengths-four .strength-plus{grid-column:2;grid-row:3;align-self:end}
+  .strengths-four .strength-body{display:block!important;padding:0 22px 24px!important}
+  .strengths-four .strength-body p{font-size:.92rem;line-height:1.62}
+  .strengths-four .scribble{display:block;margin-top:18px;white-space:normal}
+}
