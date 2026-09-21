@@ -125,3 +125,7 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 .ai-copy{min-width:0!important;max-width:760px!important}.ai-band h2{max-width:700px!important;word-break:normal!important;overflow-wrap:normal!important}.ai-band p{max-width:700px!important;word-break:normal!important;overflow-wrap:normal!important}
 .ai-photo{min-width:0;width:100%}
 @media(max-width:900px){.flagship,.ai-band{grid-template-columns:1fr!important}.sample-art{min-height:350px!important}.case-meta{grid-template-columns:1fr}}
+
+/* Seamless skills marquee spacing */
+.skills-ticker .ticker-track{gap:0}
+.skills-ticker .ticker-track span{padding-right:0!important;margin:0!important}
