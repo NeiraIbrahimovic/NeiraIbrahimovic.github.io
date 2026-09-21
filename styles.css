@@ -849,3 +849,11 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 
 /* Close tiny spoke-to-node gaps in SIMS diagram */
 .sample-map .map-line{width:33.2%!important}
+
+/* Anchor Code at the start of its colored panel */
+#code{scroll-margin-top:74px!important}
+.code-band{position:relative}
+.code-band:target{scroll-margin-top:74px!important}
+
+/* Stop SIMS spokes exactly at teal nodes */
+.sample-map .map-line{width:32%!important}
