@@ -72,45 +72,52 @@
         <div class="case-copy">
           <p class="tag">SIMS · 0→1 enterprise data platform</p>
           <h3>A global identity layer for samples.</h3>
-          <p class="case-summary">Illumina products had evolved different definitions of a sample. I led product for SIMS from problem definition through internal beta, defining the shared data model, API behavior and adoption path across a complex software ecosystem.</p>
+          <p class="case-summary">Illumina products had evolved different definitions of a sample. I led product for SIMS from problem definition through internal beta, creating a shared data model and integration strategy designed to preserve sample identity across the software ecosystem.</p>
           <div class="case-meta">
-            <div><b>Problem</b><span>Fragmented sample identities made end-to-end traceability difficult</span></div>
-            <div><b>My role</b><span>0→1 product lead across model, APIs, UX, integrations, customer discovery and release strategy</span></div>
-            <div><b>Scale</b><span>12+ integrating product teams across the genomics workflow</span></div>
+            <div><b>My scope</b><span>Product vision, roadmap, data model, APIs, UX, customer discovery, integration strategy, alpha/beta readiness and GTM</span></div>
+            <div><b>Scale</b><span>12+ product integrations spanning run planning, sample management, analysis and interpretation</span></div>
+            <div><b>Core challenge</b><span>Introduce a consistent enterprise model without breaking years of legacy workflows</span></div>
           </div>
-          <a class="case-link" href="case-studies/sims.html">Read technical deep dive <span>↗</span></a>
+          <a class="case-link" href="case-studies/sims.html">Read technical case study <span>↗</span></a>
+        </div>
+        <div class="case-art sample-art" aria-label="SIMS integration diagram">
+          <div class="sample-map">
+            <span class="map-node n1">Run planning</span><span class="map-node n2">BaseSpace</span><span class="map-node n3">Clarity</span><span class="map-node n4">ICA</span><span class="map-node n5">Analysis</span><span class="map-node n6">Interpretation</span>
+            <span class="map-line l1"></span><span class="map-line l2"></span><span class="map-line l3"></span><span class="map-line l4"></span><span class="map-line l5"></span><span class="map-line l6"></span>
+            <div class="sample-core">SIMS<small>global sample identity</small></div>
+          </div>
         </div>
       </article>
 
-      <div class="case-grid featured-grid">
+      <div class="case-grid featured-grid compact-featured">
         <article class="case small case-sage reveal">
           <p class="case-number">02</p><p class="tag">Connected Multiomics</p>
-          <h3>Turning an acquisition into one connected product experience.</h3>
-          <p>I worked across scientific workflows, requirements, verification, usability and customer readiness to help move an integrated multiomics product toward Early Access.</p>
-          <div class="compact-meta"><b>Product decisions</b><span>Workflow integration · requirements · usability · launch readiness</span></div>
+          <h3>Integrating an acquired product into one connected experience.</h3>
+          <p>I helped move Connected Multiomics toward its first Early Access release across requirements, scientific workflows, design controls, UAT, test traceability and customer enablement.</p>
+          <div class="compact-meta"><b>Focus</b><span>Post-acquisition integration · scientific workflows · launch readiness</span></div>
           <a class="case-link" href="case-studies/multiomics.html">Read case study ↗</a>
         </article>
-        <article class="case small dark reveal">
+        <article class="case small case-terracotta reveal">
           <p class="case-number">03</p><p class="tag">AWS security</p>
           <h3>Moving customer storage from access keys toward IAM roles.</h3>
-          <p>I helped define the product and migration requirements for a safer cross-account access model while preserving a workable path for existing customer configurations.</p>
-          <div class="compact-meta"><b>Technical depth</b><span>IAM roles · trust policies · role assumption · backward compatibility · VPC restrictions</span></div>
-          <a class="case-link light" href="case-studies/iam-roles.html">Read technical case study ↗</a>
+          <p>I helped define the requirements and migration strategy for a safer cross-account access model while preserving existing customer configurations.</p>
+          <div class="compact-meta"><b>Tradeoffs</b><span>Security · backward compatibility · role chaining · VPC restrictions</span></div>
+          <a class="case-link light" href="case-studies/iam-roles.html">Read case study ↗</a>
         </article>
       </div>
 
-      <div class="case-grid platform-stories platform-three">
+      <div class="case-grid platform-stories platform-three compact-three">
         <article class="case small case-gold reveal">
           <p class="case-number">04</p><p class="tag">Cloud economics</p>
           <h3>Turning AWS egress into a customer-facing product model.</h3>
-          <p>I helped define what counted as billable movement, how usage should be attributed and what telemetry the platform needed to support billing.</p>
+          <p>I helped define what counted as billable movement, how usage should be attributed and how platform events could support downstream billing.</p>
           <div class="compact-meta"><b>Tradeoffs</b><span>Metering · attribution · tiered pricing · event-driven usage</span></div>
           <a class="case-link" href="case-studies/egress.html">Read case study ↗</a>
         </article>
         <article class="case small case-blue reveal">
           <p class="case-number">05</p><p class="tag">Data lifecycle</p>
           <h3>Designing deletion when data has dependencies.</h3>
-          <p>I explored a recoverable deletion model across analyses, projects and shared resources, including dependency handling, retention, recovery and purge.</p>
+          <p>I explored a recoverable deletion model across analyses, projects and shared resources, including retention, recovery and irreversible purge.</p>
           <div class="compact-meta"><b>Tradeoffs</b><span>Dependencies · async operations · retention · recovery</span></div>
           <a class="case-link light" href="case-studies/deletion.html">Read case study ↗</a>
         </article>
@@ -122,7 +129,7 @@
           <a class="case-link" href="case-studies/fair-scheduling.html">Read case study ↗</a>
         </article>
       </div>
-
+    </section>
 
     <section class="ai-band section reveal">
       <div class="ai-copy">
