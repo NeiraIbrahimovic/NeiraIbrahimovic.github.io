@@ -1102,3 +1102,30 @@ footer.simple-footer .footer-links{
     object-position:center 72%!important;
   }
 }
+
+
+/* Hero tagline mirrors closing manifesto */
+.hero h1{
+  white-space:nowrap!important;
+  max-width:none!important;
+  width:max-content!important;
+  font-size:clamp(42px,4.55vw,76px)!important;
+}
+.hero h1 em{
+  color:#c9694b!important;
+  font-style:italic!important;
+  font-weight:400!important;
+}
+.hero h1 strong{
+  color:#6f958a!important;
+  font-family:"DM Serif Display",serif!important;
+  font-style:italic!important;
+  font-weight:400!important;
+}
+@media(max-width:800px){
+  .hero h1{
+    white-space:normal!important;
+    width:auto!important;
+    font-size:clamp(44px,12vw,72px)!important;
+  }
+}
