@@ -1173,3 +1173,11 @@ footer.simple-footer .footer-links{
 @media(max-width:800px){
   .hero h1{font-size:clamp(38px,9vw,58px)!important;}
 }
+
+
+/* Pull the hero portrait slightly left to balance the new three-line headline */
+@media(min-width:801px){
+  .portrait-card{
+    transform:translateX(-34px)!important;
+  }
+}
