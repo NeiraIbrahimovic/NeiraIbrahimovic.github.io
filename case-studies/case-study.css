@@ -305,3 +305,19 @@
 
 /* Simple dashed connectors for SIMS integration map */
 .exact-lines .plain-spokes line{stroke:var(--terracotta)!important;stroke-width:1.7;stroke-dasharray:7 6;marker-start:none!important;marker-end:none!important}
+
+/* Editorial treatment for expanded key product decisions */
+.decision-story{padding:24px 26px 26px!important}
+.decision-visual{display:flex;align-items:stretch;gap:10px;margin:0 0 20px}
+.decision-visual>div{flex:1;background:rgba(244,239,229,.78);border:1px solid rgba(23,32,29,.11);border-radius:14px;padding:14px 15px;display:flex;flex-direction:column;justify-content:center}
+.decision-visual>div small{font-size:9px;letter-spacing:.14em;font-weight:700;color:var(--terracotta);margin-bottom:5px}
+.decision-visual>div b{font-size:13px;line-height:1.3}
+.decision-visual>span{align-self:center;font-family:"DM Serif Display",serif;font-size:22px;color:var(--terracotta)}
+.decision-narrative{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.decision-lead{font-size:14px!important;line-height:1.65!important;margin:0!important;padding:3px 0}
+.decision-callout{background:rgba(201,105,75,.09);border-left:3px solid var(--terracotta);border-radius:0 12px 12px 0;padding:14px 16px}
+.decision-callout small{display:block;font-size:9px;letter-spacing:.14em;font-weight:700;color:var(--terracotta);margin-bottom:6px}
+.decision-callout p{font-size:13px!important;line-height:1.55!important;margin:0!important}
+.decision-story footer{margin-top:18px!important;padding-top:13px!important;border-top:1px solid rgba(23,32,29,.13)!important;font-size:12px!important;line-height:1.45!important}
+.decision-story footer span{font-size:9px;letter-spacing:.13em;font-weight:700;color:var(--terracotta);margin-right:7px}
+@media(max-width:720px){.decision-narrative{grid-template-columns:1fr}.decision-visual{flex-direction:column}.decision-visual>span{transform:rotate(90deg)}}
