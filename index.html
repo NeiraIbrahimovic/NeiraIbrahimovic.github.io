@@ -63,122 +63,74 @@
 
     <section class="work section" id="work">
       <div class="section-head">
-        <div>
-          <p class="kicker">Selected work</p>
-          <h2>A few problems I’ve spent a lot of time thinking about.</h2>
-        </div>
-        <p class="side-note">Not the résumé version.<br>The interesting version.</p>
+        <div><p class="kicker">Selected work</p><h2>Technical product case studies.</h2></div>
+        <p class="side-note">The architecture, tradeoffs<br>and decisions behind the résumé.</p>
       </div>
 
       <article class="case flagship reveal">
         <div class="case-number">01</div>
         <div class="case-copy">
           <p class="tag">SIMS · 0→1 enterprise data platform</p>
-          <h3>So... what exactly <em>is</em> a sample?</h3>
-          <p>When I first encountered the problem, the same real-world sample could look different depending on which Illumina product you were in. Samples were created differently, data and analyses could become disconnected, and customers often reconciled the workflow themselves.</p>
-          <p>Usually with spreadsheets. Lots of spreadsheets.</p>
-          <button class="story-toggle" aria-expanded="false">Read the full story <span>↗</span></button>
-          <div class="story-panel">
-            <h4>The problem showed up before SIMS existed</h4>
-            <p>I first saw it while working on Multiomics. We could pull a sample into one part of the workflow, but the files and analyses associated with it did not always travel with the same identity. Internal lab workflows and support issues kept pointing back to the same underlying problem. We did not have one sample concept that could move cleanly from run planning through analysis and interpretation.</p>
-            <h4>Turning a concept into a product</h4>
-            <p>SIMS began as an idea, not a finished product definition. I became the product owner responsible for turning that idea into something teams could actually integrate with. I owned the vision and roadmap, worked through the data model, defined API behavior and integration requirements, partnered with UX on prototypes, interviewed customers before code was written, and coordinated the work across more than a dozen product and engineering teams.</p>
-            <div class="mini-diagram"><span>Run planning</span><i>→</i><span>global sample identity</span><i>→</i><span>analysis</span><i>→</i><span>interpretation</span></div>
-            <h4>The architecture decision was also a product decision</h4>
-            <p>The cleanest model on a whiteboard was not automatically the right answer. Existing products had years of customer behavior built around their own sample models. BaseSpace, for example, already distinguished run-level samples from biosamples aggregated across runs. Replacing that model would have created enormous integration cost and customer disruption.</p>
-            <p>We found a middle ground. A SIMS Run Sample represented the instance from a sequencing run, while a SIMS Sample represented the identity that could span runs. That preserved compatibility with existing workflows while giving downstream products a consistent model to build on.</p>
-            <h4>Then the release taught me another lesson</h4>
-            <p>SIMS was moving quickly, but one of the products integrating our web components had a much more structured customer release cycle and an earlier code freeze. We hit integration and security-readiness issues close to that boundary. Rather than treat the calendar as the only definition of success, I pushed for an internal beta before exposing the experience externally.</p>
-            <p>It changed how I plan platform launches. Integration dependencies, security work and another team’s release mechanics belong on the product plan from the beginning, not at the end.</p>
-            <h4>Nobody owned the migration</h4>
-            <p>As SIMS grew, another hard problem emerged. Existing sample data had to move into the new model, but the migration crossed systems and teams and did not have a natural owner. When international teams came together in San Diego, I set the agenda, brought a proposed migration approach into the room and used it as the starting point for engineering to refine. That became a pattern for me on SIMS. When a problem sat between teams, I tried to make it concrete enough that we could finally move it forward.</p>
-            <blockquote>A colleague once told me I was working on one of the hardest and longest-standing problems at Illumina. That stuck with me because customers had been working around the problem for years.</blockquote>
+          <h3>A global identity layer for samples.</h3>
+          <p class="case-summary">Illumina products had evolved different definitions of a sample. I led product for SIMS from problem definition through internal beta, creating a shared data model and integration strategy designed to preserve sample identity across the software ecosystem.</p>
+          <div class="case-meta">
+            <div><b>My scope</b><span>Product vision, roadmap, data model, APIs, UX, customer discovery, integration strategy, alpha/beta readiness and GTM</span></div>
+            <div><b>Scale</b><span>12+ product integrations spanning run planning, sample management, analysis and interpretation</span></div>
+            <div><b>Core challenge</b><span>Introduce a consistent enterprise model without breaking years of legacy workflows</span></div>
           </div>
+          <a class="case-link" href="case-studies/sims.html">Read technical case study <span>↗</span></a>
         </div>
-        <div class="case-art sample-art" aria-hidden="true"><div class="orbit o1">run</div><div class="orbit o2">QC</div><div class="orbit o3">analysis</div><div class="sample-core">one<br>sample</div></div>
+        <div class="case-art sample-art" aria-label="SIMS integration diagram">
+          <div class="sample-core">SIMS<br><small>global sample identity</small></div>
+          <div class="spoke s1">Run planning</div><div class="spoke s2">BaseSpace</div><div class="spoke s3">Clarity</div><div class="spoke s4">ICA</div><div class="spoke s5">Analysis</div><div class="spoke s6">Interpretation</div>
+        </div>
       </article>
 
-      <div class="case-grid">
+      <div class="case-grid featured-grid">
         <article class="case small case-sage reveal">
           <p class="case-number">02</p><p class="tag">Connected Multiomics</p>
-          <h3>Making two products feel like one.</h3>
-          <p>I joined before the first Early Access release, shortly after an acquisition. The challenge was not simply integrating requirements. It was making an acquired product feel like part of one coherent experience.</p>
-          <button class="story-toggle" aria-expanded="false">Read the story <span>+</span></button>
-          <div class="story-panel">
-            <h4>From acquisition to one product</h4>
-            <p>I translated scientific workflows into product requirements and user needs, then worked closely with test engineering so those requirements could be traced into verification. I contributed to UX, ran extensive UAT and helped bring workflows spanning areas such as spatial, single-cell and proteomics into the same product experience.</p>
-            <h4>Watching people use it changed the product</h4>
-            <p>Usability sessions were especially useful because we could watch where users looked for an action instead of telling them where to click. Those moments exposed gaps that a requirements document never would.</p>
-            <h4>The launch needed more than software</h4>
-            <p>As Early Access approached, I realized the customer documentation did not have a clear owner. I wrote the documentation experience from the ground up and created customer-facing demos so users could actually learn the product we were asking them to adopt.</p>
-            <blockquote>A test engineering partner later gave me a spot award and told me the Multiomics release could not have happened without my contribution.</blockquote>
-          </div>
+          <h3>Integrating an acquired product into one connected experience.</h3>
+          <p>I helped move Connected Multiomics toward its first Early Access release across requirements, scientific workflows, design controls, UAT, test traceability and customer enablement.</p>
+          <div class="compact-meta"><b>Focus</b><span>Post-acquisition integration · scientific workflows · launch readiness</span></div>
+          <a class="case-link" href="case-studies/multiomics.html">Read case study ↗</a>
         </article>
-
         <article class="case small dark reveal">
-          <p class="case-number">03</p><p class="tag">Cloud platform</p>
-          <h3>The infrastructure underneath the product.</h3>
-          <p>I worked across storage and compute platform problems where security, cloud economics and customer experience were tightly connected.</p>
-          <button class="story-toggle light" aria-expanded="false">Go under the hood <span>+</span></button>
-          <div class="story-panel">
-            <p>This work ranged from customer-owned AWS storage and role-based access to data egress, lifecycle behavior, file integrity and shared compute. The individual stories below are the parts I spent the most time untangling.</p>
-            <div class="flow"><span>customer</span><b>→</b><span>authorize</span><b>→</b><span>platform</span><b>→</b><span>usage</span></div>
-          </div>
+          <p class="case-number">03</p><p class="tag">AWS cloud platform</p>
+          <h3>Product decisions below the application layer.</h3>
+          <p>I helped shape platform work across customer-owned storage, security, data lifecycle, cloud economics and multi-tenant compute.</p>
+          <div class="compact-meta"><b>Focus</b><span>AWS · IAM · storage · billing · infrastructure</span></div>
+          <a class="case-link light" href="case-studies/cloud-platform.html">Explore the platform work ↗</a>
         </article>
       </div>
 
       <div class="case-grid platform-stories">
         <article class="case small case-terracotta reveal">
           <p class="case-number">04</p><p class="tag">AWS security</p>
-          <h3>Access keys worked. That didn’t mean we should keep them.</h3>
-          <p>Customer-owned storage relied on IAM users and long-lived credentials. The future state was role-based access, but getting there without breaking existing customer configurations was the actual product problem.</p>
-          <button class="story-toggle light" aria-expanded="false">See the tradeoffs <span>+</span></button>
-          <div class="story-panel">
-            <h4>Security met backward compatibility</h4>
-            <p>I helped define requirements and migration strategy for moving toward cross-account IAM roles. We worked through who creates and trusts each role, customer bucket policies, role assumption and how existing storage configurations could transition without delete-and-recreate workflows.</p>
-            <h4>VPC-only customers made the edge cases real</h4>
-            <p>Role chaining and restricted network environments affected browser and instrument workflows differently. Session behavior and access boundaries were not just implementation details. They changed what customers could actually do.</p>
-            <p>I worked with engineering and security to turn those architecture constraints into product behavior. I transitioned away from the storage platform before the full implementation was delivered, so this story is about the product definition and technical decisions I helped shape.</p>
-          </div>
+          <h3>Moving customer storage from access keys toward IAM roles.</h3>
+          <p>I helped define the requirements and migration strategy for a safer cross-account access model while preserving existing customer configurations.</p>
+          <div class="compact-meta"><b>Tradeoffs</b><span>Security · backward compatibility · role chaining · VPC restrictions</span></div>
+          <a class="case-link light" href="case-studies/cloud-platform.html#iam">Technical details ↗</a>
         </article>
-
         <article class="case small case-gold reveal">
           <p class="case-number">05</p><p class="tag">Cloud economics</p>
-          <h3>Who pays when data leaves the cloud?</h3>
-          <p>AWS charged us for data movement, but the platform had not historically metered that usage back to customers. A pricing idea quickly became an attribution and architecture problem.</p>
-          <button class="story-toggle" aria-expanded="false">Follow the usage <span>+</span></button>
-          <div class="story-panel">
-            <h4>First we had to define the thing we were charging for</h4>
-            <p>Not every byte leaving storage means the same thing. I worked through questions around internet and inter-region movement, internal platform transfers, customer-owned storage, shared data and who should own a charge when one user accesses another user’s data.</p>
-            <h4>Then the platform had to measure it</h4>
-            <p>I helped shape an event-driven model where storage activity could produce usage records with the metadata needed for downstream aggregation and billing. The product also had to translate AWS tiered pricing into a customer-facing model that was understandable rather than simply exposing cloud-provider complexity.</p>
-            <div class="mini-diagram"><span>data movement</span><i>→</i><span>usage event</span><i>→</i><span>attribution</span><i>→</i><span>aggregate</span><i>→</i><span>billing</span></div>
-            <p>The implementation continued after I moved to SIMS, but the work taught me how quickly infrastructure decisions become commercialization decisions.</p>
-          </div>
+          <h3>Turning AWS egress into a customer-facing product model.</h3>
+          <p>I helped define what counted as billable movement, how usage should be attributed and how platform events could support downstream billing.</p>
+          <div class="compact-meta"><b>Tradeoffs</b><span>Metering · attribution · tiered pricing · event-driven usage</span></div>
+          <a class="case-link" href="case-studies/cloud-platform.html#egress">Technical details ↗</a>
         </article>
-
         <article class="case small case-blue reveal">
           <p class="case-number">06</p><p class="tag">Data lifecycle</p>
-          <h3>What should “delete” actually mean?</h3>
-          <p>Deleting customer data sounded like a button. Underneath it was a graph of analyses, projects, shared resources, retention rules and irreversible actions.</p>
-          <button class="story-toggle light" aria-expanded="false">Why it got complicated <span>+</span></button>
-          <div class="story-panel">
-            <h4>A safer deletion model</h4>
-            <p>I explored a recoverable deletion experience rather than treating delete as an immediate permanent purge. The concept was to mark data as deleted, remove it from normal workflows, protect dependent operations during a retention period and then allow either recovery or final purge.</p>
-            <p>That forced us to think through ordering, asynchronous deletion, large collections of dependent analyses, shared data, rollback behavior and what confirmation a user needs before an action becomes irreversible.</p>
-            <div class="mini-diagram"><span>delete</span><i>→</i><span>hide</span><i>→</i><span>retain</span><i>→</i><span>recover or purge</span></div>
-          </div>
+          <h3>Designing deletion when data has dependencies.</h3>
+          <p>I explored a recoverable deletion model across analyses, projects and shared resources, including retention, recovery and irreversible purge.</p>
+          <div class="compact-meta"><b>Tradeoffs</b><span>Dependencies · async operations · retention · recovery</span></div>
+          <a class="case-link light" href="case-studies/cloud-platform.html#deletion">Technical details ↗</a>
         </article>
-
         <article class="case small case-sage reveal">
           <p class="case-number">07</p><p class="tag">Multi-tenant compute</p>
-          <h3>Fair doesn’t always mean first come, first served.</h3>
-          <p>I contributed to product work for a shared batch-processing platform where many tenants and workloads were competing for the same compute resources.</p>
-          <button class="story-toggle" aria-expanded="false">See what I learned <span>+</span></button>
-          <div class="story-panel">
-            <p>The scheduling problem pushed me into concepts like fair queueing, quality-of-service priorities, round-robin behavior and token-based resource allocation. A clinical or otherwise high-priority workload may need different treatment from ordinary work, while the system still has to prevent one tenant from consuming everything.</p>
-            <p>I did not lead this feature through delivery, but working on it gave me a much stronger mental model for multi-tenant systems and the product decisions hidden inside infrastructure.</p>
-          </div>
+          <h3>Fair scheduling for shared compute.</h3>
+          <p>I contributed to product work around fair queueing, QoS, round-robin scheduling and token-based allocation for competing workloads.</p>
+          <div class="compact-meta"><b>Concepts</b><span>Fairness · priority · QoS · resource allocation</span></div>
+          <a class="case-link" href="case-studies/cloud-platform.html#compute">Technical details ↗</a>
         </article>
       </div>
     </section>
