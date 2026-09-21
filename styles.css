@@ -1259,3 +1259,36 @@ footer.simple-footer .footer-links{
 .sample-art-v2 .overview-node.ov7{left:37%!important;bottom:0!important}
 .sample-art-v2 .overview-node.ov8{right:2%!important;bottom:4%!important}
 .sample-art-v2 .overview-core{left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important}
+
+/* SIMS overview: position every card by its CENTER, not its top edge.
+   Fixed card height prevents 1-line vs 2-line subtitles from shifting the geometry. */
+.sample-art-v2 .overview-sims-map{
+  position:relative!important;
+  width:90%!important;
+  height:90%!important;
+  top:0!important;
+  margin:auto!important;
+}
+.sample-art-v2 .overview-node{
+  width:26%!important;
+  height:76px!important;
+  min-height:76px!important;
+  box-sizing:border-box!important;
+  transform:translate(-50%,-50%)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.sample-art-v2 .overview-node.ov1{left:50%!important;top:12%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov2{left:20%!important;top:28%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov3{left:80%!important;top:28%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov4{left:12%!important;top:50%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov5{left:88%!important;top:50%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov6{left:20%!important;top:72%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov7{left:50%!important;top:88%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-node.ov8{left:80%!important;top:72%!important;right:auto!important;bottom:auto!important}
+.sample-art-v2 .overview-core{
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+}
