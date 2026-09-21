@@ -262,3 +262,20 @@
 .icon-report{width:22px;height:27px!important;border:2px solid #10211f;border-radius:2px;position:relative}.icon-report i{display:block;height:2px;background:#10211f;margin:5px 4px 0}.icon-report i:first-child{margin-top:7px}
 
 @media(max-width:900px){.challenge-banner blockquote{white-space:normal!important}}
+
+/* Inline speech-bubble challenge quote */
+.challenge-quote-wrap{max-width:1080px;margin:18px auto 6px;padding:0 max(20px,calc((100vw - 1080px)/2));box-sizing:content-box;display:flex;align-items:center;justify-content:center;gap:14px}
+.quote-avatar{width:46px;height:46px;flex:0 0 46px;border:1px solid var(--line);border-radius:50%;background:#fff8ee;position:relative}.quote-avatar:before{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:rgba(23,32,29,.45);left:16px;top:9px}.quote-avatar:after{content:"";position:absolute;width:24px;height:12px;border-radius:14px 14px 8px 8px;background:rgba(23,32,29,.45);left:10px;bottom:8px}
+.challenge-chat{position:relative;flex:0 1 860px;border:1px solid rgba(23,32,29,.2);border-radius:18px;padding:14px 20px;background:rgba(255,248,238,.55)}
+.challenge-chat:before{content:"";position:absolute;left:-9px;top:19px;width:16px;height:16px;background:#f4efe5;border-left:1px solid rgba(23,32,29,.2);border-bottom:1px solid rgba(23,32,29,.2);transform:rotate(45deg)}
+.challenge-chat blockquote{font:clamp(19px,2vw,27px)/1.15 var(--serif);margin:0 0 5px;white-space:nowrap}
+.challenge-chat p{font-size:9px;line-height:1.4;opacity:.62;margin:0;font-style:italic}
+@media(max-width:900px){.challenge-chat blockquote{white-space:normal}.quote-avatar{display:none}.challenge-chat:before{display:none}}
+
+/* Exact SIMS database hub icon */
+.hub-database{width:32px;height:30px!important;position:relative;display:block!important;margin-bottom:7px}
+.hub-database i{position:absolute;left:1px;width:28px;height:10px;border:2px solid #fff8ee;border-radius:50%}.hub-database i:nth-child(1){top:0}.hub-database i:nth-child(2){top:8px;border-top-color:transparent}.hub-database i:nth-child(3){top:16px;border-top-color:transparent}
+
+/* Ensure every spoke is bidirectional and arrowheads inherit terracotta */
+.exact-lines line{stroke:var(--terracotta)!important;marker-start:url(#arrowTerracotta)!important;marker-end:url(#arrowTerracotta)!important}
+.exact-lines #arrowTerracotta path,.exact-lines defs marker path{fill:var(--terracotta)!important;stroke:var(--terracotta)!important}
