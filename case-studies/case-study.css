@@ -321,3 +321,26 @@
 .decision-story footer{margin-top:18px!important;padding-top:13px!important;border-top:1px solid rgba(23,32,29,.13)!important;font-size:12px!important;line-height:1.45!important}
 .decision-story footer span{font-size:9px;letter-spacing:.13em;font-weight:700;color:var(--terracotta);margin-right:7px}
 @media(max-width:720px){.decision-narrative{grid-template-columns:1fr}.decision-visual{flex-direction:column}.decision-visual>span{transform:rotate(90deg)}}
+
+/* Compact pill treatment for product principle */
+.decision-story footer{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:7px!important;
+  width:auto!important;
+  margin-top:12px!important;
+  padding:6px 11px!important;
+  border:0!important;
+  border-radius:999px!important;
+  background:rgba(111,149,138,.16)!important;
+  color:#425f57!important;
+  font-size:11px!important;
+  line-height:1.25!important;
+}
+.decision-story footer span{
+  margin:0!important;
+  color:#52766c!important;
+  font-size:8px!important;
+  letter-spacing:.12em!important;
+  white-space:nowrap!important;
+}
