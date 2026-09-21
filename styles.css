@@ -360,3 +360,18 @@ img,svg{max-width:100%}
 .flagship .case-copy{max-width:1050px}
 .platform-three{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 @media(max-width:900px){.platform-three{grid-template-columns:1fr!important}}
+
+/* Restore the original Selected Work proportions while keeping the 1 / 2 / 3 hierarchy */
+.flagship{grid-template-columns:minmax(0,1.55fr) minmax(380px,.9fr)!important}
+.compact-featured .case{padding:34px!important;min-height:0!important}
+.compact-featured .case h3{font-size:clamp(31px,2.7vw,46px)!important;margin:20px 0 18px!important}
+.compact-featured .case>p:not(.tag):not(.case-number){font-size:16px!important;line-height:1.55!important}
+.compact-three{gap:20px!important}
+.compact-three .case{padding:28px!important;min-height:0!important}
+.compact-three .case h3{font-size:clamp(25px,2vw,34px)!important;margin:18px 0 16px!important}
+.compact-three .case>p:not(.tag):not(.case-number){font-size:15px!important;line-height:1.5!important}
+.compact-three .compact-meta{margin-top:20px!important}
+@media(max-width:900px){
+  .flagship{grid-template-columns:1fr!important}
+  .compact-featured .case,.compact-three .case{padding:24px!important}
+}
