@@ -376,6 +376,3 @@ img,svg{max-width:100%}
   .compact-featured .case,.compact-three .case{padding:24px!important}
 }
 
-/* Keep the hero payoff together instead of orphaning "real." */
-.hero-real{white-space:nowrap}
-@media(max-width:800px){.hero-real{white-space:normal}}
