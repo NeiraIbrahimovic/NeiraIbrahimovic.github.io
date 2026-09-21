@@ -779,3 +779,35 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .sample-map .sample-core{width:140px!important;height:140px!important}
  .sample-map .map-node{font-size:9px!important;padding:8px 12px!important}
 }
+
+/* Final SIMS diagram restoration: compact original proportions, six clean connected spokes */
+.sample-art{min-height:430px!important}
+.sample-map:before{inset:18%!important}
+.sample-map:after{inset:34%!important}
+.sample-map .sample-core{width:170px!important;height:170px!important}
+.sample-map .map-line{width:32%!important}
+.sample-map .map-node{font-size:10px!important;line-height:1.2!important;padding:9px 15px!important;min-width:76px;text-align:center!important}
+.sample-map .n1{left:9%!important;top:12%!important}.sample-map .n2{right:8%!important;top:12%!important}
+.sample-map .n3{left:2%!important;top:43%!important}.sample-map .n4{right:1%!important;top:43%!important}
+.sample-map .n5{left:8%!important;bottom:12%!important}.sample-map .n6{right:8%!important;bottom:12%!important}
+.d1{left:34%!important;top:22.3%!important}.d2{left:66%!important;top:22.3%!important}
+.d3{left:18%!important;top:50%!important}.d4{left:82%!important;top:50%!important}
+.d5{left:34%!important;top:77.7%!important}.d6{left:66%!important;top:77.7%!important}
+
+/* More vertically compact strength cards */
+@media(min-width:801px){
+ .strengths-four .strength summary{
+   min-height:132px!important;
+   padding:16px 20px!important;
+   grid-template-rows:auto 1fr auto!important;
+ }
+ .strengths-four .strength-title{font-size:clamp(18px,1.32vw,22px)!important;line-height:1.06!important}
+ .strengths-four .strength-teaser{font-size:.66rem!important;line-height:1.28!important}
+ .strengths-four .strength-index{font-size:.63rem!important}
+ .strengths-four .strength-plus{font-size:23px!important}
+ .strength-icon{top:15px!important;right:18px!important}
+ .strength-icon svg{width:27px!important;height:27px!important}
+ .strengths-four .strength-body{padding:12px 20px 15px!important}
+ .strengths-four .strength-body p{font-size:.76rem!important;line-height:1.42!important}
+ .strengths-four .scribble{font-size:.8rem!important;margin-top:8px!important}
+}
