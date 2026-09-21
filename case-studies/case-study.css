@@ -279,3 +279,7 @@
 /* Ensure every spoke is bidirectional and arrowheads inherit terracotta */
 .exact-lines line{stroke:var(--terracotta)!important;marker-start:url(#arrowTerracotta)!important;marker-end:url(#arrowTerracotta)!important}
 .exact-lines #arrowTerracotta path,.exact-lines defs marker path{fill:var(--terracotta)!important;stroke:var(--terracotta)!important}
+
+/* Tighten quote placement beneath hero cards while preserving space before next section */
+.challenge-quote-wrap{margin-top:6px!important;margin-bottom:22px!important}
+.challenge-chat blockquote{color:var(--terracotta)!important}
