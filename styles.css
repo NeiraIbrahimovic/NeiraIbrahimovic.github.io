@@ -456,3 +456,39 @@ footer>span:last-child a{text-decoration:none;border-bottom:1px solid rgba(216,2
   .strengths-four .strength-body p{font-size:.92rem;line-height:1.62}
   .strengths-four .scribble{display:block;margin-top:18px;white-space:normal}
 }
+
+/* Compact four-card strengths refinement */
+@media(min-width:801px){
+  .strengths-four{gap:14px!important}
+  .strengths-four .strength summary{
+    min-height:148px!important;
+    padding:18px 20px!important;
+    grid-template-rows:auto 1fr auto!important;
+    gap:7px 10px!important;
+  }
+  .strengths-four .strength-title{
+    font-size:clamp(20px,1.55vw,25px)!important;
+    line-height:1.04!important;
+  }
+  .strengths-four .strength-teaser{
+    font-size:.79rem!important;
+    line-height:1.35!important;
+  }
+  .strengths-four .strength-index{font-size:.69rem!important}
+  .strengths-four .strength-plus{font-size:26px!important}
+  .strengths-four .strength-body{
+    padding:0 20px 18px!important;
+  }
+  .strengths-four .strength-body p{
+    font-size:.84rem!important;
+    line-height:1.5!important;
+  }
+  .strengths-four .scribble{
+    margin-top:12px!important;
+    font-size:.9rem!important;
+  }
+}
+.strength-execution{
+  background:#d9a58f!important;
+  border-color:rgba(120,70,52,.20)!important;
+}
