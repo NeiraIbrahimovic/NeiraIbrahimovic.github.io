@@ -239,3 +239,26 @@
 .exact-copy h2{font-size:clamp(30px,3.15vw,43px)!important;line-height:1.03!important;margin:0 0 22px!important}.exact-copy h2 em{display:inline;color:var(--terracotta)}
 .exact-copy>p:last-child{font-size:12px!important;line-height:1.6!important;max-width:460px}
 @media(max-width:800px){.model-section{padding-top:34px!important;padding-bottom:34px!important}.exact-solution{grid-template-columns:1fr}.exact-map{height:440px}.exact-copy{order:-1}.exact-copy h2 br{display:block}}
+
+/* Final challenge banner placement + integration icon refinements */
+.challenge-banner{background:#243743!important;padding:20px max(24px,calc((100vw - 1080px)/2))!important}
+.challenge-banner blockquote{font-size:clamp(20px,2vw,28px)!important;white-space:nowrap!important;max-width:none!important}
+.challenge-banner p{color:#fff8ee!important;opacity:.7!important}
+
+/* Terracotta two-way arrowheads */
+.exact-lines defs path{fill:var(--terracotta)!important}
+.exact-lines line{stroke:var(--terracotta)!important;marker-start:url(#arrowTerracotta)!important;marker-end:url(#arrowTerracotta)!important}
+
+/* Semantic line icons */
+.icon-testtube{width:16px;height:27px!important;border:2px solid #10211f;border-top:0!important;border-radius:2px 2px 8px 8px;transform:rotate(8deg);position:relative}
+.icon-testtube:before{content:"";position:absolute;left:-4px;top:-3px;width:20px;border-top:3px solid #10211f;border-radius:3px}
+.icon-cloud-outline{width:30px;height:15px!important;border:2px solid #10211f;border-radius:16px;position:relative;margin-top:8px;margin-bottom:6px!important}
+.icon-cloud-outline:before{content:"";position:absolute;width:13px;height:13px;border:2px solid #10211f;border-bottom:0;border-radius:50% 50% 0 0;left:5px;top:-10px;background:#fffdf8}
+.icon-graph{display:flex!important;align-items:flex-end!important;justify-content:center!important;gap:3px!important}.icon-graph i{display:block;width:4px;border:2px solid #10211f;border-radius:2px}.icon-graph i:nth-child(1){height:8px}.icon-graph i:nth-child(2){height:16px}.icon-graph i:nth-child(3){height:23px}
+.icon-gate{position:relative;width:30px;height:27px!important}.icon-gate i{position:absolute;top:3px;width:3px;height:23px;background:#10211f;border-radius:2px}.icon-gate i:first-child{left:3px}.icon-gate i:last-child{right:3px}.icon-gate:after{content:"";position:absolute;left:6px;right:6px;top:8px;height:10px;border-top:2px solid #10211f;border-bottom:2px solid #10211f;transform:skewY(-18deg)}
+.icon-cohort{display:flex!important;justify-content:center!important;align-items:flex-end!important;gap:1px!important}.icon-cohort i{width:8px;height:8px;border:2px solid #10211f;border-radius:50%;position:relative}.icon-cohort i:after{content:"";position:absolute;width:11px;height:7px;border:2px solid #10211f;border-radius:7px 7px 2px 2px;left:-4px;top:8px;background:#fffdf8}.icon-cohort i:nth-child(2){transform:translateY(-4px);z-index:2}
+.icon-dragen{display:flex!important;align-items:center!important;justify-content:center!important;gap:2px!important;transform:skewX(-18deg)}.icon-dragen i{display:block;width:7px;height:18px;background:#10211f;border-radius:1px}.icon-dragen i:nth-child(2){height:14px}.icon-dragen i:nth-child(3){height:10px}
+.icon-cell{width:27px;height:27px!important;border:2px solid #10211f;border-radius:48% 52% 44% 56%;position:relative}.icon-cell:before,.icon-cell:after,.icon-cell i{content:"";position:absolute;border:1.5px solid #10211f;border-radius:50%}.icon-cell:before{width:7px;height:7px;left:8px;top:8px}.icon-cell:after{width:3px;height:3px;left:4px;top:15px}.icon-cell i{width:3px;height:3px;right:4px;top:5px}
+.icon-report{width:22px;height:27px!important;border:2px solid #10211f;border-radius:2px;position:relative}.icon-report i{display:block;height:2px;background:#10211f;margin:5px 4px 0}.icon-report i:first-child{margin-top:7px}
+
+@media(max-width:900px){.challenge-banner blockquote{white-space:normal!important}}
