@@ -1155,3 +1155,12 @@ footer.simple-footer .footer-links{
     font-size:clamp(44px,12vw,72px)!important;
   }
 }
+
+
+/* Restore the original hero headline scale */
+.hero h1{
+  font-size:clamp(48px,5.7vw,88px)!important;
+}
+@media(max-width:800px){
+  .hero h1{font-size:clamp(42px,10vw,64px)!important;}
+}
