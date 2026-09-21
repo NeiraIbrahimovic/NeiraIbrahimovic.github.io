@@ -906,3 +906,10 @@ footer.simple-footer .footer-links a{
   opacity:1!important;
   font-weight:400!important;
 }
+
+/* Space footer navigation links */
+footer.simple-footer .footer-links{
+  display:flex!important;
+  align-items:center!important;
+  gap:22px!important;
+}
