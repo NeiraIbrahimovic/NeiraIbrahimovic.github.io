@@ -16,3 +16,10 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 .ask h2{font-size:46px}.contact h2{font-size:58px}
 .platform-stories{margin-top:18px}
 @media(min-width:801px){.moment:nth-child(even) .photo-collage{order:2}.moment:nth-child(odd) .photo-collage{order:0}}
+
+.skills-ticker{overflow:hidden;white-space:nowrap}
+.skills-ticker .ticker-track{display:flex;width:max-content;will-change:transform;animation:skills-marquee 42s linear infinite}
+.skills-ticker .ticker-track span{display:block;flex:none;padding-right:2.5rem}
+.skills-ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes skills-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.skills-ticker .ticker-track{animation:none;white-space:normal;flex-wrap:wrap}.skills-ticker .ticker-track span[aria-hidden="true"]{display:none}}
