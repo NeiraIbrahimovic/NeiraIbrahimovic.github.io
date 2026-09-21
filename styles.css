@@ -1078,3 +1078,27 @@ footer.simple-footer .footer-links{
     object-position:center 72%!important;
   }
 }
+
+
+/* Penn journey framing: wider main crop, less overlap */
+@media(min-width:801px){
+  .penn-collage.penn-two{
+    min-height:430px!important;
+  }
+  .penn-collage.penn-two .photo-main{
+    width:82%!important;
+    height:72%!important;
+    aspect-ratio:16/10!important;
+    object-fit:cover!important;
+    object-position:center 57%!important;
+    transform:none!important;
+  }
+  .penn-collage.penn-two .photo-accent{
+    width:43%!important;
+    height:62%!important;
+    right:-8%!important;
+    bottom:-1%!important;
+    object-fit:cover!important;
+    object-position:center 72%!important;
+  }
+}
