@@ -1164,3 +1164,12 @@ footer.simple-footer .footer-links{
 @media(max-width:800px){
   .hero h1{font-size:clamp(42px,10vw,64px)!important;}
 }
+
+
+/* Slightly smaller hero headline */
+.hero h1{
+  font-size:clamp(44px,5.1vw,78px)!important;
+}
+@media(max-width:800px){
+  .hero h1{font-size:clamp(38px,9vw,58px)!important;}
+}
