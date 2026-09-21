@@ -492,3 +492,39 @@ footer>span:last-child a{text-decoration:none;border-bottom:1px solid rgba(216,2
   background:#d9a58f!important;
   border-color:rgba(120,70,52,.20)!important;
 }
+
+/* Closing contact statement + simple footer */
+.contact-manifesto{
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(40px,5vw,72px)!important;
+  line-height:1.03!important;
+  letter-spacing:-.025em;
+  max-width:1050px;
+}
+.contact-manifesto em{
+  color:#c9694b;
+  font-style:italic;
+  font-weight:400;
+}
+.contact-manifesto strong{
+  color:#6f958a;
+  font-style:italic;
+  font-weight:400;
+}
+footer.simple-footer{
+  background:#f4efe5!important;
+  color:#17201d!important;
+  padding:22px clamp(20px,5vw,72px)!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:18px!important;
+  border-top:1px solid rgba(23,32,29,.14);
+  font-family:"DM Sans",sans-serif!important;
+  font-size:.82rem!important;
+}
+footer.simple-footer>span:first-child{font-family:"DM Sans",sans-serif!important;font-size:.82rem!important;letter-spacing:0!important}
+footer.simple-footer a{color:#17201d!important;text-decoration:none;border-bottom:1px solid rgba(23,32,29,.35)}
+@media(max-width:600px){
+  footer.simple-footer{align-items:flex-start!important;flex-direction:column!important;padding:20px!important}
+}
