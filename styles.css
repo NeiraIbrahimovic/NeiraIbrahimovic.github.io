@@ -579,3 +579,33 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .strength[open].strength-execution .strength-body{background:#f0ddd5!important}
  .strength[open].strength-proactive .strength-body{background:#f4e8bd!important}
 }
+
+/* Final compact card sizing + requested icons */
+@media(min-width:801px){
+  .strengths-four .strength summary{min-height:142px!important;padding:18px 20px!important}
+  .strengths-four .strength-title{
+    font-size:clamp(17px,1.28vw,21px)!important;
+    line-height:1.08!important;
+    white-space:nowrap!important;
+    padding-right:30px!important;
+  }
+  .strengths-four .strength-teaser{
+    font-size:.72rem!important;
+    line-height:1.3!important;
+    white-space:nowrap!important;
+  }
+  .strengths-four .strength-index{font-size:.66rem!important}
+  .strengths-four .strength-plus{font-size:24px!important}
+  .strengths-four .strength-body{padding:14px 20px 17px!important}
+  .strengths-four .strength-body p{font-size:.78rem!important;line-height:1.45!important}
+  .strengths-four .scribble{font-size:.82rem!important;margin-top:10px!important}
+  .strength-icon{top:17px!important;right:18px!important;font-size:27px!important}
+  .icon-bulb{font-family:"DM Sans",sans-serif!important;font-size:23px!important;filter:grayscale(1)}
+  .icon-pencil{font-size:31px!important;transform:rotate(-42deg)!important}
+  .icon-team{font-size:27px!important}
+  .icon-gear{font-size:29px!important}
+}
+@media(max-width:1100px) and (min-width:801px){
+  .strengths-four .strength-title{font-size:16px!important}
+  .strengths-four .strength-teaser{font-size:.66rem!important;white-space:normal!important}
+}
