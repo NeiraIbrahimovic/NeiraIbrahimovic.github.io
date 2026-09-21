@@ -132,3 +132,6 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 
 /* Calmer, more readable skills marquee */
 .skills-ticker .ticker-track{animation-duration:180s!important}
+
+/* Extra-slow, spacious skills marquee */
+.skills-ticker .ticker-track{animation-duration:260s!important}
