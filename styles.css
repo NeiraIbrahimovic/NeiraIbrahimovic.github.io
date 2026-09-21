@@ -376,3 +376,33 @@ img,svg{max-width:100%}
   .compact-featured .case,.compact-three .case{padding:24px!important}
 }
 
+
+/* Closing manifesto */
+footer{
+  background:#17201d!important;
+  color:#f4efe5!important;
+  padding:44px clamp(28px,5vw,76px)!important;
+  align-items:center!important;
+}
+footer>span:first-child{
+  font-family:"DM Serif Display",serif!important;
+  font-size:clamp(25px,2.25vw,38px)!important;
+  line-height:1.1!important;
+  letter-spacing:-.01em;
+}
+footer>span:first-child em{
+  color:#c9694b;
+  font-style:italic;
+  font-weight:400;
+}
+footer>span:first-child strong{
+  color:#a9c6bc;
+  font-style:italic;
+  font-weight:400;
+}
+footer>span:last-child,footer>span:last-child a{color:#d8d1c5!important}
+footer>span:last-child a{text-decoration:none;border-bottom:1px solid rgba(216,209,197,.45)}
+@media(max-width:800px){
+  footer{padding:34px 22px!important;gap:24px!important}
+  footer>span:first-child{font-size:29px!important}
+}
