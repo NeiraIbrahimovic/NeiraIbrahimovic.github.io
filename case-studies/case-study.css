@@ -195,3 +195,16 @@
 
 /* Keep API-first journey intro on two lines at desktop widths */
 @media(min-width:801px){.solution-journey .api-first-intro{max-width:1040px!important}}
+
+/* Split solution architecture */
+.solution-split{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center;max-width:1080px;margin:0 auto}
+.integration-map{height:520px;position:relative;border:1px solid var(--line);border-radius:24px;background-color:rgba(255,248,238,.58);background-image:radial-gradient(rgba(23,32,29,.11) 1px,transparent 1px);background-size:22px 22px;overflow:hidden}
+.integration-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.integration-lines line{stroke:rgba(23,32,29,.28);stroke-width:1.4;stroke-dasharray:5 5}
+.integration-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:112px;height:112px;border-radius:22px;background:var(--terracotta);color:#fff8ee;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3;box-shadow:0 12px 28px rgba(23,32,29,.14)}
+.integration-core b{font:27px var(--serif)}.integration-core small{font-size:7px;line-height:1.25;margin-top:4px;max-width:80px;opacity:.85}
+.integration-node{position:absolute;z-index:2;width:118px;min-height:48px;padding:9px 8px;border:1px solid rgba(23,32,29,.13);border-radius:13px;background:#fffdf8;box-shadow:0 5px 12px rgba(23,32,29,.06);display:grid;place-items:center;text-align:center;font-size:8px;font-weight:700;line-height:1.2;transform:translate(-50%,-50%)}
+.in1{left:50%;top:10%}.in2{left:76%;top:18%}.in3{left:88%;top:39%}.in4{left:85%;top:68%}.in5{left:66%;top:88%}.in6{left:34%;top:88%}.in7{left:15%;top:68%}.in8{left:12%;top:39%}.in9{left:24%;top:18%}.in10{left:30%;top:50%}.in11{left:70%;top:50%}
+.solution-copy{padding:12px 0}.solution-copy .kicker{margin-bottom:14px}.solution-copy h2{font-size:clamp(36px,4vw,54px)!important;line-height:.98!important;margin:0 0 24px!important}.solution-copy h2 em{color:var(--terracotta);font-style:italic}.solution-copy>p:last-child{font-size:14px!important;line-height:1.65!important;max-width:440px}
+@media(max-width:800px){.solution-split{grid-template-columns:1fr;gap:26px}.integration-map{height:480px}.solution-copy{order:-1}.solution-copy h2 br{display:none}}
+@media(max-width:520px){.integration-map{height:540px}.integration-node{width:102px;font-size:7px}.in10{left:27%}.in11{left:73%}}
