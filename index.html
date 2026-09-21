@@ -118,6 +118,52 @@
           </div>
         </article>
       </div>
+      <div class="case-grid platform-stories">
+        <article class="case small reveal">
+          <p class="case-number">04</p>
+          <p class="tag">AWS security</p>
+          <h3>Access keys worked. That didn’t mean we should keep them.</h3>
+          <p>Customer-owned storage relied on IAM users and long-lived credentials. I helped define a path toward role-based access that improved the security model without making existing customer configurations unusable.</p>
+          <button class="story-toggle" aria-expanded="false">See the tradeoffs <span>+</span></button>
+          <div class="story-panel">
+            <p>The product problem was bigger than replacing one authentication mechanism with another. We had to think through cross-account access, customer bucket policies, role assumption, VPC-restricted environments and how existing configurations could migrate without forcing customers to start over.</p>
+            <h4>What I was solving for</h4>
+            <p>A safer future state that still respected backward compatibility. I worked with engineering and security to turn the architecture into product requirements and a migration strategy before ownership later transitioned to another PM.</p>
+          </div>
+        </article>
+        <article class="case small reveal">
+          <p class="case-number">05</p>
+          <p class="tag">Cloud economics</p>
+          <h3>Who pays when data leaves the cloud?</h3>
+          <p>AWS data movement creates real cost, but our platform did not originally have a customer-facing way to meter that usage. I helped shape the strategy for turning infrastructure cost into understandable product behavior.</p>
+          <button class="story-toggle" aria-expanded="false">Follow the usage <span>+</span></button>
+          <div class="story-panel">
+            <p>I worked through what should count as billable egress, how usage should be attributed when data is shared and how storage events could become usage records that downstream billing systems could aggregate.</p>
+            <p>The pricing model also had to translate AWS tiering into something customers could understand. The implementation continued after I moved to SIMS, but the product definition and edge cases became one of my favorite examples of how technical architecture and commercialization meet.</p>
+          </div>
+        </article>
+        <article class="case small reveal">
+          <p class="case-number">06</p>
+          <p class="tag">Data lifecycle</p>
+          <h3>What should “delete” actually mean?</h3>
+          <p>Permanent deletion is easy to describe and surprisingly risky to design. I explored a recoverable model where deleted data could disappear from normal workflows before a later purge.</p>
+          <button class="story-toggle" aria-expanded="false">Why it got complicated <span>+</span></button>
+          <div class="story-panel">
+            <p>Deleting one object could affect analyses, projects, shared resources and large collections of dependent data. We had to consider ordering, asynchronous operations, retention periods, recovery and the point at which deletion becomes irreversible.</p>
+            <div class="mini-diagram"><span>delete</span><i>→</i><span>hide</span><i>→</i><span>retain</span><i>→</i><span>recover or purge</span></div>
+          </div>
+        </article>
+        <article class="case small reveal">
+          <p class="case-number">07</p>
+          <p class="tag">Multi-tenant compute</p>
+          <h3>Fair doesn’t always mean first come, first served.</h3>
+          <p>I contributed to product work for a shared batch-processing platform where different tenants and workloads competed for compute.</p>
+          <button class="story-toggle" aria-expanded="false">See what I learned <span>+</span></button>
+          <div class="story-panel">
+            <p>I worked through concepts including fair queueing, quality-of-service priorities, round-robin scheduling and token-based resource allocation. It gave me a much deeper understanding of how platform behavior changes when one shared system has to serve many customers at once.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="ai-band section reveal">
@@ -155,19 +201,19 @@
       <h2>The career plan was not exactly linear.</h2>
       <div class="timeline">
         <article class="moment reveal">
-          <div class="photo-collage ucla-collage"><img class="photo-main crop-ucla" src="assets/UCLA_Wet_lab.webp" alt="Neira in a UCLA wet lab at graduation"><img class="photo-accent" src="assets/Grad_formal.webp" alt="Neira at UCLA graduation"></div>
+          <div class="photo-collage ucla-collage"><img class="photo-main crop-ucla" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/UCLA_Wet_lab.webp" alt="Neira in a UCLA wet lab at graduation"><img class="photo-accent" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/Grad_formal.webp" alt="Neira at UCLA graduation"></div>
           <div><small>UCLA</small><h3>Scientist first.</h3><p>I studied molecular biology and mathematical biology. I spent time in the wet lab and learned what it feels like to be the person actually using scientific tools and working with the data they create.</p></div>
         </article>
         <article class="moment reverse reveal">
-          <div class="photo-collage single"><img class="photo-main" src="assets/illumina_lab.webp" alt="Neira working in the lab at Illumina"></div>
+          <div class="photo-collage single"><img class="photo-main" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/illumina_lab.webp" alt="Neira working in the lab at Illumina"></div>
           <div><small>Illumina internship</small><h3>Then I got curious about the tools.</h3><p>I worked on sequencing instrument validation and verification. Eventually I realized I was just as interested in building the products around the science as I was in the science itself.</p></div>
         </article>
         <article class="moment reveal">
-          <div class="photo-collage single"><img class="photo-main" src="assets/illumina_speech.webp" alt="Neira speaking at an Illumina company event"></div>
+          <div class="photo-collage single"><img class="photo-main" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/illumina_speech.webp" alt="Neira speaking at an Illumina company event"></div>
           <div><small>Somewhere along the way</small><h3>I emceed a company-wide event for 3,000+ people.</h3><p>Public speaking has always been one of my favorite ways to bring people into a story. During my Illumina internship, I was selected to emcee a company-wide event for more than 3,000 employees.</p></div>
         </article>
         <article class="moment reverse reveal">
-          <div class="photo-collage penn-collage"><img class="photo-main" src="assets/penn_building_fam.webp" alt="Neira with family on Penn campus"><img class="photo-accent" src="assets/penn_sign.webp" alt="Neira at Penn Engineering"><img class="photo-accent second" src="assets/penn_parents.webp" alt="Neira with family at Penn"></div>
+          <div class="photo-collage penn-collage"><img class="photo-main" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/penn_building_fam.webp" alt="Neira with family on Penn campus"><img class="photo-accent" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/penn_sign.webp" alt="Neira at Penn Engineering"><img class="photo-accent second" src="https://raw.githubusercontent.com/NeiraIbrahimovic/NeiraIbrahimovic.github.io/stage/assets/penn_parents.webp" alt="Neira with family at Penn"></div>
           <div><small>University of Pennsylvania</small><h3>I decided product management wasn’t enough homework.</h3><p>I kept wanting to understand the systems I was helping build one layer deeper. So I went back to school for computer science at Penn. Naturally, I made my family come see the campus too.</p></div>
         </article>
       </div>
