@@ -354,3 +354,9 @@ img,svg{max-width:100%}
 
 /* Keep a single divider below the Programming Projects heading */
 .code-section .section-head,.code .section-head,.programming-projects .section-head{border-bottom:0!important}
+
+/* Selected work hierarchy: 1 flagship, 2 feature stories, 3 technical stories */
+.flagship{grid-template-columns:minmax(0,1fr)!important}
+.flagship .case-copy{max-width:1050px}
+.platform-three{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media(max-width:900px){.platform-three{grid-template-columns:1fr!important}}
