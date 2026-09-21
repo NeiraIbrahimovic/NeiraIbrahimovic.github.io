@@ -192,3 +192,6 @@
 .step-output{display:flex;align-items:baseline;gap:7px;white-space:nowrap;margin-top:auto}
 .step-output b{margin:0!important}
 .step-output em{margin:0!important}
+
+/* Keep API-first journey intro on two lines at desktop widths */
+@media(min-width:801px){.solution-journey .api-first-intro{max-width:1040px!important}}
