@@ -936,3 +936,13 @@ footer.simple-footer .footer-links{
 @media(max-width:800px){
   #ask{scroll-margin-top:56px!important}
 }
+
+
+/* Two-photo Penn journey collage */
+.penn-collage.penn-two .photo-main{width:78%!important}
+.penn-collage.penn-two .photo-accent{
+  width:46%!important;
+  right:0!important;
+  left:auto!important;
+  bottom:-5%!important;
+}
