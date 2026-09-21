@@ -300,3 +300,24 @@ img,svg{max-width:100%}
   .ask{margin-bottom:10px!important}
   .contact{padding-top:16px!important;padding-bottom:34px!important}
 }
+
+/* Programming panel alignment and GitHub CTA */
+.code-band:before{inset-left:auto}
+.code-band .section-head,
+.code-band .project-stack,
+.code-band .code-github{position:relative;z-index:2}
+.code-band .project-list{padding-left:52px!important;padding-right:34px!important}
+.code-github{
+  margin-top:28px!important;
+  margin-left:52px!important;
+  background:#a9513e!important;
+  color:#fff8ee!important;
+  border-radius:999px!important;
+  padding:12px 18px!important;
+  text-decoration:none!important;
+  border-bottom:0!important;
+}
+@media(max-width:800px){
+  .code-band .project-list{padding-left:28px!important;padding-right:18px!important}
+  .code-github{margin-top:24px!important;margin-left:28px!important}
+}
