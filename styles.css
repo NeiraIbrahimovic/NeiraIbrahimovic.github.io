@@ -1187,3 +1187,19 @@ footer.simple-footer .footer-links{
 .skills-ticker .ticker-track span{
   word-spacing:.08em;
 }
+
+/* SIMS homepage overview: match the case-study integration map while preserving tile palette */
+.sample-art-v2{overflow:hidden!important}
+.overview-sims-map{position:relative;width:100%;height:100%;min-height:430px}
+.overview-sims-map:before{content:"";position:absolute;width:68%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.16);left:16%;top:16%}
+.overview-spokes{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.overview-spokes line{stroke:rgba(201,105,75,.9);stroke-width:1.7;stroke-dasharray:7 6}
+.overview-core{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:28%;aspect-ratio:1;border-radius:22px;background:var(--terracotta,#c9694b);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 28px rgba(23,32,29,.08)}
+.overview-core-icon{font-family:"DM Serif Display",serif;font-size:20px;letter-spacing:-9px;margin-right:9px;line-height:1;margin-bottom:7px;font-weight:400}
+.overview-core b{font-size:24px;line-height:1}
+.overview-node{position:absolute;z-index:2;width:29%;min-height:82px;padding:9px 8px 8px;border-radius:18px;background:#f8f3e9;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 18px rgba(23,32,29,.06)}
+.overview-node img{width:28px;height:28px;object-fit:contain;margin-bottom:3px}
+.overview-node b{font-size:12px;line-height:1.1}
+.overview-node small{font-size:9px;line-height:1.2;color:#7a756d;margin-top:4px}
+.overview-node.ov1{left:35.5%;top:1%}.overview-node.ov2{left:2%;top:15%}.overview-node.ov3{right:2%;top:15%}.overview-node.ov4{left:0;top:42%}.overview-node.ov5{right:0;top:42%}.overview-node.ov6{left:2%;bottom:3%}.overview-node.ov7{left:35.5%;bottom:-1%}.overview-node.ov8{right:2%;bottom:3%}
+@media(max-width:800px){.overview-sims-map{min-height:390px}.overview-node{width:30%;min-height:72px}.overview-core{width:27%}}
