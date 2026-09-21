@@ -877,3 +877,10 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 .d2{left:65.35%!important;top:21.9%!important}
 .d5{left:34.65%!important;top:78.1%!important}
 .d6{left:65.35%!important;top:78.1%!important}
+
+/* Final SIMS spoke endpoint + footer link visibility */
+.sample-map .map-line{width:31.35%!important}
+.simple-footer .footer-links a{
+  color:inherit!important;
+  opacity:1!important;
+}
