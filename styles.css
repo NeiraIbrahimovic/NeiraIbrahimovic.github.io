@@ -750,3 +750,32 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
  .strength-icon svg{width:26px;height:26px}
  .contact-manifesto{white-space:normal!important}
 }
+
+/* SIMS diagram exact reference geometry: labels terminate at six spoke dots */
+.sample-art{min-height:520px!important}
+.sample-map{position:absolute!important;inset:0!important}
+.sample-map:before,.sample-map:after{
+ content:"";position:absolute;border:1px dashed rgba(74,105,96,.62);border-radius:50%;pointer-events:none
+}
+.sample-map:before{inset:18%!important}
+.sample-map:after{inset:34%!important}
+.sample-art:before,.sample-art:after{display:none!important}
+.sample-map .sample-core{width:190px!important;height:190px!important;z-index:4!important}
+.sample-map .map-line{left:50%!important;top:50%!important;width:32%!important;border-top:1px dashed rgba(74,105,96,.72)!important;transform-origin:0 50%!important}
+.sample-map .l1{transform:rotate(-120deg)!important}.sample-map .l2{transform:rotate(-60deg)!important}
+.sample-map .l3{transform:rotate(180deg)!important}.sample-map .l4{transform:rotate(0deg)!important}
+.sample-map .l5{transform:rotate(120deg)!important}.sample-map .l6{transform:rotate(60deg)!important}
+.sample-map .map-node{font-size:13px!important;padding:12px 24px!important}
+.sample-map .n1{left:15%!important;top:11%!important}.sample-map .n2{right:14%!important;top:11%!important}
+.sample-map .n3{left:2%!important;top:45%!important}.sample-map .n4{right:1%!important;top:45%!important}
+.sample-map .n5{left:13%!important;bottom:11%!important}.sample-map .n6{right:14%!important;bottom:11%!important}
+.map-dot{width:10px!important;height:10px!important;background:#6f958a!important}
+.d1{left:34%!important;top:22.3%!important}.d2{left:66%!important;top:22.3%!important}
+.d3{left:18%!important;top:50%!important}.d4{left:82%!important;top:50%!important}
+.d5{left:34%!important;top:77.7%!important}.d6{left:66%!important;top:77.7%!important}
+.icon-people svg{fill:none!important;stroke:#17201d!important;stroke-width:1.8!important}
+@media(max-width:800px){
+ .sample-art{min-height:390px!important}
+ .sample-map .sample-core{width:140px!important;height:140px!important}
+ .sample-map .map-node{font-size:9px!important;padding:8px 12px!important}
+}
