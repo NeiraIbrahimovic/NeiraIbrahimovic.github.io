@@ -867,3 +867,7 @@ footer.simple-footer a{color:#17201d!important;text-decoration:none;border-botto
 @media(max-width:800px){
   .hero h1 em{margin-left:-0.02em;margin-right:.08em}
 }
+
+/* Tighten spacing between “turn” and the italic “what if?” */
+.hero h1 em{margin-left:-0.10em!important}
+@media(max-width:800px){.hero h1 em{margin-left:-0.07em!important}}
