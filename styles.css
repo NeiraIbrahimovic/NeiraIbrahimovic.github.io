@@ -50,3 +50,14 @@ h1{font-size:clamp(40px,4.25vw,58px);max-width:760px;margin-bottom:22px}
 .flagship .story-panel.open{max-width:720px}
 .flagship{background:#fbf3e6}
 @media(max-width:800px){.platform-stories .case:nth-child(3),.platform-stories .case:nth-child(4){grid-column:auto}.intro{padding-bottom:28px}.work{padding-top:34px}}
+
+/* Skills marquee */
+.skills-ticker{background:#c9694b;color:#fff8ee;border-color:rgba(255,255,255,.25);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.02em}
+.skills-ticker .ticker-track span{color:#fff8ee;margin:0;padding-right:2.5rem}
+
+/* AI workshop story */
+.ai-band{grid-template-columns:minmax(0,1.05fr) minmax(300px,.65fr);gap:54px;align-items:center}
+.ai-copy{max-width:760px}.ai-band .ai-steps{grid-column:auto;margin-top:24px}
+.ai-lesson{font-family:var(--serif);font-size:20px;line-height:1.45!important}
+.ai-photo{margin:0}.ai-photo-placeholder{aspect-ratio:1.25/1;border:1px dashed rgba(255,255,255,.55);border-radius:22px;display:grid;place-items:center;padding:30px;text-align:center;background:rgba(255,255,255,.08);font-weight:600}.ai-photo figcaption{font-size:11px;line-height:1.5;margin-top:10px;opacity:.8}
+@media(max-width:800px){.ai-band{grid-template-columns:1fr}.ai-photo{max-width:520px}.skills-ticker{font-size:12px}}
