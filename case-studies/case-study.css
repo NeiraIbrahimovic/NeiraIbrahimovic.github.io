@@ -639,3 +639,9 @@
 @media(max-width:800px){
  .study .study-hero{padding-top:38px}
 }
+
+/* Further tighten all case-study hero spacing below navigation */
+.study .study-hero{padding-top:28px}
+@media(max-width:800px){
+ .study .study-hero{padding-top:22px}
+}
