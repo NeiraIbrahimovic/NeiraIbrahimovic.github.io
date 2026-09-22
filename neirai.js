@@ -11,6 +11,7 @@ const followups=document.getElementById("neirai-followups");
 const form=document.getElementById("neirai-chat-form");
 const input=document.getElementById("neirai-input");
 let isSending=false;
+const chatHistory=[];
 
 function resizeInput(){input.style.height="auto";input.style.height=Math.min(input.scrollHeight,160)+"px"}
 input.addEventListener("input",resizeInput);
@@ -72,7 +73,7 @@ async function ask(q){
  input.value="";resizeInput();
  const typing=document.createElement("div");typing.className="neirai-typing";typing.textContent="NeirAI is looking through Neira’s experience…";conversation.appendChild(typing);conversation.scrollTop=conversation.scrollHeight;
  try{
-   const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q})});
+   const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q,history:chatHistory.slice(-8)})});
    if(!response.ok){const data=await response.json().catch(()=>({}));throw new Error(data.error||"NeirAI is temporarily unavailable.")}
    if(!response.body)throw new Error("Streaming is unavailable.");
    const wrap=document.createElement("div");wrap.className="neirai-message assistant";
@@ -80,7 +81,7 @@ async function ask(q){
    const bubble=document.createElement("div");bubble.className="neirai-bubble";wrap.appendChild(bubble);
    conversation.appendChild(wrap);
    const reader=response.body.getReader(),decoder=new TextDecoder();
-   let buffer="",answer="",suggestions=[],started=false;
+   let buffer="",answer="",suggestions=[],started=false,unsupported=false;
    while(true){
      const {value,done}=await reader.read();if(done)break;
      buffer+=decoder.decode(value,{stream:true});
@@ -93,12 +94,19 @@ async function ask(q){
          answer+=event.delta;
          bubble.innerHTML="";renderAnswer(answer,bubble);
          conversation.scrollTop=conversation.scrollHeight;
+       }else if(event.type==="unsupported"){
+         unsupported=true;
+         if(!started){typing.remove();started=true}
+         bubble.innerHTML="";renderAnswer(event.message||"We don’t have information on that from Neira’s current sources yet.",bubble);
+         const actions=document.createElement("div");actions.className="neirai-links";
+         const feedback=document.createElement("a");feedback.href="mailto:neiraibrahimovic01@gmail.com?subject=NeirAI%20feedback&body="+encodeURIComponent("I asked NeirAI: "+q+"\n\nIt did not have information on this yet.");feedback.textContent="Send feedback so Neira can add it ↗";actions.appendChild(feedback);bubble.appendChild(actions);
        }else if(event.type==="done"){suggestions=event.followups||[]}
        else if(event.type==="error")throw new Error(event.error);
      }
    }
    if(!started)typing.remove();
-   showFollowups(suggestions.length?suggestions:followupsFor(q));
+   if(!unsupported&&answer.trim()){chatHistory.push({role:"user",content:q},{role:"assistant",content:answer.trim()});if(chatHistory.length>8)chatHistory.splice(0,chatHistory.length-8)}
+   showFollowups(unsupported?[]:(suggestions.length?suggestions:followupsFor(q)));
  }catch(err){
    typing.remove();
    addMessage("assistant","I’m having trouble reaching NeirAI right now. Please try again in a moment.");
