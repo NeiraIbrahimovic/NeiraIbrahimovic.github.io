@@ -602,3 +602,19 @@
 .security-deep-dive + .decisions-section .decision-callout{
   margin-top:8px!important;
 }
+
+/* Egress decision callouts: consistent tradeoff/decision color language */
+.visual-study .decisions-section .decision-narrative .decision-callout:not(.multiomics-decision){
+  background:#dbe5ed!important;
+  border-left-color:#6f958a!important;
+}
+.visual-study .decisions-section .decision-narrative .decision-callout:not(.multiomics-decision) small{
+  color:#52766c!important;
+}
+.visual-study .decisions-section .decision-narrative .multiomics-decision{
+  background:rgba(201,105,75,.11)!important;
+  border-left-color:var(--terracotta)!important;
+}
+.visual-study .decisions-section .decision-narrative .multiomics-decision small{
+  color:var(--terracotta)!important;
+}
