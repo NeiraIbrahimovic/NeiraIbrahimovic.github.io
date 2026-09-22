@@ -1665,3 +1665,24 @@ footer.simple-footer .footer-links{
  .neirai-prompt-design .neirai-chat-head{padding-top:12px!important}
  .neirai-prompt-design .neirai-message.assistant .neirai-bubble{font-size:14px!important;padding:12px 14px!important}
 }
+
+/* Match case-study NeirAI CTA to homepage + replace chat X with Back */
+.nav .nav-neirai{
+ border-color:rgba(201,105,75,.55)!important;
+ color:#c9694b!important;
+}
+.nav .nav-neirai:hover{
+ background:#c9694b!important;color:#fff!important;border-color:#c9694b!important;
+}
+.neirai-prompt-design .neirai-close{
+ left:clamp(20px,4vw,64px)!important;right:auto!important;top:20px!important;
+ width:auto!important;height:42px!important;padding:0 14px!important;
+ display:inline-flex!important;align-items:center!important;gap:8px!important;
+ border-radius:999px!important;font-family:"DM Sans",sans-serif!important;
+ font-size:14px!important;font-weight:600!important;color:#f4efe5!important;
+ border:1px solid rgba(244,239,229,.25)!important;text-decoration:none!important;
+}
+.neirai-prompt-design .neirai-close:hover{background:rgba(244,239,229,.08)!important;border-color:rgba(244,239,229,.5)!important}
+@media(max-width:800px){
+ .neirai-prompt-design .neirai-close{left:12px!important;top:12px!important;height:38px!important;padding:0 11px!important}
+}
