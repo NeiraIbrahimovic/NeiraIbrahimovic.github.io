@@ -105,7 +105,7 @@ async function ask(q){
          if(!started){typing.remove();started=true;ensureAssistantBubble()}
          bubble.innerHTML="";renderAnswer(event.message||"We don’t have information on that from Neira’s current sources yet.",bubble);
          const actions=document.createElement("div");actions.className="neirai-links";
-         const feedback=document.createElement("button");feedback.type="button";feedback.className="neirai-feedback-button";feedback.textContent="Flag this for Neira";
+         const feedback=document.createElement("button");feedback.type="button";feedback.className="neirai-feedback-button";feedback.textContent="⚑ Flag this for Neira";
          feedback.onclick=async()=>{
            if(feedback.disabled)return;
            feedback.disabled=true;feedback.textContent="Sending…";
@@ -113,7 +113,7 @@ async function ask(q){
              const r=await fetch("https://neirai-knowledge.vercel.app/api/feedback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q,answer:event.message||"",reason:"unsupported",page:location.href})});
              if(!r.ok)throw new Error("Feedback failed");
              feedback.textContent="✓ Sent to Neira";feedback.classList.add("sent");
-           }catch{feedback.disabled=false;feedback.textContent="Try sending feedback again"}
+           }catch{feedback.disabled=false;feedback.textContent="⚑ Try sending feedback again"}
          };
          actions.appendChild(feedback);bubble.appendChild(actions);
        }else if(event.type==="done"){suggestions=event.followups||[]}
