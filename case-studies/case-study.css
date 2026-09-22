@@ -618,3 +618,17 @@
 .visual-study .decisions-section .decision-narrative .multiomics-decision small{
   color:var(--terracotta)!important;
 }
+
+/* Tighten egress decision spacing */
+.visual-study .decisions-section .decision-story{
+  gap:10px!important;
+}
+.visual-study .decisions-section .decision-narrative{
+  row-gap:8px!important;
+}
+.visual-study .decisions-section .decision-lead{
+  margin-bottom:6px!important;
+}
+.visual-study .decisions-section .decision-callout{
+  margin-top:4px!important;
+}
