@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body class="neirai-page">
+<body class="neirai-page neirai-prompt-design">
 <div class="grain"></div>
 <header class="nav">
 <a class="brand" href="index.html">NI<span>.</span></a>
@@ -17,27 +17,34 @@
 <main class="neirai-shell">
 <section class="neirai-chat-card">
 <header class="neirai-chat-head">
-<div><span class="beta">NeirAI</span><h1>Ask about my work. <em>Go deep.</em></h1><p>Explore my product experience, technical depth, AI work, scientific background, and the projects behind this portfolio.</p></div>
+<div>
+<span class="neirai-kicker">NeirAI ✦</span>
+<h1>What would you like to know?</h1>
+<p>Ask about my products, technical decisions, AI work, scientific background, or the experience behind this portfolio.</p>
+</div>
 <a href="index.html" class="neirai-close" aria-label="Back to portfolio">×</a>
 </header>
 <div class="neirai-conversation" id="neirai-conversation" aria-live="polite">
 <div class="neirai-welcome" id="neirai-welcome">
-<p class="neirai-label">A few places to start</p>
+<p class="neirai-label">Try asking</p>
 <div class="neirai-starters">
-<button data-neirai-question="What has Neira built from 0→1?">What has Neira built from 0→1?</button>
-<button data-neirai-question="How technical is Neira?">How technical is Neira?</button>
-<button data-neirai-question="Tell me about Neira's AI experience.">Tell me about Neira’s AI experience.</button>
-<button data-neirai-question="Why is Neira looking for a new role?">Why is Neira looking for a new role?</button>
+<button data-neirai-question="What has Neira built from 0→1?"><span>What has Neira built from 0→1?</span></button>
+<button data-neirai-question="What technical decisions did Neira make on SIMS?"><span>What technical decisions did Neira make on SIMS?</span></button>
+<button data-neirai-question="What API experience does Neira have?"><span>What API experience does Neira have?</span></button>
+<button data-neirai-question="Tell me about Neira's AI experience."><span>Tell me about Neira’s AI experience.</span></button>
 </div>
 </div>
 </div>
 <div class="neirai-followups" id="neirai-followups" hidden></div>
 <form class="neirai-composer" id="neirai-chat-form">
 <label class="sr-only" for="neirai-input">Ask NeirAI</label>
-<input id="neirai-input" type="text" placeholder="Ask anything about Neira..." autocomplete="off" autofocus>
-<button type="submit">Send <span>↗</span></button>
+<textarea id="neirai-input" rows="1" placeholder="Ask NeirAI anything..." autocomplete="off" autofocus></textarea>
+<div class="neirai-composer-bar">
+<span class="neirai-source-note">Answers grounded in Neira’s verified experience</span>
+<button type="submit" aria-label="Send question"><span class="neirai-send-icon">↑</span><span class="neirai-send-label">Send</span></button>
+</div>
 </form>
-<p class="neirai-disclaimer">NeirAI answers from Neira’s portfolio and verified professional background. It won’t share confidential company information.</p>
+<p class="neirai-disclaimer">NeirAI won’t share confidential company information.</p>
 </section>
 </main>
 <script src="neirai.js"></script>
