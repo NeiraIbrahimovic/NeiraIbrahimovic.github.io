@@ -78,10 +78,14 @@ async function ask(q){
    const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q,history:chatHistory.slice(-8)})});
    if(!response.ok){const data=await response.json().catch(()=>({}));throw new Error(data.error||"NeirAI is temporarily unavailable.")}
    if(!response.body)throw new Error("Streaming is unavailable.");
-   const wrap=document.createElement("div");wrap.className="neirai-message assistant";
-   const label=document.createElement("span");label.className="neirai-message-label";label.textContent="NeirAI ✦";wrap.appendChild(label);
-   const bubble=document.createElement("div");bubble.className="neirai-bubble";wrap.appendChild(bubble);
-   conversation.appendChild(wrap);
+   let wrap=null,bubble=null;
+   const ensureAssistantBubble=()=>{
+     if(wrap)return;
+     wrap=document.createElement("div");wrap.className="neirai-message assistant";
+     const label=document.createElement("span");label.className="neirai-message-label";label.textContent="NeirAI ✦";wrap.appendChild(label);
+     bubble=document.createElement("div");bubble.className="neirai-bubble";wrap.appendChild(bubble);
+     conversation.appendChild(wrap);
+   };
    const reader=response.body.getReader(),decoder=new TextDecoder();
    let buffer="",answer="",suggestions=[],started=false,unsupported=false;
    while(true){
@@ -92,16 +96,16 @@ async function ask(q){
        if(!line.trim())continue;
        const event=JSON.parse(line);
        if(event.type==="delta"){
-         if(!started){typing.remove();started=true;requestAnimationFrame(()=>wrap.scrollIntoView({behavior:"smooth",block:"start"}))}
+         if(!started){typing.remove();started=true;ensureAssistantBubble();requestAnimationFrame(()=>wrap.scrollIntoView({behavior:"smooth",block:"start"}))}
          answer+=event.delta;
          bubble.innerHTML="";renderAnswer(answer,bubble);
          conversation.scrollTop=conversation.scrollHeight;
        }else if(event.type==="unsupported"){
          unsupported=true;
-         if(!started){typing.remove();started=true}
+         if(!started){typing.remove();started=true;ensureAssistantBubble()}
          bubble.innerHTML="";renderAnswer(event.message||"We don’t have information on that from Neira’s current sources yet.",bubble);
          const actions=document.createElement("div");actions.className="neirai-links";
-         const feedback=document.createElement("a");feedback.href="mailto:neiraibrahimovic01@gmail.com?subject=NeirAI%20feedback&body="+encodeURIComponent("I asked NeirAI: "+q+"\n\nIt did not have information on this yet.");feedback.textContent="Send feedback so Neira can add it ↗";actions.appendChild(feedback);bubble.appendChild(actions);
+         const feedback=document.createElement("a");feedback.href="https://github.com/NeiraIbrahimovic/neirai-knowledge/issues/new?title="+encodeURIComponent("NeirAI feedback: "+q.slice(0,80))+"&body="+encodeURIComponent("## Question\n"+q+"\n\n## Current result\nNeirAI did not find enough supported information to answer.\n\n## Improvement needed\nAdd or improve recruiter-safe evidence/retrieval for this question.");feedback.target="_blank";feedback.rel="noopener";feedback.textContent="Send feedback so Neira can add it ↗";actions.appendChild(feedback);bubble.appendChild(actions);
        }else if(event.type==="done"){suggestions=event.followups||[]}
        else if(event.type==="error")throw new Error(event.error);
      }
