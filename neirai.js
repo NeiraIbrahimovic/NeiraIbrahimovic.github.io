@@ -49,9 +49,11 @@ function addMessage(role,text,links=[]){
 function showFollowups(items=[]){
  followups.innerHTML="";
  if(!items.length){followups.hidden=true;return}
- followups.hidden=false;
  const label=document.createElement("span");label.textContent="You might also ask";followups.appendChild(label);
- items.forEach(q=>{const b=document.createElement("button");b.type="button";b.textContent=q;b.onclick=()=>ask(q);followups.appendChild(b)});
+ const track=document.createElement("div");track.className="neirai-followup-track";followups.appendChild(track);
+ items.forEach(q=>{const b=document.createElement("button");b.type="button";b.textContent=q;b.title=q;b.onclick=()=>ask(q);track.appendChild(b)});
+ followups.hidden=false;
+ requestAnimationFrame(()=>{followups.scrollLeft=0});
 }
 
 function followupsFor(q){
@@ -107,6 +109,7 @@ async function ask(q){
    if(!started)typing.remove();
    if(!unsupported&&answer.trim()){chatHistory.push({role:"user",content:q},{role:"assistant",content:answer.trim()});if(chatHistory.length>8)chatHistory.splice(0,chatHistory.length-8)}
    showFollowups(unsupported?[]:(suggestions.length?suggestions:followupsFor(q)));
+   if(!unsupported&&wrap)requestAnimationFrame(()=>wrap.scrollIntoView({behavior:"smooth",block:"nearest"}));
  }catch(err){
    typing.remove();
    addMessage("assistant","I’m having trouble reaching NeirAI right now. Please try again in a moment.");
