@@ -3,49 +3,71 @@ const returnTo=params.get("from");
 const closeLink=document.querySelector(".neirai-close");
 if(closeLink&&returnTo){try{const u=new URL(returnTo,location.href);if(u.origin===location.origin)closeLink.href=u.href}catch(e){}}
 if(closeLink){closeLink.addEventListener("click",e=>{if(returnTo&&history.length>1){e.preventDefault();history.back()}})}
+
+const API_URL="https://neirai-knowledge.vercel.app/api/chat";
 const conversation=document.getElementById("neirai-conversation");
 const welcome=document.getElementById("neirai-welcome");
 const followups=document.getElementById("neirai-followups");
 const form=document.getElementById("neirai-chat-form");
 const input=document.getElementById("neirai-input");
+let isSending=false;
+
 function resizeInput(){input.style.height="auto";input.style.height=Math.min(input.scrollHeight,160)+"px"}
 input.addEventListener("input",resizeInput);
 input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();ask(input.value)}});
 
-const answers=[
- {test:/technical decision|architecture tradeoff|architectural decision|data model decision/i,answer:`On SIMS, Neira made product-level technical decisions about how sample identity, lineage, aggregation, and integrations should behave across a fragmented genomics ecosystem. Some of the most important were:\n\n• Separating the durable Sample identity from a Run Sample, so a biological sample could exist before sequencing and could have multiple run-level occurrences when it was resequenced.\n\n• Defining a shared hierarchy across Subject → Specimen → Sample → Run Sample, while deciding which attributes belonged at each level so downstream applications did not duplicate or misinterpret identity.\n\n• Establishing a persistent global identifier strategy so the same sample could be traced across applications even when product-specific names or IDs differed.\n\n• Working through aggregation semantics: when multiple lanes or runs should represent one logical sample, when they should remain standalone, and how per-lane QC exclusions should affect an aggregate.\n\n• Defining how files attach to the model. For example, run-derived FASTQs belong to run-level context, while non-run files can live at the Sample level. For manual FASTQ attachment, she proposed creating or selecting the appropriate Run Sample rather than collapsing run data into the higher-level Sample.\n\n• Defining REST API and event-driven integration behavior so systems such as run planning, LIMS, analysis, and interpretation could create, update, and consume the shared model consistently.\n\nThese are product architecture decisions rather than claims that Neira personally implemented the production services. Her role was to turn ambiguous cross-system behavior into a coherent model and requirements engineering teams could build against.`,links:[["Read the SIMS case study","case-studies/sims.html"]],next:["Why separate Sample from Run Sample?","How did she think about aggregation?","What API experience does she have?"]},
- {test:/api experience|apis has|rest api|api design|endpoint|payload/i,answer:`Neira’s API experience comes primarily from defining product behavior for platform integrations, not simply consuming APIs. On SIMS and related platform work, she authored requirements and specifications for REST APIs, including endpoint behavior, request and response payload expectations, validation rules, update behavior, and the events downstream systems needed to receive.\n\nA major part of that work was deciding what the API should mean. For example: which entity should own a field, when a Sample versus Run Sample should be created, how relationships such as Subject and Specimen should be updated or unlinked, how duplicate or aggregated samples should behave, and what downstream systems need in order to preserve lineage.\n\nShe has also worked with event-driven integrations, including defining required Kafka events, and has used APIs hands-on in prototypes and tooling. Her SIMS evaluation CLI exercised sample, lineage, attribute, QC, project, data, and analysis workflows, while other prototypes pulled live product data through APIs for validation and demos.\n\nSo the strongest description is that Neira can move between API-level product design and hands-on API usage: she defines contracts and behaviors with engineering, reasons about edge cases and cross-system consequences, and uses APIs herself to prototype and test workflows.`,links:[["Explore SIMS architecture and integrations","case-studies/sims.html"],["View coding projects","index.html#code"]],next:["What did she specify in API payloads?","How technical is she overall?","What event-driven architecture experience does she have?"]},
-
- {test:/technical|engineer|api|code|coding/i,answer:`Neira has substantial technical product experience, particularly across APIs, data platforms, cloud infrastructure, and AI-enabled workflows. A strong example is SIMS, a 0→1 enterprise data platform she led across 10+ genomics applications. She defined its data model and persistent identifier strategy and worked with engineering on REST APIs, event-driven integrations, validation behavior, and data lineage.\n\nShe also has hands-on programming experience through her computer science graduate program and projects in Python, Java, and SQL.`,links:[["Explore the SIMS case study","case-studies/sims.html"],["View her coding projects","index.html#code"]],next:["What API experience does she have?","Tell me about her AI work.","How does she work with engineers?"]},
- {test:/0.?1|built|build|product/i,answer:`Neira’s strongest 0→1 example is SIMS, an enterprise platform designed to create a consistent sample identity and traceability layer across Illumina’s connected software ecosystem. She led the product from the original problem through product strategy, the shared data model, integration and API requirements, customer discovery, UAT, and alpha/beta readiness.\n\nHer broader work also includes AWS cloud platform capabilities, multiomics software, AI-assisted product prototypes, and a documentation operating model adopted across 27+ software teams.`,links:[["Read the SIMS case study","case-studies/sims.html"],["Explore selected work","index.html#work"]],next:["What technical decisions did she make on SIMS?","Has she worked directly with customers?","Tell me about her cloud platform work."]},
- {test:/\bai\b|agent|cursor|claude|llm/i,answer:`Neira’s AI experience is hands-on and product-oriented. She builds AI-assisted prototypes and reusable agent workflows to accelerate product discovery, requirements, release work, reporting, and stakeholder alignment. One release-management automation reduced manual documentation and coordination by approximately 10 hours per week.\n\nShe has worked with tools including Cursor, Claude, MCP-based integrations, GitHub, Jira/Confluence, Figma, APIs, and live data sources. She also led an AI workshop for Software TPMs on using LLM tools for prototyping and development workflows.`,links:[["See AI in practice","index.html#ask"],["View coding projects","index.html#code"]],next:["What AI workflows has she built?","How hands-on is she with AI?","How does AI change the way she works as a PM?"]},
- {test:/new role|leaving|leave|next role/i,answer:`Neira is looking for her next role because she’s ready to keep growing as a Technical Product Manager and take on new, technically challenging product problems.\n\nAt Illumina, she has led a 0→1 enterprise data platform, worked across APIs, cloud infrastructure and genomics software, conducted customer discovery, and increasingly built with AI. She’s learned that she does her best work at the intersection of product strategy, technology, and complex customer problems.\n\nShe’s now looking for an opportunity where she can build on that foundation, take on broader product ownership, continue developing her technical depth, and help bring meaningful products from early concept through customer adoption.`,links:[["See her 0→1 product work","case-studies/sims.html"],["Explore her technical projects","index.html#code"]],next:["What kind of role is she looking for?","Why would she fit a Platform PM role?","What are her strongest product skills?"]},
- {test:/cowork|colleague|feedback|say about|reference/i,answer:`People who have worked with Neira consistently point to how quickly she learns, how deeply she retains technical context, and how reliably she follows through. One Software Test Engineer described her as “intensely bright” and specifically highlighted her ability to pick up new concepts and requirements quickly, produce high-quality deliverables, present to stakeholders, and take ownership.\n\nHer leadership has also highlighted organization and cross-functional execution as strengths, which shows up in the way she coordinates complex dependencies across product, engineering, quality, and other teams.`,links:[["See how Neira works","index.html#story"]],next:["What leadership experience does she have?","How does she work cross-functionally?","What makes her different as a PM?"]},
- {test:/platform pm|platform product|platform role/i,answer:`Neira has a strong foundation for platform product work because much of her experience sits below the surface of a single application. She has led work involving shared data models, persistent identity, data lineage, APIs, event-driven integrations, AWS storage, IAM, and usage-based commercialization.\n\nSIMS is the clearest example: she led a common data and identity layer designed to work across 10+ applications rather than optimizing for only one product experience.`,links:[["Explore the SIMS platform case study","case-studies/sims.html"],["See her AWS security work","case-studies/iam-roles.html"],["See cloud economics work","case-studies/egress.html"]],next:["How technical is she?","What API experience does she have?","How has she handled platform tradeoffs?"]},
- {test:/biology|science|scientific|ucla|genomics/i,answer:`Neira started in molecular biology and mathematical biology at UCLA, including hands-on research using tools such as RNA-seq, qPCR, and metabolomics. That scientific background now complements her work building genomics software.\n\nShe later added computer science because she wanted to understand the systems she was helping build one layer deeper. The combination helps her translate between scientific users, product needs, and technical teams.`,links:[["Read how she got here","index.html#story"],["Explore her genomics platform work","case-studies/sims.html"]],next:["What research did she do at UCLA?","How does science help her as a PM?","What genomics products has she worked on?"]},
- {test:/.*/,answer:`That’s a good question. This staging version of NeirAI currently demonstrates the complete chat experience with a recruiter-safe set of grounded answers. The next step is connecting this interface to the private NeirAI knowledge service so it can answer open-ended questions from Neira’s full verified experience.\n\nFor now, try asking about her technical depth, 0→1 product work, AI experience, platform experience, scientific background, or why she’s exploring a new role.`,links:[["Explore Neira’s work","index.html#work"]],next:["How technical is Neira?","What has Neira built from 0→1?","Tell me about Neira’s AI experience."]}
-];
-
 function addMessage(role,text,links=[]){
- const wrap=document.createElement("div"); wrap.className="neirai-message "+role;
- const label=document.createElement("span"); label.className="neirai-message-label"; label.textContent=role==="user"?"You":"NeirAI ✦"; wrap.appendChild(label);
- const bubble=document.createElement("div"); bubble.className="neirai-bubble";
- text.split("\n\n").forEach(t=>{const p=document.createElement("p");p.textContent=t;bubble.appendChild(p)});
+ const wrap=document.createElement("div");wrap.className="neirai-message "+role;
+ const label=document.createElement("span");label.className="neirai-message-label";label.textContent=role==="user"?"You":"NeirAI ✦";wrap.appendChild(label);
+ const bubble=document.createElement("div");bubble.className="neirai-bubble";
+ String(text).split("\n\n").forEach(t=>{const p=document.createElement("p");p.textContent=t;bubble.appendChild(p)});
  if(links.length){const box=document.createElement("div");box.className="neirai-links";links.forEach(([label,url])=>{const a=document.createElement("a");a.href=url;a.textContent=label+" ↗";box.appendChild(a)});bubble.appendChild(box)}
- wrap.appendChild(bubble); conversation.appendChild(wrap); conversation.scrollTop=conversation.scrollHeight;
+ wrap.appendChild(bubble);conversation.appendChild(wrap);conversation.scrollTop=conversation.scrollHeight;
 }
-function showFollowups(items){
- followups.innerHTML=""; followups.hidden=false;
+
+function showFollowups(items=[]){
+ followups.innerHTML="";
+ if(!items.length){followups.hidden=true;return}
+ followups.hidden=false;
  const label=document.createElement("span");label.textContent="You might also ask";followups.appendChild(label);
  items.forEach(q=>{const b=document.createElement("button");b.type="button";b.textContent=q;b.onclick=()=>ask(q);followups.appendChild(b)});
 }
-function ask(q){
- q=(q||"").trim();if(!q)return;
- if(welcome) welcome.hidden=true; followups.hidden=true; addMessage("user",q); input.value=""; resizeInput();
- const match=answers.find(x=>x.test.test(q));
- const typing=document.createElement("div");typing.className="neirai-typing";typing.textContent="NeirAI is looking through Neira’s experience…";conversation.appendChild(typing);conversation.scrollTop=conversation.scrollHeight;
- setTimeout(()=>{typing.remove();addMessage("assistant",match.answer,match.links);showFollowups(match.next);},420);
+
+function followupsFor(q){
+ const s=q.toLowerCase();
+ if(/api|integration|rest|event/.test(s))return["What technical decisions did she make?","How technical is Neira?","How does she work with engineers?"];
+ if(/ai|agent|llm|automation|prototype/.test(s))return["What AI workflows has she built?","How hands-on is she with AI?","What has Neira built from 0→1?"];
+ if(/0.?1|built|build|product/.test(s))return["What technical decisions did she make on SIMS?","Has she worked directly with customers?","Tell me about her cloud platform work."];
+ if(/cowork|colleague|feedback|reference/.test(s))return["What leadership experience does she have?","How does she work cross-functionally?","What makes her different as a PM?"];
+ return["How technical is Neira?","What has Neira built from 0→1?","Tell me about Neira’s AI experience."];
 }
+
+async function ask(q){
+ q=(q||"").trim();
+ if(!q||isSending)return;
+ isSending=true;
+ if(welcome)welcome.hidden=true;
+ followups.hidden=true;
+ addMessage("user",q);
+ input.value="";resizeInput();
+ const typing=document.createElement("div");typing.className="neirai-typing";typing.textContent="NeirAI is looking through Neira’s experience…";conversation.appendChild(typing);conversation.scrollTop=conversation.scrollHeight;
+ try{
+   const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q})});
+   const data=await response.json().catch(()=>({}));
+   typing.remove();
+   if(!response.ok)throw new Error(data.error||"NeirAI is temporarily unavailable.");
+   addMessage("assistant",data.answer);
+   showFollowups(followupsFor(q));
+ }catch(err){
+   typing.remove();
+   addMessage("assistant","I’m having trouble reaching NeirAI right now. Please try again in a moment.");
+   showFollowups([]);
+ }finally{
+   isSending=false;
+   input.focus();
+ }
+}
+
 document.querySelectorAll("[data-neirai-question]").forEach(b=>b.addEventListener("click",()=>ask(b.dataset.neiraiQuestion)));
 form.addEventListener("submit",e=>{e.preventDefault();ask(input.value)});
-const initial=params.get("q");if(initial) ask(initial);
+const initial=params.get("q");if(initial)ask(initial);
