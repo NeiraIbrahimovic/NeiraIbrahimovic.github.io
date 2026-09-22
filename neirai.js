@@ -73,11 +73,32 @@ async function ask(q){
  const typing=document.createElement("div");typing.className="neirai-typing";typing.textContent="NeirAI is looking through Neira’s experience…";conversation.appendChild(typing);conversation.scrollTop=conversation.scrollHeight;
  try{
    const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q})});
-   const data=await response.json().catch(()=>({}));
-   typing.remove();
-   if(!response.ok)throw new Error(data.error||"NeirAI is temporarily unavailable.");
-   addMessage("assistant",data.answer);
-   showFollowups(Array.isArray(data.followups)&&data.followups.length?data.followups:followupsFor(q));
+   if(!response.ok){const data=await response.json().catch(()=>({}));throw new Error(data.error||"NeirAI is temporarily unavailable.")}
+   if(!response.body)throw new Error("Streaming is unavailable.");
+   const wrap=document.createElement("div");wrap.className="neirai-message assistant";
+   const label=document.createElement("span");label.className="neirai-message-label";label.textContent="NeirAI ✦";wrap.appendChild(label);
+   const bubble=document.createElement("div");bubble.className="neirai-bubble";wrap.appendChild(bubble);
+   conversation.appendChild(wrap);
+   const reader=response.body.getReader(),decoder=new TextDecoder();
+   let buffer="",answer="",suggestions=[],started=false;
+   while(true){
+     const {value,done}=await reader.read();if(done)break;
+     buffer+=decoder.decode(value,{stream:true});
+     const lines=buffer.split("\n");buffer=lines.pop()||"";
+     for(const line of lines){
+       if(!line.trim())continue;
+       const event=JSON.parse(line);
+       if(event.type==="delta"){
+         if(!started){typing.remove();started=true;requestAnimationFrame(()=>wrap.scrollIntoView({behavior:"smooth",block:"start"}))}
+         answer+=event.delta;
+         bubble.innerHTML="";renderAnswer(answer,bubble);
+         conversation.scrollTop=conversation.scrollHeight;
+       }else if(event.type==="done"){suggestions=event.followups||[]}
+       else if(event.type==="error")throw new Error(event.error);
+     }
+   }
+   if(!started)typing.remove();
+   showFollowups(suggestions.length?suggestions:followupsFor(q));
  }catch(err){
    typing.remove();
    addMessage("assistant","I’m having trouble reaching NeirAI right now. Please try again in a moment.");
