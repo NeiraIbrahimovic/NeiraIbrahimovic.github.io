@@ -1417,3 +1417,13 @@ footer.simple-footer .footer-links{
  .neirai-followups{padding-left:16px;padding-right:16px}
  .neirai-composer{margin-left:12px;margin-right:12px}
 }
+
+/* Ask NeirAI compact hero — preserve staggered prompt animation */
+#ask .ask-card{padding-top:clamp(34px,4vw,58px);padding-bottom:clamp(34px,4vw,58px)}
+#ask .ask-intro h2{margin-top:0}
+#ask .prompt-cloud button:nth-child(1){animation-delay:.08s}
+#ask .prompt-cloud button:nth-child(2){animation-delay:.18s}
+#ask .prompt-cloud button:nth-child(3){animation-delay:.28s}
+#ask .prompt-cloud button:nth-child(4){animation-delay:.38s}
+#ask .prompt-cloud button:nth-child(5){animation-delay:.48s}
+#ask .prompt-cloud button:nth-child(6){animation-delay:.58s}
