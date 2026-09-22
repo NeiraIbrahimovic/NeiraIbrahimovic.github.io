@@ -16,13 +16,33 @@ function resizeInput(){input.style.height="auto";input.style.height=Math.min(inp
 input.addEventListener("input",resizeInput);
 input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();ask(input.value)}});
 
+function renderAnswer(text,bubble){
+ const lines=String(text).replace(/\r/g,"").split("\n");
+ let list=null;
+ const addInline=(el,s)=>{
+   const parts=s.split(/(\*\*[^*]+\*\*)/g);
+   parts.forEach(part=>{if(part.startsWith("**")&&part.endsWith("**")){const strong=document.createElement("strong");strong.textContent=part.slice(2,-2);el.appendChild(strong)}else{el.appendChild(document.createTextNode(part))}});
+ };
+ for(const raw of lines){
+   const line=raw.trim();
+   if(!line){list=null;continue}
+   const bullet=line.match(/^[-•]\s+(.*)$/);
+   if(bullet){
+     if(!list){list=document.createElement("ul");bubble.appendChild(list)}
+     const li=document.createElement("li");addInline(li,bullet[1]);list.appendChild(li);
+   }else{
+     list=null;const p=document.createElement("p");addInline(p,line);bubble.appendChild(p);
+   }
+ }
+}
 function addMessage(role,text,links=[]){
  const wrap=document.createElement("div");wrap.className="neirai-message "+role;
  const label=document.createElement("span");label.className="neirai-message-label";label.textContent=role==="user"?"You":"NeirAI ✦";wrap.appendChild(label);
  const bubble=document.createElement("div");bubble.className="neirai-bubble";
- String(text).split("\n\n").forEach(t=>{const p=document.createElement("p");p.textContent=t;bubble.appendChild(p)});
+ if(role==="assistant")renderAnswer(text,bubble);else{const p=document.createElement("p");p.textContent=String(text);bubble.appendChild(p)}
  if(links.length){const box=document.createElement("div");box.className="neirai-links";links.forEach(([label,url])=>{const a=document.createElement("a");a.href=url;a.textContent=label+" ↗";box.appendChild(a)});bubble.appendChild(box)}
- wrap.appendChild(bubble);conversation.appendChild(wrap);conversation.scrollTop=conversation.scrollHeight;
+ wrap.appendChild(bubble);conversation.appendChild(wrap);
+ if(role==="assistant")requestAnimationFrame(()=>wrap.scrollIntoView({behavior:"smooth",block:"start"}));else conversation.scrollTop=conversation.scrollHeight;
 }
 
 function showFollowups(items=[]){
