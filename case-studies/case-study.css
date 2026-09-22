@@ -413,3 +413,62 @@
 .multiomics-doc-copy .button{margin-top:14px}
 @media(max-width:800px){.multiomics-impact-grid{grid-template-columns:1fr 1fr}.multiomics-docs{grid-template-columns:1fr;gap:32px}.multiomics-doc-browser img{height:auto}}
 @media(max-width:480px){.multiomics-impact-grid{grid-template-columns:1fr}}
+
+/* Multiomics refinement: compact impact, wide enablement, clearer decision hierarchy */
+.multiomics-impact-grid{gap:10px!important;max-width:820px!important}
+.multiomics-impact-grid article{min-height:92px!important;padding:14px 15px!important;background:#dbe5ed!important}
+.multiomics-impact-grid strong{font-size:26px!important;margin-bottom:6px!important}
+.multiomics-impact-grid span{font-size:10px!important;line-height:1.35!important}
+
+.multiomics-docs{
+  max-width:none!important;
+  width:100%!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  gap:56px!important;
+  padding-left:max(30px,calc((100vw - 1180px)/2))!important;
+  padding-right:max(30px,calc((100vw - 1180px)/2))!important;
+  background:#dbe5ed!important;
+}
+.multiomics-doc-browser{
+  width:100%!important;
+  padding:0 12px 14px!important;
+  border-radius:16px 16px 24px 24px!important;
+  background:#202725!important;
+  border:0!important;
+  box-shadow:0 22px 48px rgba(23,32,29,.2)!important;
+  transform:none!important;
+  position:relative;
+}
+.multiomics-doc-browser:after{
+  content:"";
+  position:absolute;
+  left:-5%;right:-5%;bottom:-12px;
+  height:12px;
+  border-radius:2px 2px 14px 14px;
+  background:#b9b9b4;
+  box-shadow:0 5px 8px rgba(23,32,29,.15);
+}
+.multiomics-browser-bar{margin:0 -12px 10px!important;height:32px!important;background:#303936!important;border-radius:16px 16px 0 0!important}
+.multiomics-browser-bar i{width:7px!important;height:7px!important}
+.multiomics-browser-bar span{color:#fff!important;opacity:.65!important}
+.multiomics-doc-browser img{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  object-fit:cover!important;
+  object-position:top center!important;
+  border-radius:3px!important;
+}
+.multiomics-doc-copy{max-width:560px!important}
+.multiomics-doc-copy h2{font-size:clamp(38px,4.4vw,58px)!important;line-height:1.02!important;max-width:540px!important}
+.multiomics-doc-copy>p:not(.kicker){font-size:15px!important;line-height:1.65!important;max-width:540px!important}
+
+.generic-decisions .decision-narrative .decision-callout{background:#dbe5ed!important;border-left-color:#6f958a!important}
+.generic-decisions .decision-narrative .decision-callout small{color:#52766c!important}
+.generic-decisions .multiomics-decision{background:rgba(201,105,75,.11)!important;border-left-color:var(--terracotta)!important}
+.generic-decisions .multiomics-decision small{color:var(--terracotta)!important}
+
+@media(max-width:800px){
+ .multiomics-docs{grid-template-columns:1fr!important;padding-left:20px!important;padding-right:20px!important}
+ .multiomics-doc-copy{max-width:none!important}
+}
