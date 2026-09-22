@@ -1738,3 +1738,20 @@ footer.simple-footer .footer-links{
  .neirai-prompt-design .neirai-composer{min-height:48px!important}
  .neirai-prompt-design .neirai-composer textarea{min-height:36px!important;padding:7px 14px!important}
 }
+
+
+/* NeirAI v9 — neutral suggested prompts, keep terracotta as an accent */
+.neirai-prompt-design .neirai-followups>span{
+ color:#c9694b!important;
+ opacity:1!important;
+}
+.neirai-prompt-design .neirai-followups button{
+ color:rgba(244,239,229,.82)!important;
+ border-color:rgba(244,239,229,.28)!important;
+ background:transparent!important;
+}
+.neirai-prompt-design .neirai-followups button:hover{
+ color:#fff!important;
+ border-color:rgba(244,239,229,.58)!important;
+ background:rgba(244,239,229,.08)!important;
+}
