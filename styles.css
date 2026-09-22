@@ -1566,3 +1566,67 @@ footer.simple-footer .footer-links{
  transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease
 }
 .nav .nav-neirai:hover{background:#15211e;color:#f4efe5!important;border-color:#15211e;transform:translateY(-1px)}
+
+/* NeirAI v6 — screenshot-matched full-screen conversation */
+.neirai-prompt-design .nav{display:none!important}
+.neirai-prompt-design .neirai-shell{height:100vh!important;padding:0!important}
+.neirai-prompt-design .neirai-chat-card{height:100vh!important;background:#15211e!important}
+.neirai-prompt-design .neirai-chat-head{
+ padding:42px 70px 8px!important;justify-content:center!important;text-align:center!important
+}
+.neirai-prompt-design .neirai-kicker{font-size:11px!important;margin-bottom:9px!important;letter-spacing:.15em!important}
+.neirai-prompt-design .neirai-chat-head h1{
+ font-family:"DM Serif Display",serif!important;font-size:clamp(31px,2.8vw,45px)!important;
+ font-weight:400!important;letter-spacing:-.015em!important;margin:0!important;color:#f4efe5!important;
+ background:none!important;-webkit-text-fill-color:initial!important
+}
+.neirai-prompt-design .neirai-close{right:30px!important;top:20px!important;width:48px!important;height:48px!important}
+.neirai-prompt-design .neirai-conversation{
+ padding:22px clamp(38px,8vw,150px) 14px!important;
+}
+.neirai-prompt-design .neirai-message{max-width:1240px!important;margin-bottom:14px!important}
+.neirai-prompt-design .neirai-message.user{max-width:1240px!important}
+.neirai-prompt-design .neirai-message.user .neirai-bubble{
+ max-width:430px!important;padding:17px 25px!important;border-radius:28px!important;
+ background:rgba(255,255,255,.055)!important;color:#f4efe5!important;border:1px solid rgba(255,255,255,.12)!important
+}
+.neirai-prompt-design .neirai-message.assistant .neirai-bubble{
+ padding:18px 22px!important;border-radius:18px!important;background:rgba(0,0,0,.12)!important;
+ border:1px solid rgba(255,255,255,.16)!important;font-size:16px!important;line-height:1.55!important
+}
+.neirai-prompt-design .neirai-message-label{font-size:11px!important;letter-spacing:.14em!important;color:#d56f52!important;opacity:1!important}
+.neirai-prompt-design .neirai-followups{
+ max-width:1240px!important;width:calc(100% - clamp(76px,16vw,300px))!important;
+ padding:7px 0 12px!important;margin:0 auto!important;display:flex!important;align-items:center!important;gap:10px!important;flex-wrap:wrap!important
+}
+.neirai-prompt-design .neirai-followups[hidden]{display:none!important}
+.neirai-prompt-design .neirai-followups>span{margin:0 8px 0 0!important;font-size:10px!important;letter-spacing:.14em!important}
+.neirai-prompt-design .neirai-followups button{
+ margin:0!important;padding:9px 15px!important;border-radius:999px!important;font-size:12px!important
+}
+.neirai-prompt-design .neirai-composer{
+ max-width:1380px!important;width:calc(100% - 110px)!important;margin:0 auto 10px!important;border-radius:999px!important;
+ min-height:72px!important;display:flex!important;align-items:center!important;overflow:visible!important;
+ background:rgba(0,0,0,.13)!important;border-color:rgba(255,255,255,.22)!important
+}
+.neirai-prompt-design .neirai-composer textarea{
+ min-height:54px!important;max-height:110px!important;padding:16px 24px!important;align-self:center!important
+}
+.neirai-prompt-design .neirai-composer-bar{
+ border:0!important;padding:7px 9px 7px 0!important;flex:0 0 auto!important
+}
+.neirai-prompt-design .neirai-source-note{display:none!important}
+.neirai-prompt-design .neirai-composer button{
+ border-radius:999px!important;background:#d66d4f!important;color:white!important;padding:14px 21px!important;font-size:14px!important
+}
+.neirai-prompt-design .neirai-disclaimer{
+ font-size:11px!important;color:rgba(244,239,229,.68)!important;padding:0 12px 12px!important
+}
+@media(max-width:800px){
+ .neirai-prompt-design .neirai-chat-head{padding:26px 58px 6px 18px!important}
+ .neirai-prompt-design .neirai-chat-head h1{font-size:28px!important}
+ .neirai-prompt-design .neirai-conversation{padding:14px 14px 10px!important}
+ .neirai-prompt-design .neirai-followups{width:calc(100% - 28px)!important}
+ .neirai-prompt-design .neirai-composer{width:calc(100% - 24px)!important;border-radius:24px!important}
+ .neirai-prompt-design .neirai-send-label{display:none}
+}
