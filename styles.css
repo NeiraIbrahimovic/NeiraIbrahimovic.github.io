@@ -1686,3 +1686,55 @@ footer.simple-footer .footer-links{
 @media(max-width:800px){
  .neirai-prompt-design .neirai-close{left:12px!important;top:12px!important;height:38px!important;padding:0 11px!important}
 }
+
+
+/* NeirAI v8 — clearer roles, orange followups, tighter composer */
+.neirai-prompt-design .neirai-message.user .neirai-bubble{
+ background:#c9694b!important;
+ color:#fff!important;
+ border-color:#c9694b!important;
+}
+.neirai-prompt-design .neirai-message.assistant .neirai-bubble{
+ background:rgba(255,255,255,.055)!important;
+ color:#f4efe5!important;
+ border-color:rgba(255,255,255,.12)!important;
+}
+.neirai-prompt-design .neirai-followups>span{
+ color:#c9694b!important;
+ opacity:1!important;
+}
+.neirai-prompt-design .neirai-followups button{
+ color:#e07b5d!important;
+ border-color:rgba(201,105,75,.52)!important;
+ background:rgba(201,105,75,.07)!important;
+}
+.neirai-prompt-design .neirai-followups button:hover{
+ color:#fff!important;
+ background:#c9694b!important;
+ border-color:#c9694b!important;
+}
+.neirai-prompt-design .neirai-composer{
+ min-height:50px!important;
+}
+.neirai-prompt-design .neirai-composer textarea{
+ min-height:38px!important;
+ max-height:92px!important;
+ padding:8px 20px!important;
+ line-height:1.4!important;
+}
+.neirai-prompt-design .neirai-composer-bar{
+ padding:4px 6px 4px 0!important;
+}
+.neirai-prompt-design .neirai-composer button{
+ padding:9px 16px!important;
+}
+.neirai-prompt-design .neirai-message{
+ scroll-margin-top:10px;
+}
+.neirai-prompt-design .neirai-bubble strong{font-weight:700}
+.neirai-prompt-design .neirai-bubble ul{margin:6px 0 10px!important;padding-left:22px!important}
+.neirai-prompt-design .neirai-bubble li{margin:4px 0!important}
+@media(max-width:800px){
+ .neirai-prompt-design .neirai-composer{min-height:48px!important}
+ .neirai-prompt-design .neirai-composer textarea{min-height:36px!important;padding:7px 14px!important}
+}
