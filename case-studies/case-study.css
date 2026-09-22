@@ -632,3 +632,10 @@
 .visual-study .decisions-section .decision-callout{
   margin-top:4px!important;
 }
+
+/* Consistent, tighter case-study hero spacing below global navigation */
+.study{padding-top:58px}
+.study .study-hero{padding-top:52px}
+@media(max-width:800px){
+ .study .study-hero{padding-top:38px}
+}
