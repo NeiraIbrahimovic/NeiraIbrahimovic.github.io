@@ -551,3 +551,20 @@
   letter-spacing:.11em;
   vertical-align:middle;
 }
+
+/* Compact IAM security deep-dive cards */
+.security-tradeoff-accordion details>summary{
+  min-height:104px!important;
+  padding:15px 18px!important;
+}
+.security-tradeoff-accordion details>summary h3{
+  font-size:21px!important;
+  margin:8px 0 0!important;
+}
+.security-tradeoff-body{
+  padding:13px 18px 16px!important;
+}
+.security-tradeoff-body p{
+  margin-bottom:12px!important;
+  line-height:1.5!important;
+}
