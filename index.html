@@ -224,16 +224,24 @@
     </section>
 
     <section class="ask section reveal" id="ask">
-      <div>
-        <span class="beta">coming next</span>
+      <div class="ask-intro">
+        <span class="beta">Meet NeirAI</span>
         <h2>Ask NeirAI ✦</h2>
-        <p>Soon you will be able to ask this portfolio questions instead of hunting through it. It will answer from my real experience and point you to the story behind the answer.</p>
+        <p>NeirAI is an AI guide to my experience, projects, and background. Ask it about what I’ve built, how technical I am, the problems I’ve worked on, or how my biology and computer science background shapes the way I build products.</p>
+        <p class="ask-note">Choose a starter question or ask your own. NeirAI answers from my real experience and points you to relevant work across this portfolio.</p>
+        <form class="ask-inline-form" id="ask-inline-form">
+          <label class="sr-only" for="ask-inline-input">Ask NeirAI a question</label>
+          <input id="ask-inline-input" type="text" placeholder="Ask anything about Neira..." autocomplete="off">
+          <button type="submit" aria-label="Ask NeirAI">Ask <span>↗</span></button>
+        </form>
       </div>
-      <div class="prompt-cloud">
-        <button>How technical is Neira?</button>
-        <button>Tell me about something that went wrong.</button>
-        <button>What has she actually built?</button>
-        <button>Why biology and computer science?</button>
+      <div class="prompt-cloud" aria-label="Suggested questions">
+        <button type="button" data-neirai-question="What has Neira built from 0→1?">What has Neira built from 0→1?</button>
+        <button type="button" data-neirai-question="How technical is Neira?">How technical is Neira?</button>
+        <button type="button" data-neirai-question="Tell me about Neira's AI experience.">Tell me about Neira’s AI experience.</button>
+        <button type="button" data-neirai-question="Why is Neira looking for a new role?">Why is Neira looking for a new role?</button>
+        <button type="button" data-neirai-question="What do Neira's coworkers say about her?">What do Neira’s coworkers say about her?</button>
+        <button type="button" data-neirai-question="Why would Neira be a strong Platform PM?">Why would Neira be a strong Platform PM?</button>
       </div>
     </section>
 
