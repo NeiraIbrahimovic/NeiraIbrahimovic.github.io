@@ -77,7 +77,7 @@ async function ask(q){
    typing.remove();
    if(!response.ok)throw new Error(data.error||"NeirAI is temporarily unavailable.");
    addMessage("assistant",data.answer);
-   showFollowups(followupsFor(q));
+   showFollowups(Array.isArray(data.followups)&&data.followups.length?data.followups:followupsFor(q));
  }catch(err){
    typing.remove();
    addMessage("assistant","I’m having trouble reaching NeirAI right now. Please try again in a moment.");
