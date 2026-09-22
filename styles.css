@@ -1380,3 +1380,14 @@ footer.simple-footer .footer-links{
  .neirai-message.user .neirai-bubble{max-width:88%}.neirai-bubble{padding:16px 17px;font-size:14px}
  .neirai-followups{padding:0 18px 14px}.neirai-composer{margin:0 14px 9px}.neirai-composer input{font-size:14px;padding:10px}
 }
+
+/* NeirAI homepage v2: make the interactive state unmistakable */
+.ask-intro .beta{background:#f4efe5;color:#17201d;border-color:#f4efe5;font-weight:700}
+.ask-intro h2{margin-bottom:18px}
+.ask-intro .ask-note{max-width:620px}
+.ask-inline-form{background:#f4efe5;border-color:#f4efe5;box-shadow:0 12px 34px rgba(0,0,0,.18)}
+.ask-inline-form input{color:#17201d}
+.ask-inline-form input::placeholder{color:rgba(23,32,29,.56)}
+.ask-inline-form button{background:#c9694b;color:#fff}
+.prompt-cloud button{position:relative;padding-right:54px}
+.prompt-cloud button::after{content:"↗";position:absolute;right:22px;top:50%;transform:translateY(-50%);opacity:.55}
