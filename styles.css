@@ -1802,3 +1802,11 @@ footer.simple-footer .footer-links{
 @media(max-width:800px){
  .neirai-prompt-design .neirai-followups{width:calc(100% - 28px)!important;min-height:44px!important}
 }
+
+.neirai-feedback-button{
+ appearance:none;border:0;border-bottom:1px solid rgba(239,235,224,.7);background:transparent;
+ color:#efebe0;font:inherit;font-weight:700;padding:0 0 2px;cursor:pointer;text-align:left;
+}
+.neirai-feedback-button:hover{border-bottom-color:#d96f4e}
+.neirai-feedback-button:disabled{cursor:default;opacity:.75}
+.neirai-feedback-button.sent{color:#d96f4e;border-bottom-color:transparent;opacity:1}
