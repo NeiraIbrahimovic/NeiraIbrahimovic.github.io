@@ -588,3 +588,17 @@
 .security-deep-dive + .decisions-section .multiomics-decision small{
   color:var(--terracotta)!important;
 }
+
+/* Tighten vertical spacing inside IAM decision stories */
+.security-deep-dive + .decisions-section .decision-story{
+  gap:12px!important;
+}
+.security-deep-dive + .decisions-section .decision-narrative{
+  row-gap:12px!important;
+}
+.security-deep-dive + .decisions-section .decision-lead{
+  margin-bottom:10px!important;
+}
+.security-deep-dive + .decisions-section .decision-callout{
+  margin-top:8px!important;
+}
