@@ -2,6 +2,7 @@ const params=new URLSearchParams(location.search);
 const returnTo=params.get("from");
 const closeLink=document.querySelector(".neirai-close");
 if(closeLink&&returnTo){try{const u=new URL(returnTo,location.href);if(u.origin===location.origin)closeLink.href=u.href}catch(e){}}
+if(closeLink){closeLink.addEventListener("click",e=>{if(returnTo&&history.length>1){e.preventDefault();history.back()}})}
 const conversation=document.getElementById("neirai-conversation");
 const welcome=document.getElementById("neirai-welcome");
 const followups=document.getElementById("neirai-followups");
