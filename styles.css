@@ -1557,3 +1557,12 @@ footer.simple-footer .footer-links{
 #ask .ask-card{background:#15211e!important}
 .neirai-prompt-design,
 .neirai-prompt-design .neirai-chat-card{background:#15211e!important;background-image:none!important}
+
+/* Global nav Ask NeirAI outline button */
+.nav .nav-neirai{
+ display:inline-flex;align-items:center;justify-content:center;
+ border:1px solid rgba(23,32,29,.42);border-radius:999px;
+ padding:8px 14px!important;line-height:1;text-decoration:none;
+ transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease
+}
+.nav .nav-neirai:hover{background:#15211e;color:#f4efe5!important;border-color:#15211e;transform:translateY(-1px)}
