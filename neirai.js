@@ -4,6 +4,9 @@ const welcome=document.getElementById("neirai-welcome");
 const followups=document.getElementById("neirai-followups");
 const form=document.getElementById("neirai-chat-form");
 const input=document.getElementById("neirai-input");
+function resizeInput(){input.style.height="auto";input.style.height=Math.min(input.scrollHeight,160)+"px"}
+input.addEventListener("input",resizeInput);
+input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();ask(input.value)}});
 
 const answers=[
  {test:/technical decision|architecture tradeoff|architectural decision|data model decision/i,answer:`On SIMS, Neira made product-level technical decisions about how sample identity, lineage, aggregation, and integrations should behave across a fragmented genomics ecosystem. Some of the most important were:\n\n• Separating the durable Sample identity from a Run Sample, so a biological sample could exist before sequencing and could have multiple run-level occurrences when it was resequenced.\n\n• Defining a shared hierarchy across Subject → Specimen → Sample → Run Sample, while deciding which attributes belonged at each level so downstream applications did not duplicate or misinterpret identity.\n\n• Establishing a persistent global identifier strategy so the same sample could be traced across applications even when product-specific names or IDs differed.\n\n• Working through aggregation semantics: when multiple lanes or runs should represent one logical sample, when they should remain standalone, and how per-lane QC exclusions should affect an aggregate.\n\n• Defining how files attach to the model. For example, run-derived FASTQs belong to run-level context, while non-run files can live at the Sample level. For manual FASTQ attachment, she proposed creating or selecting the appropriate Run Sample rather than collapsing run data into the higher-level Sample.\n\n• Defining REST API and event-driven integration behavior so systems such as run planning, LIMS, analysis, and interpretation could create, update, and consume the shared model consistently.\n\nThese are product architecture decisions rather than claims that Neira personally implemented the production services. Her role was to turn ambiguous cross-system behavior into a coherent model and requirements engineering teams could build against.`,links:[["Read the SIMS case study","case-studies/sims.html"]],next:["Why separate Sample from Run Sample?","How did she think about aggregation?","What API experience does she have?"]},
@@ -34,7 +37,7 @@ function showFollowups(items){
 }
 function ask(q){
  q=(q||"").trim();if(!q)return;
- if(welcome) welcome.hidden=true; followups.hidden=true; addMessage("user",q); input.value="";
+ if(welcome) welcome.hidden=true; followups.hidden=true; addMessage("user",q); input.value=""; resizeInput();
  const match=answers.find(x=>x.test.test(q));
  const typing=document.createElement("div");typing.className="neirai-typing";typing.textContent="NeirAI is looking through Neira’s experience…";conversation.appendChild(typing);conversation.scrollTop=conversation.scrollHeight;
  setTimeout(()=>{typing.remove();addMessage("assistant",match.answer,match.links);showFollowups(match.next);},420);
