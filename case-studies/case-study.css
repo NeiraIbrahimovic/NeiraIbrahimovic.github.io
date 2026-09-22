@@ -388,3 +388,10 @@
 .security-bottom-line small{font-size:8px;letter-spacing:.14em;color:#f0c96b;font-weight:700;white-space:nowrap}
 .security-bottom-line strong{font:18px/1.35 var(--serif);font-weight:400}
 @media(max-width:720px){.security-tradeoff-grid{grid-template-columns:1fr}.security-bottom-line{align-items:flex-start;flex-direction:column;gap:7px}}
+
+/* Let long skills & takeaways headings wrap cleanly instead of overflowing */
+.visual-takeaways h2{
+  white-space:normal!important;
+  max-width:100%!important;
+  text-wrap:balance;
+}
