@@ -1427,3 +1427,83 @@ footer.simple-footer .footer-links{
 #ask .prompt-cloud button:nth-child(4){animation-delay:.38s}
 #ask .prompt-cloud button:nth-child(5){animation-delay:.48s}
 #ask .prompt-cloud button:nth-child(6){animation-delay:.58s}
+
+/* NeirAI prompt-inspired chat page: adapted to the portfolio's visual system */
+.neirai-prompt-design{background:#101b18}
+.neirai-prompt-design .grain{opacity:.16}
+.neirai-prompt-design .nav{background:rgba(244,239,229,.94);backdrop-filter:blur(18px)}
+.neirai-prompt-design .neirai-chat-card{
+ background:
+  radial-gradient(circle at 28% 12%,rgba(201,105,75,.09),transparent 27%),
+  radial-gradient(circle at 78% 72%,rgba(244,239,229,.045),transparent 32%),
+  #111d1a;
+ position:relative;
+}
+.neirai-prompt-design .neirai-chat-head{
+ justify-content:center;text-align:center;border:0;padding:clamp(34px,5vh,62px) 72px 18px;position:relative;
+}
+.neirai-prompt-design .neirai-chat-head>div{max-width:760px}
+.neirai-prompt-design .neirai-kicker{
+ display:inline-block;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#c9694b;margin-bottom:13px
+}
+.neirai-prompt-design .neirai-chat-head h1{
+ font-family:"DM Sans",sans-serif;font-size:clamp(30px,3vw,46px);font-weight:500;letter-spacing:-.035em;line-height:1.08;margin:0 0 10px;
+ background:linear-gradient(90deg,#f8f3e9,rgba(248,243,233,.55));-webkit-background-clip:text;background-clip:text;color:transparent
+}
+.neirai-prompt-design .neirai-chat-head p{font-size:14px;color:rgba(248,243,233,.48);margin:auto;max-width:650px}
+.neirai-prompt-design .neirai-close{position:absolute;right:32px;top:28px;width:40px;height:40px;font-size:27px;opacity:.72}
+.neirai-prompt-design .neirai-conversation{
+ padding:18px clamp(24px,10vw,170px) 22px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.12) transparent
+}
+.neirai-prompt-design .neirai-welcome{max-width:760px;margin:12px auto 0;text-align:center}
+.neirai-prompt-design .neirai-label{margin-bottom:15px;color:rgba(248,243,233,.42)}
+.neirai-prompt-design .neirai-starters{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}
+.neirai-prompt-design .neirai-starters button{
+ width:auto;border-radius:11px;padding:11px 15px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.09);
+ color:rgba(248,243,233,.7);font-size:13px;animation:neiraiPromptIn .45s ease both
+}
+.neirai-prompt-design .neirai-starters button:nth-child(1){animation-delay:.12s}
+.neirai-prompt-design .neirai-starters button:nth-child(2){animation-delay:.22s}
+.neirai-prompt-design .neirai-starters button:nth-child(3){animation-delay:.32s}
+.neirai-prompt-design .neirai-starters button:nth-child(4){animation-delay:.42s}
+.neirai-prompt-design .neirai-starters button:hover{transform:translateY(-2px);background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.2);color:#fff}
+@keyframes neiraiPromptIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.neirai-prompt-design .neirai-message{max-width:880px}
+.neirai-prompt-design .neirai-message-label{opacity:.42}
+.neirai-prompt-design .neirai-message.user .neirai-bubble{background:#f4efe5;color:#17201d;border-radius:18px 18px 6px 18px}
+.neirai-prompt-design .neirai-message.assistant .neirai-bubble{
+ background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.08);border-radius:18px 18px 18px 6px;backdrop-filter:blur(14px)
+}
+.neirai-prompt-design .neirai-typing{max-width:880px;color:rgba(248,243,233,.6)}
+.neirai-prompt-design .neirai-followups{max-width:880px;padding-bottom:10px}
+.neirai-prompt-design .neirai-followups button{background:rgba(255,255,255,.02);border-color:rgba(255,255,255,.09);color:rgba(248,243,233,.65)}
+.neirai-prompt-design .neirai-composer{
+ display:block;max-width:760px;width:calc(100% - 48px);margin:0 auto 9px;padding:0;border-radius:18px;
+ background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.11);box-shadow:0 20px 60px rgba(0,0,0,.2);overflow:hidden;transition:.2s ease
+}
+.neirai-prompt-design .neirai-composer:focus-within{border-color:rgba(201,105,75,.52);box-shadow:0 20px 60px rgba(0,0,0,.2),0 0 0 3px rgba(201,105,75,.08)}
+.neirai-prompt-design .neirai-composer textarea{
+ display:block;width:100%;box-sizing:border-box;min-height:66px;max-height:160px;resize:none;overflow-y:auto;
+ background:transparent;border:0;outline:0;color:#f8f3e9;font:15px/1.5 "DM Sans",sans-serif;padding:18px 20px 10px
+}
+.neirai-prompt-design .neirai-composer textarea::placeholder{color:rgba(248,243,233,.25)}
+.neirai-prompt-design .neirai-composer-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 10px 10px 18px;border-top:1px solid rgba(255,255,255,.055)}
+.neirai-prompt-design .neirai-source-note{font-size:10px;color:rgba(248,243,233,.3)}
+.neirai-prompt-design .neirai-composer button{
+ display:flex;align-items:center;gap:7px;border-radius:10px;background:#f4efe5;color:#17201d;padding:9px 13px;font-size:12px;transition:.18s ease
+}
+.neirai-prompt-design .neirai-composer button:hover{transform:translateY(-1px);background:#fff}
+.neirai-prompt-design .neirai-send-icon{font-size:16px;line-height:1}
+.neirai-prompt-design .neirai-disclaimer{padding-bottom:12px;color:rgba(248,243,233,.45)}
+@media(prefers-reduced-motion:reduce){.neirai-prompt-design .neirai-starters button{animation:none}}
+@media(max-width:800px){
+ .neirai-prompt-design .neirai-chat-head{padding:26px 54px 12px 18px;text-align:left}
+ .neirai-prompt-design .neirai-chat-head p{margin:0}
+ .neirai-prompt-design .neirai-close{right:12px;top:16px}
+ .neirai-prompt-design .neirai-conversation{padding:18px 16px}
+ .neirai-prompt-design .neirai-welcome{text-align:left}
+ .neirai-prompt-design .neirai-starters{justify-content:flex-start}
+ .neirai-prompt-design .neirai-starters button{font-size:12px;padding:10px 12px}
+ .neirai-prompt-design .neirai-composer{width:calc(100% - 24px)}
+ .neirai-prompt-design .neirai-source-note{display:none}
+}
