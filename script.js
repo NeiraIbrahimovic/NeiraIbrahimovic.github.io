@@ -13,3 +13,12 @@ document.querySelectorAll(".story-toggle").forEach(btn=>btn.addEventListener("cl
 }));
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.querySelectorAll("#ask [data-neirai-question]").forEach(btn=>btn.addEventListener("click",()=>{
+  window.location.href="neirai.html?q="+encodeURIComponent(btn.dataset.neiraiQuestion);
+}));
+const neiraiInline=document.getElementById("ask-inline-form");
+if(neiraiInline) neiraiInline.addEventListener("submit",e=>{
+  e.preventDefault();
+  const q=document.getElementById("ask-inline-input").value.trim();
+  if(q) window.location.href="neirai.html?q="+encodeURIComponent(q);
+});
