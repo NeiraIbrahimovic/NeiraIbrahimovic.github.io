@@ -1552,3 +1552,8 @@ footer.simple-footer .footer-links{
  .neirai-prompt-design .neirai-chat-head p{font-size:11px!important}
  .neirai-prompt-design .neirai-conversation{padding-top:8px!important;padding-bottom:8px!important}
 }
+
+/* Restore site-standard dark block shade for NeirAI surfaces */
+#ask .ask-card{background:#15211e!important}
+.neirai-prompt-design,
+.neirai-prompt-design .neirai-chat-card{background:#15211e!important;background-image:none!important}
